@@ -1,0 +1,5 @@
+﻿district,scenario,flooded_area_pct,building_area_km2,flooded_building_area_km2,flooded_building_area_pct,agri_area_km2,flooded_agri_area_km2,flooded_agri_area_pct,pop_total,pop_65p,pop_0_14,pop_alone_elderly,pop_disability,E_pop_total,E_pop_65p,E_pop_0_14,E_pop_alone_elderly,E_pop_disability
+士林區,24h350,0.31,9.0206,0.0328,0.36,5.8574,0.0075,0.13,258163,61951,28985,802,13727,939.7,225.5,105.5,2.9,50.0
+北投區,24h350,0.45,7.3965,0.0016,0.02,7.9256,0.1965,2.48,235678,52078,28656,515,12262,50.8,11.2,6.2,0.1,2.6
+士林區,24h500,0.74,9.0206,0.1064,1.18,5.8574,0.0488,0.83,258163,61951,28985,802,13727,3045.6,730.8,341.9,9.5,161.9
+北投區,24h500,10.85,7.3965,0.5159,6.98,7.9256,3.7237,46.98,235678,52078,28656,515,12262,16439.7,3632.7,1998.9,35.9,855.3

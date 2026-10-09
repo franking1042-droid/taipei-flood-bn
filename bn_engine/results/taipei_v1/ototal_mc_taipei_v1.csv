@@ -1,0 +1,3 @@
+﻿district,city,R1_EV,R2_EV,R3_EV,O_EV_exact_eqw,O_EV_approx_eqw,approx_gap,O_EV_mc_mean,O_EV_mc_sd,O_EV_ci2.5,O_EV_ci97.5,rank_if_placed_among_tainan37
+士林區,臺北市,0.221,1.0176,0.4175,0.7541,0.7537,-0.0005,0.7561,0.1237,0.5465,1.0262,26
+北投區,臺北市,0.3279,1.7309,0.5095,1.1481,1.1477,-0.0004,1.1484,0.2292,0.7547,1.6428,14

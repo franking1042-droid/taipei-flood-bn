@@ -1,0 +1,166 @@
+{
+ "士林區": {
+  "R1_EconomicLoss_new": [
+   0.7895273365360348,
+   0.20006701891206657,
+   0.010324763858562229,
+   8.088069333636664e-05
+  ],
+  "R2_Lifeline_new": [
+   0.1574196485457197,
+   0.6699094956416002,
+   0.1702882024736371,
+   0.002382653339043004
+  ],
+  "R3_Vulnerable_new": [
+   0.7040259505864933,
+   0.1847630046779254,
+   0.10093113195691815,
+   0.01027991277866313
+  ],
+  "O_TotalRisk_int": [
+   0.36401642282584273,
+   0.5233246501337964,
+   0.1072065232348096,
+   0.005399476296335226,
+   5.292750921618777e-05
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9929209999999999,
+    0.0037490000000000006,
+    0.003122,
+    0.00020700000000000002,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7565282078732786,
+    0.2332740890937258,
+    0.00932306418732807,
+    0.0008069893574380706,
+    6.764948822933625e-05
+   ],
+   "FloodDuration": [
+    0.5566672385675825,
+    0.19209902806658902,
+    0.08535567540037256,
+    0.16587805796545585
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14612677339705504,
+    0.2917906053296295,
+    0.3163540089461617,
+    0.18622348043275713,
+    0.05950513189439655
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "中",
+   "NbS_Coverage_Ratio": "高",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "low",
+   "FloodZone_Elderly_Count": "medium",
+   "FloodZone_ElderlyAlone_Count": "very_high",
+   "FloodZone_Disability_Count": "medium",
+   "FloodZone_Children_Count": "high",
+   "FloodZone_Building_Pct": "low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "low"
+  }
+ },
+ "北投區": {
+  "R1_EconomicLoss_new": [
+   0.7487263449311125,
+   0.18666854037648548,
+   0.05260634454211331,
+   0.01199877015028873
+  ],
+  "R2_Lifeline_new": [
+   0.025581068289262626,
+   0.32291832645643415,
+   0.5465477391010691,
+   0.10495286615323404
+  ],
+  "R3_Vulnerable_new": [
+   0.6946189222485045,
+   0.14766868380070056,
+   0.11127027044238522,
+   0.046442123508409795
+  ],
+  "O_TotalRisk_int": [
+   0.18054338563322792,
+   0.538999164034669,
+   0.23543161802231002,
+   0.04186941554110839,
+   0.0031564167686848614
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9327540000000001,
+    0.011478,
+    0.014792,
+    0.022832999999999996,
+    0.018143
+   ],
+   "ModifiedFloodPotential": [
+    0.71141168406042,
+    0.22759347606825445,
+    0.022372338803822955,
+    0.02005897176921264,
+    0.01856352929829009
+   ],
+   "FloodDuration": [
+    0.534919871317783,
+    0.18969572193925227,
+    0.09244819441230896,
+    0.18293621233065593
+   ],
+   "OUT_FloodRiskIndex": [
+    0.11963307018682784,
+    0.26668893355604717,
+    0.32342998561416697,
+    0.21350301248061557,
+    0.0767449981623425
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "中",
+   "NbS_Coverage_Ratio": "高",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "high",
+   "FloodZone_Elderly_Count": "very_high",
+   "FloodZone_ElderlyAlone_Count": "very_high",
+   "FloodZone_Disability_Count": "very_high",
+   "FloodZone_Children_Count": "very_high",
+   "FloodZone_Building_Pct": "high",
+   "FloodZone_Agri_km2": "high",
+   "FloodZone_Vulnerable_Ratio": "high"
+  }
+ }
+}

@@ -1,0 +1,124 @@
+{
+  "_meta": {
+    "version": "taipei_v1",
+    "date": "2026-10-10",
+    "model": "bn_v0220.pkl (193 nodes / 269 edges, NTU-STEMLab/tainan-flood-bn)",
+    "nodes": 16,
+    "note": "同臺南 v0188：Rainfall 於推論時依情境覆寫；FloodZone_* 八個 E 節點另由 E_node_levels_taipei_v1.csv 依雨級注入",
+    "vs_cuts_pct": {
+      "Children_Ratio": [
+        8,
+        11,
+        14,
+        17
+      ],
+      "Elderly_Ratio": [
+        15,
+        18,
+        24,
+        30
+      ],
+      "ElderlyAlone_Ratio": [
+        0.1,
+        0.2,
+        0.3,
+        0.5
+      ],
+      "DisabilityPopulation_Ratio": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "rules": {
+      "Population_Density/BuildingDensity": "[500,3000] 人/km²（v0181，BuildingDensity 以人口密度代理）",
+      "LandUseImperviousness": "<5 極低 / <15 低 / <30 中 / <50 高 / ≥50 極高（LULC 03+05+06 面積%）",
+      "NbS_Coverage_Ratio": "<25 低 / <50 中 / ≥50 高（LULC A1）",
+      "LP.green_infrastructure_coverage": "<5 / 5-15 / 15-30 / >30（LULC A2 %）",
+      "LP.river_corridor_designation": "<6 僅河道 / <12 含緩衝帶 / ≥12 完整廊道（LULC 04 水利利用 %）",
+      "DR.StructuralMeasures_Coverage": "抽水量 cms 五分位 level≤2 低 / 3 中 / ≥4 高（v0185 A4）",
+      "AccessToShelters": "每千 65+ 收容所數五分位 level≥4 高 / 3 中 / ≤2 低（v0185 A5）"
+    },
+    "raw_values": {
+      "士林區": {
+        "children_ratio_pct": 11.23,
+        "elderly_ratio_pct": 24.0,
+        "elderly_alone_ratio_pct_of_65p": 1.295,
+        "disability_pop_ratio_pct": 5.32,
+        "pop_density_per_km2": 4139.3,
+        "Impervious_pct": 25.29,
+        "A1_NbS_pct": 57.11,
+        "A2_GreenInfra_pct": 54.63,
+        "A3_RiverCorridor_pct": 5.89,
+        "pump_capacity_cms": 259.6,
+        "pump_level_tainan_quintile": 5,
+        "shelters_per_1000_elderly": 1.114,
+        "shelter_level_tainan_quintile": 5
+      },
+      "北投區": {
+        "children_ratio_pct": 12.16,
+        "elderly_ratio_pct": 22.1,
+        "elderly_alone_ratio_pct_of_65p": 0.989,
+        "disability_pop_ratio_pct": 5.2,
+        "pop_density_per_km2": 4147.7,
+        "Impervious_pct": 25.0,
+        "A1_NbS_pct": 54.61,
+        "A2_GreenInfra_pct": 46.3,
+        "A3_RiverCorridor_pct": 2.47,
+        "pump_capacity_cms": 147.88,
+        "pump_level_tainan_quintile": 5,
+        "shelters_per_1000_elderly": 0.768,
+        "shelter_level_tainan_quintile": 5
+      }
+    },
+    "knowledge_rule_reasons": {
+      "士林區": {
+        "LP.zoning_type": "臺北市全境為都市計畫區",
+        "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+        "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+      },
+      "北投區": {
+        "LP.zoning_type": "臺北市全境為都市計畫區",
+        "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+        "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+      }
+    }
+  },
+  "士林區": {
+    "Children_Ratio": "medium",
+    "Elderly_Ratio": "high",
+    "ElderlyAlone_Ratio": "very_high",
+    "DisabilityPopulation_Ratio": "medium",
+    "Rainfall": "大豪雨",
+    "LP.zoning_type": "都市計畫區",
+    "DR.NonStructural_DRRPolicy": "高",
+    "RiverWaterLevel": "二級警戒",
+    "Population_Density": "高",
+    "BuildingDensity": "高",
+    "LandUseImperviousness": "中",
+    "NbS_Coverage_Ratio": "高",
+    "LP.green_infrastructure_coverage": ">30%",
+    "LP.river_corridor_designation": "僅河道用地",
+    "DR.StructuralMeasures_Coverage": "高",
+    "AccessToShelters": "高"
+  },
+  "北投區": {
+    "Children_Ratio": "medium",
+    "Elderly_Ratio": "medium",
+    "ElderlyAlone_Ratio": "very_high",
+    "DisabilityPopulation_Ratio": "medium",
+    "Rainfall": "大豪雨",
+    "LP.zoning_type": "都市計畫區",
+    "DR.NonStructural_DRRPolicy": "高",
+    "RiverWaterLevel": "二級警戒",
+    "Population_Density": "高",
+    "BuildingDensity": "高",
+    "LandUseImperviousness": "中",
+    "NbS_Coverage_Ratio": "高",
+    "LP.green_infrastructure_coverage": ">30%",
+    "LP.river_corridor_designation": "僅河道用地",
+    "DR.StructuralMeasures_Coverage": "高",
+    "AccessToShelters": "高"
+  }
+}
