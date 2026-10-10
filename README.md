@@ -23,6 +23,9 @@
 | 結案報告 | `bn_engine/results/taipei_v1/taipei_v1_close_report.md` |
 | **Evidence 對照表**（每個節點：臺北原始值 → 狀態 → 沿用的臺南切點 → 資料來源 → 可比性） | `docs/evidence_mapping_taipei_v1.md` |
 | 移植決策紀錄（比照臺南 DRT 格式） | `docs/DRT-TPE-20261010-001_transplant_v0220_to_taipei.md` |
+| **給 Codex 的審查任務簡報**（先讀臺南、再審臺北、逐條提修改方案） | `docs/CODEX_BRIEF.md` |
+| **已驗證優化候選清單**（16 確認／20 駁回／6 未驗證，含審查投票與修正版做法） | `docs/optimization_candidates_v1.md` |
+| AI 代理（Codex 等）的工作守則：腳本順序、不可碰清單、編碼注意、提交規範 | `AGENTS.md` |
 | 臺南參考表（切點來源，從 tainan-flood-bn 複製） | `bn_engine/reference_tainan/` |
 | 臺北輸入資料副本（CSV、潛勢圖 SHP、LULC、里界） | `data/taipei/` |
 | 腳本（依執行順序） | `scripts/` |
