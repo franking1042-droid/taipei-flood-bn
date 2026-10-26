@@ -1,0 +1,4097 @@
+{
+ "_meta": {
+  "version": "taipei_v2_village",
+  "date": "2026-10-26",
+  "model": "bn_v0220.pkl (193 nodes / 269 edges, NTU-STEMLab/tainan-flood-bn)",
+  "spatial_unit": "里（unit = 區名＋里名；士林 51 里＋北投 42 里）",
+  "nodes": 16,
+  "n_units": 93,
+  "note": "節點集合、切點、規則與 v1／臺南 v0188 相同；Rainfall 於推論時依情境覆寫；FloodZone_* 八個 E 節點另由 E_node_levels_village_v2.csv 依雨級注入",
+  "vs_cuts_pct": {
+   "Children_Ratio": [
+    8,
+    11,
+    14,
+    17
+   ],
+   "Elderly_Ratio": [
+    15,
+    18,
+    24,
+    30
+   ],
+   "ElderlyAlone_Ratio": [
+    0.1,
+    0.2,
+    0.3,
+    0.5
+   ],
+   "DisabilityPopulation_Ratio": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "rules": {
+   "Population_Density/BuildingDensity": "[500,3000] 人/km²（v0181，BuildingDensity 以人口密度代理）",
+   "LandUseImperviousness": "<5 極低 / <15 低 / <30 中 / <50 高 / ≥50 極高（LULC 03+05+06 面積%）",
+   "NbS_Coverage_Ratio": "<25 低 / <50 中 / ≥50 高（LULC A1）",
+   "LP.green_infrastructure_coverage": "<5 / 5-15 / 15-30 / >30（LULC A2 %）",
+   "LP.river_corridor_designation": "<6 僅河道 / <12 含緩衝帶 / ≥12 完整廊道（LULC 04 水利利用 %）",
+   "DR.StructuralMeasures_Coverage": "抽水量 cms 五分位 level≤2 低 / 3 中 / ≥4 高（v0185 A4）",
+   "AccessToShelters": "每千 65+ 收容所數五分位 level≥4 高 / 3 中 / ≤2 低（v0185 A5）"
+  },
+  "resolution": {
+   "Children_Ratio": {
+    "resolution": "里級原生",
+    "method": "民政局各里人口數按年齡分（115/9）：0–14 歲／總人口"
+   },
+   "Elderly_Ratio": {
+    "resolution": "里級原生",
+    "method": "同上：65+／總人口"
+   },
+   "ElderlyAlone_Ratio": {
+    "resolution": "區級複製",
+    "method": "主計處區級列冊獨居老人（114 年底）／區 65+；同區各里同值"
+   },
+   "DisabilityPopulation_Ratio": {
+    "resolution": "區級複製",
+    "method": "主計處區級身心障礙人數（114 年底）／區總人口；同區各里同值"
+   },
+   "Population_Density": {
+    "resolution": "里級原生",
+    "method": "里人口／里界面積"
+   },
+   "BuildingDensity": {
+    "resolution": "里級原生（代理）",
+    "method": "以里人口密度代理（v0181 規則）"
+   },
+   "LP.zoning_type": {
+    "resolution": "市級常數",
+    "method": "臺北市全境為都市計畫區"
+   },
+   "DR.NonStructural_DRRPolicy": {
+    "resolution": "區級複製",
+    "method": "區級地區災害防救計畫、水災保全計畫、韌性社區（知識法則）；同區各里同值"
+   },
+   "RiverWaterLevel": {
+    "resolution": "區級複製",
+    "method": "沿河區知識法則；同區各里同值"
+   },
+   "LandUseImperviousness": {
+    "resolution": "面資料裁切到里",
+    "method": "國土利用現況調查 112 年多邊形 overlay 里界：03+05+06 面積／里面積"
+   },
+   "NbS_Coverage_Ratio": {
+    "resolution": "面資料裁切到里",
+    "method": "同上，A1 規則"
+   },
+   "LP.green_infrastructure_coverage": {
+    "resolution": "面資料裁切到里",
+    "method": "同上，A2 規則"
+   },
+   "LP.river_corridor_designation": {
+    "resolution": "面資料裁切到里",
+    "method": "同上，04 水利利用占比"
+   },
+   "DR.StructuralMeasures_Coverage": {
+    "resolution": "點位→集水分區→里",
+    "method": "抽水站 cms 落入雨水下水道集水分區，里的有效 cms＝Σ 分區 cms × 面積占比"
+   },
+   "AccessToShelters": {
+    "resolution": "服務里別→里",
+    "method": "收容所一覽表「服務里別」計數／里 65+ × 1000"
+   },
+   "Rainfall": {
+    "resolution": "情境",
+    "method": "推論時依 H1 覆寫"
+   }
+  },
+  "unit_index": {
+   "北投區一德里": {
+    "district": "北投區",
+    "village": "一德里"
+   },
+   "北投區中和里": {
+    "district": "北投區",
+    "village": "中和里"
+   },
+   "北投區中央里": {
+    "district": "北投區",
+    "village": "中央里"
+   },
+   "北投區中庸里": {
+    "district": "北投區",
+    "village": "中庸里"
+   },
+   "北投區中心里": {
+    "district": "北投區",
+    "village": "中心里"
+   },
+   "北投區八仙里": {
+    "district": "北投區",
+    "village": "八仙里"
+   },
+   "北投區吉利里": {
+    "district": "北投區",
+    "village": "吉利里"
+   },
+   "北投區吉慶里": {
+    "district": "北投區",
+    "village": "吉慶里"
+   },
+   "北投區大同里": {
+    "district": "北投區",
+    "village": "大同里"
+   },
+   "北投區大屯里": {
+    "district": "北投區",
+    "village": "大屯里"
+   },
+   "北投區奇岩里": {
+    "district": "北投區",
+    "village": "奇岩里"
+   },
+   "北投區尊賢里": {
+    "district": "北投區",
+    "village": "尊賢里"
+   },
+   "北投區建民里": {
+    "district": "北投區",
+    "village": "建民里"
+   },
+   "北投區振華里": {
+    "district": "北投區",
+    "village": "振華里"
+   },
+   "北投區文化里": {
+    "district": "北投區",
+    "village": "文化里"
+   },
+   "北投區文林里": {
+    "district": "北投區",
+    "village": "文林里"
+   },
+   "北投區智仁里": {
+    "district": "北投區",
+    "village": "智仁里"
+   },
+   "北投區東華里": {
+    "district": "北投區",
+    "village": "東華里"
+   },
+   "北投區林泉里": {
+    "district": "北投區",
+    "village": "林泉里"
+   },
+   "北投區桃源里": {
+    "district": "北投區",
+    "village": "桃源里"
+   },
+   "北投區榮光里": {
+    "district": "北投區",
+    "village": "榮光里"
+   },
+   "北投區榮華里": {
+    "district": "北投區",
+    "village": "榮華里"
+   },
+   "北投區永和里": {
+    "district": "北投區",
+    "village": "永和里"
+   },
+   "北投區永明里": {
+    "district": "北投區",
+    "village": "永明里"
+   },
+   "北投區永欣里": {
+    "district": "北投區",
+    "village": "永欣里"
+   },
+   "北投區泉源里": {
+    "district": "北投區",
+    "village": "泉源里"
+   },
+   "北投區洲美里": {
+    "district": "北投區",
+    "village": "洲美里"
+   },
+   "北投區清江里": {
+    "district": "北投區",
+    "village": "清江里"
+   },
+   "北投區湖山里": {
+    "district": "北投區",
+    "village": "湖山里"
+   },
+   "北投區湖田里": {
+    "district": "北投區",
+    "village": "湖田里"
+   },
+   "北投區溫泉里": {
+    "district": "北投區",
+    "village": "溫泉里"
+   },
+   "北投區石牌里": {
+    "district": "北投區",
+    "village": "石牌里"
+   },
+   "北投區福興里": {
+    "district": "北投區",
+    "village": "福興里"
+   },
+   "北投區秀山里": {
+    "district": "北投區",
+    "village": "秀山里"
+   },
+   "北投區稻香里": {
+    "district": "北投區",
+    "village": "稻香里"
+   },
+   "北投區立賢里": {
+    "district": "北投區",
+    "village": "立賢里"
+   },
+   "北投區立農里": {
+    "district": "北投區",
+    "village": "立農里"
+   },
+   "北投區裕民里": {
+    "district": "北投區",
+    "village": "裕民里"
+   },
+   "北投區豐年里": {
+    "district": "北投區",
+    "village": "豐年里"
+   },
+   "北投區長安里": {
+    "district": "北投區",
+    "village": "長安里"
+   },
+   "北投區開明里": {
+    "district": "北投區",
+    "village": "開明里"
+   },
+   "北投區關渡里": {
+    "district": "北投區",
+    "village": "關渡里"
+   },
+   "士林區三玉里": {
+    "district": "士林區",
+    "village": "三玉里"
+   },
+   "士林區仁勇里": {
+    "district": "士林區",
+    "village": "仁勇里"
+   },
+   "士林區公館里": {
+    "district": "士林區",
+    "village": "公館里"
+   },
+   "士林區前港里": {
+    "district": "士林區",
+    "village": "前港里"
+   },
+   "士林區名山里": {
+    "district": "士林區",
+    "village": "名山里"
+   },
+   "士林區天和里": {
+    "district": "士林區",
+    "village": "天和里"
+   },
+   "士林區天壽里": {
+    "district": "士林區",
+    "village": "天壽里"
+   },
+   "士林區天山里": {
+    "district": "士林區",
+    "village": "天山里"
+   },
+   "士林區天母里": {
+    "district": "士林區",
+    "village": "天母里"
+   },
+   "士林區天玉里": {
+    "district": "士林區",
+    "village": "天玉里"
+   },
+   "士林區天祿里": {
+    "district": "士林區",
+    "village": "天祿里"
+   },
+   "士林區天福里": {
+    "district": "士林區",
+    "village": "天福里"
+   },
+   "士林區富光里": {
+    "district": "士林區",
+    "village": "富光里"
+   },
+   "士林區富洲里": {
+    "district": "士林區",
+    "village": "富洲里"
+   },
+   "士林區岩山里": {
+    "district": "士林區",
+    "village": "岩山里"
+   },
+   "士林區平等里": {
+    "district": "士林區",
+    "village": "平等里"
+   },
+   "士林區後港里": {
+    "district": "士林區",
+    "village": "後港里"
+   },
+   "士林區德華里": {
+    "district": "士林區",
+    "village": "德華里"
+   },
+   "士林區德行里": {
+    "district": "士林區",
+    "village": "德行里"
+   },
+   "士林區忠誠里": {
+    "district": "士林區",
+    "village": "忠誠里"
+   },
+   "士林區承德里": {
+    "district": "士林區",
+    "village": "承德里"
+   },
+   "士林區新安里": {
+    "district": "士林區",
+    "village": "新安里"
+   },
+   "士林區明勝里": {
+    "district": "士林區",
+    "village": "明勝里"
+   },
+   "士林區東山里": {
+    "district": "士林區",
+    "village": "東山里"
+   },
+   "士林區永倫里": {
+    "district": "士林區",
+    "village": "永倫里"
+   },
+   "士林區永福里": {
+    "district": "士林區",
+    "village": "永福里"
+   },
+   "士林區溪山里": {
+    "district": "士林區",
+    "village": "溪山里"
+   },
+   "士林區百齡里": {
+    "district": "士林區",
+    "village": "百齡里"
+   },
+   "士林區社園里": {
+    "district": "士林區",
+    "village": "社園里"
+   },
+   "士林區社子里": {
+    "district": "士林區",
+    "village": "社子里"
+   },
+   "士林區社新里": {
+    "district": "士林區",
+    "village": "社新里"
+   },
+   "士林區福中里": {
+    "district": "士林區",
+    "village": "福中里"
+   },
+   "士林區福佳里": {
+    "district": "士林區",
+    "village": "福佳里"
+   },
+   "士林區福安里": {
+    "district": "士林區",
+    "village": "福安里"
+   },
+   "士林區福德里": {
+    "district": "士林區",
+    "village": "福德里"
+   },
+   "士林區福志里": {
+    "district": "士林區",
+    "village": "福志里"
+   },
+   "士林區福林里": {
+    "district": "士林區",
+    "village": "福林里"
+   },
+   "士林區福華里": {
+    "district": "士林區",
+    "village": "福華里"
+   },
+   "士林區福順里": {
+    "district": "士林區",
+    "village": "福順里"
+   },
+   "士林區義信里": {
+    "district": "士林區",
+    "village": "義信里"
+   },
+   "士林區翠山里": {
+    "district": "士林區",
+    "village": "翠山里"
+   },
+   "士林區聖山里": {
+    "district": "士林區",
+    "village": "聖山里"
+   },
+   "士林區臨溪里": {
+    "district": "士林區",
+    "village": "臨溪里"
+   },
+   "士林區舊佳里": {
+    "district": "士林區",
+    "village": "舊佳里"
+   },
+   "士林區芝山里": {
+    "district": "士林區",
+    "village": "芝山里"
+   },
+   "士林區菁山里": {
+    "district": "士林區",
+    "village": "菁山里"
+   },
+   "士林區葫東里": {
+    "district": "士林區",
+    "village": "葫東里"
+   },
+   "士林區葫蘆里": {
+    "district": "士林區",
+    "village": "葫蘆里"
+   },
+   "士林區蘭興里": {
+    "district": "士林區",
+    "village": "蘭興里"
+   },
+   "士林區蘭雅里": {
+    "district": "士林區",
+    "village": "蘭雅里"
+   },
+   "士林區陽明里": {
+    "district": "士林區",
+    "village": "陽明里"
+   }
+  },
+  "raw_values": {
+   "北投區一德里": {
+    "children_ratio_pct": 9.05,
+    "elderly_ratio_pct": 24.11,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 3127.5,
+    "Impervious_pct": 45.11,
+    "A1_NbS_pct": 18.72,
+    "A2_GreenInfra_pct": 18.57,
+    "A3_RiverCorridor_pct": 1.56,
+    "pump_capacity_cms_eff": 0.0,
+    "pump_level_tainan_quintile": 1,
+    "shelters_per_1000_elderly": 5.862,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區中和里": {
+    "children_ratio_pct": 7.86,
+    "elderly_ratio_pct": 26.65,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 24532.7,
+    "Impervious_pct": 89.65,
+    "A1_NbS_pct": 2.57,
+    "A2_GreenInfra_pct": 2.57,
+    "A3_RiverCorridor_pct": 1.06,
+    "pump_capacity_cms_eff": 24.0,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 9.917,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區中央里": {
+    "children_ratio_pct": 9.28,
+    "elderly_ratio_pct": 24.83,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 27408.5,
+    "Impervious_pct": 69.85,
+    "A1_NbS_pct": 6.63,
+    "A2_GreenInfra_pct": 8.81,
+    "A3_RiverCorridor_pct": 0.09,
+    "pump_capacity_cms_eff": 6.571,
+    "pump_level_tainan_quintile": 2,
+    "shelters_per_1000_elderly": 6.993,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區中庸里": {
+    "children_ratio_pct": 7.67,
+    "elderly_ratio_pct": 24.86,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 36302.2,
+    "Impervious_pct": 91.27,
+    "A1_NbS_pct": 4.09,
+    "A2_GreenInfra_pct": 4.09,
+    "A3_RiverCorridor_pct": 1.9,
+    "pump_capacity_cms_eff": 23.021,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 13.216,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區中心里": {
+    "children_ratio_pct": 6.75,
+    "elderly_ratio_pct": 27.15,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 14554.3,
+    "Impervious_pct": 58.57,
+    "A1_NbS_pct": 34.36,
+    "A2_GreenInfra_pct": 34.37,
+    "A3_RiverCorridor_pct": 2.56,
+    "pump_capacity_cms_eff": 0.0,
+    "pump_level_tainan_quintile": 1,
+    "shelters_per_1000_elderly": 7.638,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區八仙里": {
+    "children_ratio_pct": 9.97,
+    "elderly_ratio_pct": 23.57,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 1340.5,
+    "Impervious_pct": 24.94,
+    "A1_NbS_pct": 12.35,
+    "A2_GreenInfra_pct": 8.86,
+    "A3_RiverCorridor_pct": 6.67,
+    "pump_capacity_cms_eff": 12.24,
+    "pump_level_tainan_quintile": 3,
+    "shelters_per_1000_elderly": 13.019,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區吉利里": {
+    "children_ratio_pct": 17.52,
+    "elderly_ratio_pct": 20.12,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 40011.5,
+    "Impervious_pct": 89.79,
+    "A1_NbS_pct": 7.42,
+    "A2_GreenInfra_pct": 9.88,
+    "A3_RiverCorridor_pct": 0.0,
+    "pump_capacity_cms_eff": 41.0,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 9.326,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區吉慶里": {
+    "children_ratio_pct": 17.22,
+    "elderly_ratio_pct": 21.37,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 14193.2,
+    "Impervious_pct": 32.88,
+    "A1_NbS_pct": 2.61,
+    "A2_GreenInfra_pct": 2.71,
+    "A3_RiverCorridor_pct": 2.75,
+    "pump_capacity_cms_eff": 41.0,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 11.566,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區大同里": {
+    "children_ratio_pct": 9.68,
+    "elderly_ratio_pct": 24.71,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 8694.6,
+    "Impervious_pct": 37.45,
+    "A1_NbS_pct": 4.38,
+    "A2_GreenInfra_pct": 4.36,
+    "A3_RiverCorridor_pct": 0.59,
+    "pump_capacity_cms_eff": 15.452,
+    "pump_level_tainan_quintile": 3,
+    "shelters_per_1000_elderly": 7.994,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區大屯里": {
+    "children_ratio_pct": 8.81,
+    "elderly_ratio_pct": 27.76,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 253.9,
+    "Impervious_pct": 5.94,
+    "A1_NbS_pct": 76.32,
+    "A2_GreenInfra_pct": 74.69,
+    "A3_RiverCorridor_pct": 0.7,
+    "pump_capacity_cms_eff": 3.712,
+    "pump_level_tainan_quintile": 2,
+    "shelters_per_1000_elderly": 45.307,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區奇岩里": {
+    "children_ratio_pct": 10.28,
+    "elderly_ratio_pct": 24.78,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 6454.4,
+    "Impervious_pct": 40.0,
+    "A1_NbS_pct": 56.76,
+    "A2_GreenInfra_pct": 56.69,
+    "A3_RiverCorridor_pct": 0.82,
+    "pump_capacity_cms_eff": 5.441,
+    "pump_level_tainan_quintile": 2,
+    "shelters_per_1000_elderly": 4.751,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區尊賢里": {
+    "children_ratio_pct": 15.44,
+    "elderly_ratio_pct": 23.21,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 58674.4,
+    "Impervious_pct": 94.24,
+    "A1_NbS_pct": 4.58,
+    "A2_GreenInfra_pct": 4.58,
+    "A3_RiverCorridor_pct": 0.0,
+    "pump_capacity_cms_eff": 41.0,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 13.233,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區建民里": {
+    "children_ratio_pct": 12.68,
+    "elderly_ratio_pct": 24.95,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 4280.6,
+    "Impervious_pct": 56.38,
+    "A1_NbS_pct": 8.12,
+    "A2_GreenInfra_pct": 7.99,
+    "A3_RiverCorridor_pct": 6.79,
+    "pump_capacity_cms_eff": 31.717,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 10.961,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區振華里": {
+    "children_ratio_pct": 12.21,
+    "elderly_ratio_pct": 26.84,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 25815.1,
+    "Impervious_pct": 96.37,
+    "A1_NbS_pct": 0.0,
+    "A2_GreenInfra_pct": 0.0,
+    "A3_RiverCorridor_pct": 0.0,
+    "pump_capacity_cms_eff": 27.954,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 7.239,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區文化里": {
+    "children_ratio_pct": 10.47,
+    "elderly_ratio_pct": 26.24,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 7348.2,
+    "Impervious_pct": 96.89,
+    "A1_NbS_pct": 1.47,
+    "A2_GreenInfra_pct": 1.47,
+    "A3_RiverCorridor_pct": 1.63,
+    "pump_capacity_cms_eff": 23.461,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 13.333,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區文林里": {
+    "children_ratio_pct": 11.54,
+    "elderly_ratio_pct": 25.61,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 37618.6,
+    "Impervious_pct": 97.94,
+    "A1_NbS_pct": 0.0,
+    "A2_GreenInfra_pct": 0.0,
+    "A3_RiverCorridor_pct": 0.0,
+    "pump_capacity_cms_eff": 41.0,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 11.152,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區智仁里": {
+    "children_ratio_pct": 9.15,
+    "elderly_ratio_pct": 23.81,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 51934.3,
+    "Impervious_pct": 98.79,
+    "A1_NbS_pct": 0.14,
+    "A2_GreenInfra_pct": 0.14,
+    "A3_RiverCorridor_pct": 0.76,
+    "pump_capacity_cms_eff": 23.931,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 8.352,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區東華里": {
+    "children_ratio_pct": 13.61,
+    "elderly_ratio_pct": 24.72,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 6671.9,
+    "Impervious_pct": 78.91,
+    "A1_NbS_pct": 19.41,
+    "A2_GreenInfra_pct": 19.41,
+    "A3_RiverCorridor_pct": 0.52,
+    "pump_capacity_cms_eff": 39.851,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 12.476,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區林泉里": {
+    "children_ratio_pct": 7.86,
+    "elderly_ratio_pct": 26.58,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 2019.0,
+    "Impervious_pct": 43.52,
+    "A1_NbS_pct": 53.34,
+    "A2_GreenInfra_pct": 53.15,
+    "A3_RiverCorridor_pct": 0.4,
+    "pump_capacity_cms_eff": 0.0,
+    "pump_level_tainan_quintile": 1,
+    "shelters_per_1000_elderly": 17.478,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區桃源里": {
+    "children_ratio_pct": 8.13,
+    "elderly_ratio_pct": 22.9,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 4779.3,
+    "Impervious_pct": 37.47,
+    "A1_NbS_pct": 42.01,
+    "A2_GreenInfra_pct": 41.96,
+    "A3_RiverCorridor_pct": 0.52,
+    "pump_capacity_cms_eff": 0.0,
+    "pump_level_tainan_quintile": 1,
+    "shelters_per_1000_elderly": 8.567,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區榮光里": {
+    "children_ratio_pct": 17.58,
+    "elderly_ratio_pct": 19.99,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 50765.6,
+    "Impervious_pct": 91.17,
+    "A1_NbS_pct": 6.48,
+    "A2_GreenInfra_pct": 6.7,
+    "A3_RiverCorridor_pct": 0.0,
+    "pump_capacity_cms_eff": 40.91,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 8.754,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區榮華里": {
+    "children_ratio_pct": 12.76,
+    "elderly_ratio_pct": 26.62,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 18886.9,
+    "Impervious_pct": 75.28,
+    "A1_NbS_pct": 11.91,
+    "A2_GreenInfra_pct": 12.82,
+    "A3_RiverCorridor_pct": 9.27,
+    "pump_capacity_cms_eff": 10.357,
+    "pump_level_tainan_quintile": 3,
+    "shelters_per_1000_elderly": 6.237,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區永和里": {
+    "children_ratio_pct": 12.77,
+    "elderly_ratio_pct": 24.68,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 5514.0,
+    "Impervious_pct": 42.67,
+    "A1_NbS_pct": 47.69,
+    "A2_GreenInfra_pct": 47.87,
+    "A3_RiverCorridor_pct": 0.96,
+    "pump_capacity_cms_eff": 8.368,
+    "pump_level_tainan_quintile": 2,
+    "shelters_per_1000_elderly": 5.305,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區永明里": {
+    "children_ratio_pct": 16.31,
+    "elderly_ratio_pct": 21.36,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 41126.8,
+    "Impervious_pct": 93.11,
+    "A1_NbS_pct": 4.33,
+    "A2_GreenInfra_pct": 4.33,
+    "A3_RiverCorridor_pct": 0.0,
+    "pump_capacity_cms_eff": 40.673,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 12.024,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區永欣里": {
+    "children_ratio_pct": 15.34,
+    "elderly_ratio_pct": 22.85,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 11269.7,
+    "Impervious_pct": 59.62,
+    "A1_NbS_pct": 38.19,
+    "A2_GreenInfra_pct": 37.53,
+    "A3_RiverCorridor_pct": 1.29,
+    "pump_capacity_cms_eff": 32.278,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 6.438,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區泉源里": {
+    "children_ratio_pct": 5.81,
+    "elderly_ratio_pct": 27.34,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 431.5,
+    "Impervious_pct": 11.53,
+    "A1_NbS_pct": 67.18,
+    "A2_GreenInfra_pct": 66.53,
+    "A3_RiverCorridor_pct": 0.84,
+    "pump_capacity_cms_eff": 0.0,
+    "pump_level_tainan_quintile": 1,
+    "shelters_per_1000_elderly": 20.236,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區洲美里": {
+    "children_ratio_pct": 14.6,
+    "elderly_ratio_pct": 18.69,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 1345.2,
+    "Impervious_pct": 21.3,
+    "A1_NbS_pct": 14.63,
+    "A2_GreenInfra_pct": 8.95,
+    "A3_RiverCorridor_pct": 19.28,
+    "pump_capacity_cms_eff": 24.826,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 25.114,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區清江里": {
+    "children_ratio_pct": 8.39,
+    "elderly_ratio_pct": 23.33,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 36067.6,
+    "Impervious_pct": 88.06,
+    "A1_NbS_pct": 8.03,
+    "A2_GreenInfra_pct": 8.03,
+    "A3_RiverCorridor_pct": 2.22,
+    "pump_capacity_cms_eff": 0.0,
+    "pump_level_tainan_quintile": 1,
+    "shelters_per_1000_elderly": 7.4,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區湖山里": {
+    "children_ratio_pct": 5.89,
+    "elderly_ratio_pct": 31.54,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 371.0,
+    "Impervious_pct": 15.2,
+    "A1_NbS_pct": 67.12,
+    "A2_GreenInfra_pct": 66.78,
+    "A3_RiverCorridor_pct": 1.39,
+    "pump_capacity_cms_eff": 0.0,
+    "pump_level_tainan_quintile": 1,
+    "shelters_per_1000_elderly": 25.057,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區湖田里": {
+    "children_ratio_pct": 6.34,
+    "elderly_ratio_pct": 31.1,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 50.2,
+    "Impervious_pct": 3.71,
+    "A1_NbS_pct": 89.7,
+    "A2_GreenInfra_pct": 64.91,
+    "A3_RiverCorridor_pct": 0.57,
+    "pump_capacity_cms_eff": 0.0,
+    "pump_level_tainan_quintile": 1,
+    "shelters_per_1000_elderly": 47.059,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區溫泉里": {
+    "children_ratio_pct": 7.92,
+    "elderly_ratio_pct": 27.19,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 24629.3,
+    "Impervious_pct": 74.24,
+    "A1_NbS_pct": 22.78,
+    "A2_GreenInfra_pct": 22.78,
+    "A3_RiverCorridor_pct": 0.33,
+    "pump_capacity_cms_eff": 0.0,
+    "pump_level_tainan_quintile": 1,
+    "shelters_per_1000_elderly": 8.424,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區石牌里": {
+    "children_ratio_pct": 10.6,
+    "elderly_ratio_pct": 25.58,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 44559.5,
+    "Impervious_pct": 96.7,
+    "A1_NbS_pct": 1.16,
+    "A2_GreenInfra_pct": 1.16,
+    "A3_RiverCorridor_pct": 0.0,
+    "pump_capacity_cms_eff": 41.0,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 9.562,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區福興里": {
+    "children_ratio_pct": 16.65,
+    "elderly_ratio_pct": 21.05,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 20086.8,
+    "Impervious_pct": 62.34,
+    "A1_NbS_pct": 3.27,
+    "A2_GreenInfra_pct": 6.26,
+    "A3_RiverCorridor_pct": 1.4,
+    "pump_capacity_cms_eff": 41.0,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 8.898,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區秀山里": {
+    "children_ratio_pct": 8.29,
+    "elderly_ratio_pct": 26.49,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 2483.1,
+    "Impervious_pct": 14.71,
+    "A1_NbS_pct": 64.7,
+    "A2_GreenInfra_pct": 64.47,
+    "A3_RiverCorridor_pct": 2.36,
+    "pump_capacity_cms_eff": 5.474,
+    "pump_level_tainan_quintile": 2,
+    "shelters_per_1000_elderly": 15.075,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區稻香里": {
+    "children_ratio_pct": 7.92,
+    "elderly_ratio_pct": 23.08,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 4958.4,
+    "Impervious_pct": 24.71,
+    "A1_NbS_pct": 65.33,
+    "A2_GreenInfra_pct": 65.26,
+    "A3_RiverCorridor_pct": 1.26,
+    "pump_capacity_cms_eff": 0.0,
+    "pump_level_tainan_quintile": 1,
+    "shelters_per_1000_elderly": 9.693,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區立賢里": {
+    "children_ratio_pct": 16.18,
+    "elderly_ratio_pct": 20.68,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 12502.4,
+    "Impervious_pct": 57.15,
+    "A1_NbS_pct": 8.2,
+    "A2_GreenInfra_pct": 9.86,
+    "A3_RiverCorridor_pct": 3.1,
+    "pump_capacity_cms_eff": 35.802,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 11.883,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區立農里": {
+    "children_ratio_pct": 15.74,
+    "elderly_ratio_pct": 20.85,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 28930.2,
+    "Impervious_pct": 71.36,
+    "A1_NbS_pct": 13.56,
+    "A2_GreenInfra_pct": 11.98,
+    "A3_RiverCorridor_pct": 2.82,
+    "pump_capacity_cms_eff": 39.282,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 6.743,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區裕民里": {
+    "children_ratio_pct": 12.18,
+    "elderly_ratio_pct": 24.91,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 42605.8,
+    "Impervious_pct": 92.04,
+    "A1_NbS_pct": 3.87,
+    "A2_GreenInfra_pct": 3.87,
+    "A3_RiverCorridor_pct": 0.0,
+    "pump_capacity_cms_eff": 20.09,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 6.908,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區豐年里": {
+    "children_ratio_pct": 10.85,
+    "elderly_ratio_pct": 23.28,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 5117.0,
+    "Impervious_pct": 30.76,
+    "A1_NbS_pct": 11.56,
+    "A2_GreenInfra_pct": 11.24,
+    "A3_RiverCorridor_pct": 3.65,
+    "pump_capacity_cms_eff": 12.291,
+    "pump_level_tainan_quintile": 3,
+    "shelters_per_1000_elderly": 14.428,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區長安里": {
+    "children_ratio_pct": 8.93,
+    "elderly_ratio_pct": 25.22,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 28381.7,
+    "Impervious_pct": 82.04,
+    "A1_NbS_pct": 12.25,
+    "A2_GreenInfra_pct": 13.27,
+    "A3_RiverCorridor_pct": 1.68,
+    "pump_capacity_cms_eff": 0.669,
+    "pump_level_tainan_quintile": 2,
+    "shelters_per_1000_elderly": 8.935,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區開明里": {
+    "children_ratio_pct": 7.9,
+    "elderly_ratio_pct": 26.26,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 14966.8,
+    "Impervious_pct": 73.01,
+    "A1_NbS_pct": 14.66,
+    "A2_GreenInfra_pct": 14.66,
+    "A3_RiverCorridor_pct": 3.14,
+    "pump_capacity_cms_eff": 3.608,
+    "pump_level_tainan_quintile": 2,
+    "shelters_per_1000_elderly": 7.505,
+    "shelter_level_tainan_quintile": 5
+   },
+   "北投區關渡里": {
+    "children_ratio_pct": 9.34,
+    "elderly_ratio_pct": 24.67,
+    "elderly_alone_ratio_pct_of_65p": 0.912,
+    "disability_pop_ratio_pct": 5.241,
+    "pop_density_per_km2": 6078.2,
+    "Impervious_pct": 27.62,
+    "A1_NbS_pct": 32.91,
+    "A2_GreenInfra_pct": 9.4,
+    "A3_RiverCorridor_pct": 14.66,
+    "pump_capacity_cms_eff": 0.0,
+    "pump_level_tainan_quintile": 1,
+    "shelters_per_1000_elderly": 4.473,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區三玉里": {
+    "children_ratio_pct": 12.65,
+    "elderly_ratio_pct": 27.08,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 10554.1,
+    "Impervious_pct": 78.47,
+    "A1_NbS_pct": 0.95,
+    "A2_GreenInfra_pct": 21.43,
+    "A3_RiverCorridor_pct": 0.0,
+    "pump_capacity_cms_eff": 36.53,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 8.513,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區仁勇里": {
+    "children_ratio_pct": 9.57,
+    "elderly_ratio_pct": 26.61,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 28544.6,
+    "Impervious_pct": 98.82,
+    "A1_NbS_pct": 0.0,
+    "A2_GreenInfra_pct": 0.0,
+    "A3_RiverCorridor_pct": 0.4,
+    "pump_capacity_cms_eff": 63.769,
+    "pump_level_tainan_quintile": 5,
+    "shelters_per_1000_elderly": 12.917,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區公館里": {
+    "children_ratio_pct": 6.97,
+    "elderly_ratio_pct": 30.69,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 695.1,
+    "Impervious_pct": 22.43,
+    "A1_NbS_pct": 52.02,
+    "A2_GreenInfra_pct": 51.94,
+    "A3_RiverCorridor_pct": 0.19,
+    "pump_capacity_cms_eff": 0.0,
+    "pump_level_tainan_quintile": 1,
+    "shelters_per_1000_elderly": 20.888,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區前港里": {
+    "children_ratio_pct": 10.96,
+    "elderly_ratio_pct": 23.0,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 25095.0,
+    "Impervious_pct": 81.01,
+    "A1_NbS_pct": 15.6,
+    "A2_GreenInfra_pct": 18.65,
+    "A3_RiverCorridor_pct": 0.0,
+    "pump_capacity_cms_eff": 21.0,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 11.317,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區名山里": {
+    "children_ratio_pct": 12.1,
+    "elderly_ratio_pct": 27.02,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 17370.0,
+    "Impervious_pct": 54.29,
+    "A1_NbS_pct": 38.73,
+    "A2_GreenInfra_pct": 38.81,
+    "A3_RiverCorridor_pct": 6.53,
+    "pump_capacity_cms_eff": 21.246,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 7.058,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區天和里": {
+    "children_ratio_pct": 12.47,
+    "elderly_ratio_pct": 26.97,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 17281.2,
+    "Impervious_pct": 60.51,
+    "A1_NbS_pct": 30.91,
+    "A2_GreenInfra_pct": 30.91,
+    "A3_RiverCorridor_pct": 0.89,
+    "pump_capacity_cms_eff": 42.5,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 5.288,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區天壽里": {
+    "children_ratio_pct": 14.56,
+    "elderly_ratio_pct": 27.04,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 24126.5,
+    "Impervious_pct": 86.85,
+    "A1_NbS_pct": 4.13,
+    "A2_GreenInfra_pct": 5.06,
+    "A3_RiverCorridor_pct": 6.23,
+    "pump_capacity_cms_eff": 0.634,
+    "pump_level_tainan_quintile": 2,
+    "shelters_per_1000_elderly": 8.615,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區天山里": {
+    "children_ratio_pct": 12.55,
+    "elderly_ratio_pct": 28.71,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 39764.9,
+    "Impervious_pct": 88.32,
+    "A1_NbS_pct": 8.99,
+    "A2_GreenInfra_pct": 10.09,
+    "A3_RiverCorridor_pct": 1.08,
+    "pump_capacity_cms_eff": 42.5,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 5.808,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區天母里": {
+    "children_ratio_pct": 13.67,
+    "elderly_ratio_pct": 27.72,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 3773.2,
+    "Impervious_pct": 28.7,
+    "A1_NbS_pct": 54.51,
+    "A2_GreenInfra_pct": 54.59,
+    "A3_RiverCorridor_pct": 0.91,
+    "pump_capacity_cms_eff": 19.192,
+    "pump_level_tainan_quintile": 3,
+    "shelters_per_1000_elderly": 5.618,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區天玉里": {
+    "children_ratio_pct": 14.48,
+    "elderly_ratio_pct": 26.13,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 33762.2,
+    "Impervious_pct": 88.64,
+    "A1_NbS_pct": 6.73,
+    "A2_GreenInfra_pct": 6.73,
+    "A3_RiverCorridor_pct": 1.25,
+    "pump_capacity_cms_eff": 18.523,
+    "pump_level_tainan_quintile": 3,
+    "shelters_per_1000_elderly": 4.433,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區天祿里": {
+    "children_ratio_pct": 12.16,
+    "elderly_ratio_pct": 27.24,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 34914.8,
+    "Impervious_pct": 98.83,
+    "A1_NbS_pct": 0.22,
+    "A2_GreenInfra_pct": 0.49,
+    "A3_RiverCorridor_pct": 0.0,
+    "pump_capacity_cms_eff": 32.327,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 7.468,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區天福里": {
+    "children_ratio_pct": 14.1,
+    "elderly_ratio_pct": 25.18,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 29829.6,
+    "Impervious_pct": 98.61,
+    "A1_NbS_pct": 0.93,
+    "A2_GreenInfra_pct": 0.97,
+    "A3_RiverCorridor_pct": 0.0,
+    "pump_capacity_cms_eff": 38.69,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 7.129,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區富光里": {
+    "children_ratio_pct": 9.6,
+    "elderly_ratio_pct": 23.36,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 19014.9,
+    "Impervious_pct": 45.79,
+    "A1_NbS_pct": 8.55,
+    "A2_GreenInfra_pct": 5.0,
+    "A3_RiverCorridor_pct": 45.77,
+    "pump_capacity_cms_eff": 21.192,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 7.004,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區富洲里": {
+    "children_ratio_pct": 6.94,
+    "elderly_ratio_pct": 22.08,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 2334.4,
+    "Impervious_pct": 25.96,
+    "A1_NbS_pct": 10.64,
+    "A2_GreenInfra_pct": 4.32,
+    "A3_RiverCorridor_pct": 40.7,
+    "pump_capacity_cms_eff": 13.972,
+    "pump_level_tainan_quintile": 3,
+    "shelters_per_1000_elderly": 7.183,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區岩山里": {
+    "children_ratio_pct": 11.4,
+    "elderly_ratio_pct": 28.05,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 6468.4,
+    "Impervious_pct": 63.01,
+    "A1_NbS_pct": 25.59,
+    "A2_GreenInfra_pct": 25.53,
+    "A3_RiverCorridor_pct": 1.75,
+    "pump_capacity_cms_eff": 17.552,
+    "pump_level_tainan_quintile": 3,
+    "shelters_per_1000_elderly": 15.713,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區平等里": {
+    "children_ratio_pct": 5.68,
+    "elderly_ratio_pct": 27.02,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 213.6,
+    "Impervious_pct": 6.27,
+    "A1_NbS_pct": 79.33,
+    "A2_GreenInfra_pct": 71.31,
+    "A3_RiverCorridor_pct": 0.69,
+    "pump_capacity_cms_eff": 0.0,
+    "pump_level_tainan_quintile": 1,
+    "shelters_per_1000_elderly": 21.563,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區後港里": {
+    "children_ratio_pct": 11.3,
+    "elderly_ratio_pct": 25.19,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 12821.8,
+    "Impervious_pct": 66.0,
+    "A1_NbS_pct": 10.51,
+    "A2_GreenInfra_pct": 15.03,
+    "A3_RiverCorridor_pct": 18.47,
+    "pump_capacity_cms_eff": 36.706,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 6.376,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區德華里": {
+    "children_ratio_pct": 12.78,
+    "elderly_ratio_pct": 25.4,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 17822.4,
+    "Impervious_pct": 69.61,
+    "A1_NbS_pct": 6.34,
+    "A2_GreenInfra_pct": 6.64,
+    "A3_RiverCorridor_pct": 17.41,
+    "pump_capacity_cms_eff": 11.667,
+    "pump_level_tainan_quintile": 3,
+    "shelters_per_1000_elderly": 8.333,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區德行里": {
+    "children_ratio_pct": 11.26,
+    "elderly_ratio_pct": 26.59,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 21877.6,
+    "Impervious_pct": 81.46,
+    "A1_NbS_pct": 11.11,
+    "A2_GreenInfra_pct": 11.11,
+    "A3_RiverCorridor_pct": 7.14,
+    "pump_capacity_cms_eff": 16.795,
+    "pump_level_tainan_quintile": 3,
+    "shelters_per_1000_elderly": 10.526,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區忠誠里": {
+    "children_ratio_pct": 11.33,
+    "elderly_ratio_pct": 28.05,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 36650.8,
+    "Impervious_pct": 98.92,
+    "A1_NbS_pct": 0.35,
+    "A2_GreenInfra_pct": 0.42,
+    "A3_RiverCorridor_pct": 0.0,
+    "pump_capacity_cms_eff": 42.484,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 7.299,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區承德里": {
+    "children_ratio_pct": 8.71,
+    "elderly_ratio_pct": 26.3,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 31116.6,
+    "Impervious_pct": 88.21,
+    "A1_NbS_pct": 11.11,
+    "A2_GreenInfra_pct": 11.11,
+    "A3_RiverCorridor_pct": 0.0,
+    "pump_capacity_cms_eff": 20.928,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 7.496,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區新安里": {
+    "children_ratio_pct": 5.99,
+    "elderly_ratio_pct": 31.74,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 920.4,
+    "Impervious_pct": 25.12,
+    "A1_NbS_pct": 47.54,
+    "A2_GreenInfra_pct": 47.59,
+    "A3_RiverCorridor_pct": 0.58,
+    "pump_capacity_cms_eff": 7.059,
+    "pump_level_tainan_quintile": 2,
+    "shelters_per_1000_elderly": 13.986,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區明勝里": {
+    "children_ratio_pct": 9.24,
+    "elderly_ratio_pct": 26.73,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 15062.5,
+    "Impervious_pct": 71.56,
+    "A1_NbS_pct": 8.29,
+    "A2_GreenInfra_pct": 4.76,
+    "A3_RiverCorridor_pct": 19.99,
+    "pump_capacity_cms_eff": 9.265,
+    "pump_level_tainan_quintile": 2,
+    "shelters_per_1000_elderly": 8.389,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區東山里": {
+    "children_ratio_pct": 11.79,
+    "elderly_ratio_pct": 25.01,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 2889.4,
+    "Impervious_pct": 20.8,
+    "A1_NbS_pct": 60.83,
+    "A2_GreenInfra_pct": 60.79,
+    "A3_RiverCorridor_pct": 0.25,
+    "pump_capacity_cms_eff": 41.132,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 10.788,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區永倫里": {
+    "children_ratio_pct": 8.7,
+    "elderly_ratio_pct": 25.95,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 10148.7,
+    "Impervious_pct": 46.09,
+    "A1_NbS_pct": 13.94,
+    "A2_GreenInfra_pct": 9.11,
+    "A3_RiverCorridor_pct": 35.01,
+    "pump_capacity_cms_eff": 5.669,
+    "pump_level_tainan_quintile": 2,
+    "shelters_per_1000_elderly": 5.405,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區永福里": {
+    "children_ratio_pct": 7.45,
+    "elderly_ratio_pct": 30.88,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 818.2,
+    "Impervious_pct": 38.57,
+    "A1_NbS_pct": 36.02,
+    "A2_GreenInfra_pct": 36.02,
+    "A3_RiverCorridor_pct": 0.74,
+    "pump_capacity_cms_eff": 5.691,
+    "pump_level_tainan_quintile": 2,
+    "shelters_per_1000_elderly": 22.989,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區溪山里": {
+    "children_ratio_pct": 6.59,
+    "elderly_ratio_pct": 28.75,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 139.8,
+    "Impervious_pct": 5.94,
+    "A1_NbS_pct": 86.39,
+    "A2_GreenInfra_pct": 85.7,
+    "A3_RiverCorridor_pct": 1.41,
+    "pump_capacity_cms_eff": 0.0,
+    "pump_level_tainan_quintile": 1,
+    "shelters_per_1000_elderly": 19.512,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區百齡里": {
+    "children_ratio_pct": 11.53,
+    "elderly_ratio_pct": 24.61,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 42117.3,
+    "Impervious_pct": 60.37,
+    "A1_NbS_pct": 3.57,
+    "A2_GreenInfra_pct": 19.23,
+    "A3_RiverCorridor_pct": 19.93,
+    "pump_capacity_cms_eff": 12.946,
+    "pump_level_tainan_quintile": 3,
+    "shelters_per_1000_elderly": 6.506,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區社園里": {
+    "children_ratio_pct": 11.02,
+    "elderly_ratio_pct": 22.47,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 32890.1,
+    "Impervious_pct": 58.96,
+    "A1_NbS_pct": 14.12,
+    "A2_GreenInfra_pct": 25.91,
+    "A3_RiverCorridor_pct": 10.13,
+    "pump_capacity_cms_eff": 8.06,
+    "pump_level_tainan_quintile": 2,
+    "shelters_per_1000_elderly": 7.304,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區社子里": {
+    "children_ratio_pct": 10.3,
+    "elderly_ratio_pct": 23.26,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 15970.6,
+    "Impervious_pct": 48.92,
+    "A1_NbS_pct": 16.73,
+    "A2_GreenInfra_pct": 14.31,
+    "A3_RiverCorridor_pct": 31.42,
+    "pump_capacity_cms_eff": 7.57,
+    "pump_level_tainan_quintile": 2,
+    "shelters_per_1000_elderly": 7.908,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區社新里": {
+    "children_ratio_pct": 9.83,
+    "elderly_ratio_pct": 23.66,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 20962.5,
+    "Impervious_pct": 50.38,
+    "A1_NbS_pct": 12.88,
+    "A2_GreenInfra_pct": 3.22,
+    "A3_RiverCorridor_pct": 35.75,
+    "pump_capacity_cms_eff": 13.678,
+    "pump_level_tainan_quintile": 3,
+    "shelters_per_1000_elderly": 6.003,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區福中里": {
+    "children_ratio_pct": 12.23,
+    "elderly_ratio_pct": 21.39,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 24296.4,
+    "Impervious_pct": 65.27,
+    "A1_NbS_pct": 4.28,
+    "A2_GreenInfra_pct": 17.34,
+    "A3_RiverCorridor_pct": 16.73,
+    "pump_capacity_cms_eff": 13.792,
+    "pump_level_tainan_quintile": 3,
+    "shelters_per_1000_elderly": 7.541,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區福佳里": {
+    "children_ratio_pct": 9.82,
+    "elderly_ratio_pct": 26.09,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 14390.6,
+    "Impervious_pct": 60.0,
+    "A1_NbS_pct": 15.73,
+    "A2_GreenInfra_pct": 15.73,
+    "A3_RiverCorridor_pct": 5.27,
+    "pump_capacity_cms_eff": 58.657,
+    "pump_level_tainan_quintile": 5,
+    "shelters_per_1000_elderly": 7.261,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區福安里": {
+    "children_ratio_pct": 6.24,
+    "elderly_ratio_pct": 21.21,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 1777.5,
+    "Impervious_pct": 29.61,
+    "A1_NbS_pct": 14.3,
+    "A2_GreenInfra_pct": 7.12,
+    "A3_RiverCorridor_pct": 31.9,
+    "pump_capacity_cms_eff": 15.763,
+    "pump_level_tainan_quintile": 3,
+    "shelters_per_1000_elderly": 10.428,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區福德里": {
+    "children_ratio_pct": 6.44,
+    "elderly_ratio_pct": 29.38,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 17783.9,
+    "Impervious_pct": 91.03,
+    "A1_NbS_pct": 3.9,
+    "A2_GreenInfra_pct": 4.7,
+    "A3_RiverCorridor_pct": 0.0,
+    "pump_capacity_cms_eff": 63.729,
+    "pump_level_tainan_quintile": 5,
+    "shelters_per_1000_elderly": 7.853,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區福志里": {
+    "children_ratio_pct": 9.04,
+    "elderly_ratio_pct": 31.68,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 19270.5,
+    "Impervious_pct": 74.42,
+    "A1_NbS_pct": 17.01,
+    "A2_GreenInfra_pct": 17.01,
+    "A3_RiverCorridor_pct": 6.84,
+    "pump_capacity_cms_eff": 25.496,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 5.495,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區福林里": {
+    "children_ratio_pct": 8.95,
+    "elderly_ratio_pct": 29.76,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 1343.5,
+    "Impervious_pct": 34.34,
+    "A1_NbS_pct": 54.21,
+    "A2_GreenInfra_pct": 54.23,
+    "A3_RiverCorridor_pct": 0.77,
+    "pump_capacity_cms_eff": 32.086,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 13.447,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區福華里": {
+    "children_ratio_pct": 9.74,
+    "elderly_ratio_pct": 25.39,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 38809.7,
+    "Impervious_pct": 62.04,
+    "A1_NbS_pct": 7.14,
+    "A2_GreenInfra_pct": 14.27,
+    "A3_RiverCorridor_pct": 23.32,
+    "pump_capacity_cms_eff": 13.173,
+    "pump_level_tainan_quintile": 3,
+    "shelters_per_1000_elderly": 7.509,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區福順里": {
+    "children_ratio_pct": 8.93,
+    "elderly_ratio_pct": 24.76,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 24060.6,
+    "Impervious_pct": 68.17,
+    "A1_NbS_pct": 12.54,
+    "A2_GreenInfra_pct": 11.65,
+    "A3_RiverCorridor_pct": 18.46,
+    "pump_capacity_cms_eff": 26.43,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 7.149,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區義信里": {
+    "children_ratio_pct": 9.79,
+    "elderly_ratio_pct": 26.0,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 16406.3,
+    "Impervious_pct": 86.68,
+    "A1_NbS_pct": 0.78,
+    "A2_GreenInfra_pct": 0.78,
+    "A3_RiverCorridor_pct": 0.0,
+    "pump_capacity_cms_eff": 42.03,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 16.645,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區翠山里": {
+    "children_ratio_pct": 6.74,
+    "elderly_ratio_pct": 32.49,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 1520.6,
+    "Impervious_pct": 14.71,
+    "A1_NbS_pct": 82.95,
+    "A2_GreenInfra_pct": 82.94,
+    "A3_RiverCorridor_pct": 0.67,
+    "pump_capacity_cms_eff": 0.0,
+    "pump_level_tainan_quintile": 1,
+    "shelters_per_1000_elderly": 9.938,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區聖山里": {
+    "children_ratio_pct": 11.91,
+    "elderly_ratio_pct": 25.32,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 44807.7,
+    "Impervious_pct": 98.18,
+    "A1_NbS_pct": 0.61,
+    "A2_GreenInfra_pct": 0.61,
+    "A3_RiverCorridor_pct": 0.0,
+    "pump_capacity_cms_eff": 23.356,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 9.685,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區臨溪里": {
+    "children_ratio_pct": 7.09,
+    "elderly_ratio_pct": 31.15,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 1167.4,
+    "Impervious_pct": 28.09,
+    "A1_NbS_pct": 57.69,
+    "A2_GreenInfra_pct": 57.56,
+    "A3_RiverCorridor_pct": 3.01,
+    "pump_capacity_cms_eff": 0.0,
+    "pump_level_tainan_quintile": 1,
+    "shelters_per_1000_elderly": 14.616,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區舊佳里": {
+    "children_ratio_pct": 8.18,
+    "elderly_ratio_pct": 29.59,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 32288.9,
+    "Impervious_pct": 86.16,
+    "A1_NbS_pct": 8.76,
+    "A2_GreenInfra_pct": 8.76,
+    "A3_RiverCorridor_pct": 4.37,
+    "pump_capacity_cms_eff": 41.879,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 7.467,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區芝山里": {
+    "children_ratio_pct": 13.58,
+    "elderly_ratio_pct": 25.19,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 6474.1,
+    "Impervious_pct": 34.42,
+    "A1_NbS_pct": 45.08,
+    "A2_GreenInfra_pct": 45.08,
+    "A3_RiverCorridor_pct": 0.59,
+    "pump_capacity_cms_eff": 31.063,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 7.799,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區菁山里": {
+    "children_ratio_pct": 6.09,
+    "elderly_ratio_pct": 27.92,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 120.4,
+    "Impervious_pct": 7.99,
+    "A1_NbS_pct": 82.24,
+    "A2_GreenInfra_pct": 75.99,
+    "A3_RiverCorridor_pct": 0.94,
+    "pump_capacity_cms_eff": 0.0,
+    "pump_level_tainan_quintile": 1,
+    "shelters_per_1000_elderly": 20.305,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區葫東里": {
+    "children_ratio_pct": 9.29,
+    "elderly_ratio_pct": 23.99,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 18926.9,
+    "Impervious_pct": 66.41,
+    "A1_NbS_pct": 7.97,
+    "A2_GreenInfra_pct": 11.58,
+    "A3_RiverCorridor_pct": 21.86,
+    "pump_capacity_cms_eff": 18.304,
+    "pump_level_tainan_quintile": 3,
+    "shelters_per_1000_elderly": 10.274,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區葫蘆里": {
+    "children_ratio_pct": 11.01,
+    "elderly_ratio_pct": 23.33,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 22277.7,
+    "Impervious_pct": 47.54,
+    "A1_NbS_pct": 8.71,
+    "A2_GreenInfra_pct": 2.96,
+    "A3_RiverCorridor_pct": 42.79,
+    "pump_capacity_cms_eff": 21.823,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 5.58,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區蘭興里": {
+    "children_ratio_pct": 12.87,
+    "elderly_ratio_pct": 26.02,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 22919.3,
+    "Impervious_pct": 73.77,
+    "A1_NbS_pct": 12.23,
+    "A2_GreenInfra_pct": 15.55,
+    "A3_RiverCorridor_pct": 10.17,
+    "pump_capacity_cms_eff": 14.868,
+    "pump_level_tainan_quintile": 3,
+    "shelters_per_1000_elderly": 6.923,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區蘭雅里": {
+    "children_ratio_pct": 12.8,
+    "elderly_ratio_pct": 26.51,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 39721.6,
+    "Impervious_pct": 96.78,
+    "A1_NbS_pct": 2.23,
+    "A2_GreenInfra_pct": 2.34,
+    "A3_RiverCorridor_pct": 0.0,
+    "pump_capacity_cms_eff": 38.792,
+    "pump_level_tainan_quintile": 4,
+    "shelters_per_1000_elderly": 4.931,
+    "shelter_level_tainan_quintile": 5
+   },
+   "士林區陽明里": {
+    "children_ratio_pct": 6.31,
+    "elderly_ratio_pct": 31.2,
+    "elderly_alone_ratio_pct_of_65p": 1.203,
+    "disability_pop_ratio_pct": 5.371,
+    "pop_density_per_km2": 1319.5,
+    "Impervious_pct": 43.97,
+    "A1_NbS_pct": 44.44,
+    "A2_GreenInfra_pct": 44.65,
+    "A3_RiverCorridor_pct": 1.01,
+    "pump_capacity_cms_eff": 1.103,
+    "pump_level_tainan_quintile": 2,
+    "shelters_per_1000_elderly": 8.939,
+    "shelter_level_tainan_quintile": 5
+   }
+  },
+  "knowledge_rule_reasons": {
+   "北投區一德里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區中和里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區中央里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區中庸里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區中心里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區八仙里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區吉利里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區吉慶里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區大同里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區大屯里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區奇岩里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區尊賢里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區建民里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區振華里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區文化里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區文林里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區智仁里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區東華里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區林泉里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區桃源里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區榮光里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區榮華里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區永和里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區永明里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區永欣里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區泉源里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區洲美里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區清江里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區湖山里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區湖田里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區溫泉里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區石牌里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區福興里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區秀山里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區稻香里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區立賢里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區立農里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區裕民里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區豐年里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區長安里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區開明里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "北投區關渡里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫、列入 115 年度水災保全計畫（洲美關渡八仙里／一德里）、水患自主防災社區（一德里）與韌性社區 5 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，洲美關渡平原為保全區；比照臺南 RIVER_HIGH。若以 200 年堤防保護標準論可改三級警戒（敏感度項）"
+   },
+   "士林區三玉里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區仁勇里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區公館里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區前港里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區名山里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區天和里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區天壽里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區天山里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區天母里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區天玉里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區天祿里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區天福里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區富光里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區富洲里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區岩山里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區平等里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區後港里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區德華里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區德行里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區忠誠里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區承德里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區新安里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區明勝里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區東山里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區永倫里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區永福里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區溪山里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區百齡里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區社園里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區社子里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區社新里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區福中里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區福佳里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區福安里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區福德里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區福志里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區福林里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區福華里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區福順里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區義信里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區翠山里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區聖山里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區臨溪里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區舊佳里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區芝山里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區菁山里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區葫東里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區葫蘆里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區蘭興里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區蘭雅里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   },
+   "士林區陽明里": {
+    "LP.zoning_type": "臺北市全境為都市計畫區",
+    "DR.NonStructural_DRRPolicy": "有區級地區災害防救計畫（eoc.gov.taipei）、列入 115 年度水災保全計畫（社子島福安里／富州里）、韌性社區 2 處；臺南 DR_HIGH 同等級",
+    "RiverWaterLevel": "臨基隆河／淡水河，社子島為全市唯一防汛熱點與保全區（堤防僅 6.6 m）；比照臺南 RIVER_HIGH 沿河區給二級警戒"
+   }
+  },
+  "state_counts": {
+   "Children_Ratio": {
+    "low": 31,
+    "very_low": 22,
+    "very_high": 3,
+    "high": 10,
+    "medium": 27
+   },
+   "Elderly_Ratio": {
+    "high": 58,
+    "medium": 26,
+    "very_high": 9
+   },
+   "ElderlyAlone_Ratio": {
+    "very_high": 93
+   },
+   "DisabilityPopulation_Ratio": {
+    "medium": 93
+   },
+   "Rainfall": {
+    "大豪雨": 93
+   },
+   "LP.zoning_type": {
+    "都市計畫區": 93
+   },
+   "DR.NonStructural_DRRPolicy": {
+    "高": 93
+   },
+   "RiverWaterLevel": {
+    "二級警戒": 93
+   },
+   "Population_Density": {
+    "高": 72,
+    "中": 14,
+    "低": 7
+   },
+   "BuildingDensity": {
+    "高": 72,
+    "中": 14,
+    "低": 7
+   },
+   "LandUseImperviousness": {
+    "高": 16,
+    "極高": 57,
+    "中": 12,
+    "低": 7,
+    "極低": 1
+   },
+   "NbS_Coverage_Ratio": {
+    "低": 64,
+    "中": 12,
+    "高": 17
+   },
+   "LP.green_infrastructure_coverage": {
+    "15-30%": 13,
+    "<5%": 24,
+    "5-15%": 29,
+    ">30%": 27
+   },
+   "LP.river_corridor_designation": {
+    "僅河道用地": 67,
+    "含河岸緩衝帶 (<30m)": 9,
+    "完整河川廊道 (≥30m + 生態緩衝)": 17
+   },
+   "DR.StructuralMeasures_Coverage": {
+    "低": 32,
+    "高": 44,
+    "中": 17
+   },
+   "AccessToShelters": {
+    "高": 93
+   }
+  }
+ },
+ "北投區一德里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "15-30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "北投區中和里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區中央里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "北投區中庸里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區中心里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "中",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "北投區八仙里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "中",
+  "BuildingDensity": "中",
+  "LandUseImperviousness": "中",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "含河岸緩衝帶 (<30m)",
+  "DR.StructuralMeasures_Coverage": "中",
+  "AccessToShelters": "高"
+ },
+ "北投區吉利里": {
+  "Children_Ratio": "very_high",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區吉慶里": {
+  "Children_Ratio": "very_high",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區大同里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "中",
+  "AccessToShelters": "高"
+ },
+ "北投區大屯里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "低",
+  "BuildingDensity": "低",
+  "LandUseImperviousness": "低",
+  "NbS_Coverage_Ratio": "高",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "北投區奇岩里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "高",
+  "NbS_Coverage_Ratio": "高",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "北投區尊賢里": {
+  "Children_Ratio": "high",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區建民里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "含河岸緩衝帶 (<30m)",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區振華里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區文化里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區文林里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區智仁里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區東華里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "15-30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區林泉里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "中",
+  "BuildingDensity": "中",
+  "LandUseImperviousness": "高",
+  "NbS_Coverage_Ratio": "高",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "北投區桃源里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "高",
+  "NbS_Coverage_Ratio": "中",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "北投區榮光里": {
+  "Children_Ratio": "very_high",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區榮華里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "含河岸緩衝帶 (<30m)",
+  "DR.StructuralMeasures_Coverage": "中",
+  "AccessToShelters": "高"
+ },
+ "北投區永和里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "高",
+  "NbS_Coverage_Ratio": "中",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "北投區永明里": {
+  "Children_Ratio": "high",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區永欣里": {
+  "Children_Ratio": "high",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "中",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區泉源里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "低",
+  "BuildingDensity": "低",
+  "LandUseImperviousness": "低",
+  "NbS_Coverage_Ratio": "高",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "北投區洲美里": {
+  "Children_Ratio": "high",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "中",
+  "BuildingDensity": "中",
+  "LandUseImperviousness": "中",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區清江里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "北投區湖山里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "very_high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "低",
+  "BuildingDensity": "低",
+  "LandUseImperviousness": "中",
+  "NbS_Coverage_Ratio": "高",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "北投區湖田里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "very_high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "低",
+  "BuildingDensity": "低",
+  "LandUseImperviousness": "極低",
+  "NbS_Coverage_Ratio": "高",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "北投區溫泉里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "15-30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "北投區石牌里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區福興里": {
+  "Children_Ratio": "high",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區秀山里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "中",
+  "BuildingDensity": "中",
+  "LandUseImperviousness": "低",
+  "NbS_Coverage_Ratio": "高",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "北投區稻香里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "中",
+  "NbS_Coverage_Ratio": "高",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "北投區立賢里": {
+  "Children_Ratio": "high",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區立農里": {
+  "Children_Ratio": "high",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區裕民里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "北投區豐年里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "中",
+  "AccessToShelters": "高"
+ },
+ "北投區長安里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "北投區開明里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "北投區關渡里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "中",
+  "NbS_Coverage_Ratio": "中",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "士林區三玉里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "15-30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區仁勇里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區公館里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "very_high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "中",
+  "BuildingDensity": "中",
+  "LandUseImperviousness": "中",
+  "NbS_Coverage_Ratio": "高",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "士林區前港里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "15-30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區名山里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "中",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "含河岸緩衝帶 (<30m)",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區天和里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "中",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區天壽里": {
+  "Children_Ratio": "high",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "含河岸緩衝帶 (<30m)",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "士林區天山里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區天母里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "中",
+  "NbS_Coverage_Ratio": "高",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "中",
+  "AccessToShelters": "高"
+ },
+ "士林區天玉里": {
+  "Children_Ratio": "high",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "中",
+  "AccessToShelters": "高"
+ },
+ "士林區天祿里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區天福里": {
+  "Children_Ratio": "high",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區富光里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區富洲里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "中",
+  "BuildingDensity": "中",
+  "LandUseImperviousness": "中",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+  "DR.StructuralMeasures_Coverage": "中",
+  "AccessToShelters": "高"
+ },
+ "士林區岩山里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "中",
+  "LP.green_infrastructure_coverage": "15-30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "中",
+  "AccessToShelters": "高"
+ },
+ "士林區平等里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "低",
+  "BuildingDensity": "低",
+  "LandUseImperviousness": "低",
+  "NbS_Coverage_Ratio": "高",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "士林區後港里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "15-30%",
+  "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區德華里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+  "DR.StructuralMeasures_Coverage": "中",
+  "AccessToShelters": "高"
+ },
+ "士林區德行里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "含河岸緩衝帶 (<30m)",
+  "DR.StructuralMeasures_Coverage": "中",
+  "AccessToShelters": "高"
+ },
+ "士林區忠誠里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區承德里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區新安里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "very_high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "中",
+  "BuildingDensity": "中",
+  "LandUseImperviousness": "中",
+  "NbS_Coverage_Ratio": "中",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "士林區明勝里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "士林區東山里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "中",
+  "BuildingDensity": "中",
+  "LandUseImperviousness": "中",
+  "NbS_Coverage_Ratio": "高",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區永倫里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "士林區永福里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "very_high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "中",
+  "BuildingDensity": "中",
+  "LandUseImperviousness": "高",
+  "NbS_Coverage_Ratio": "中",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "士林區溪山里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "低",
+  "BuildingDensity": "低",
+  "LandUseImperviousness": "低",
+  "NbS_Coverage_Ratio": "高",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "士林區百齡里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "15-30%",
+  "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+  "DR.StructuralMeasures_Coverage": "中",
+  "AccessToShelters": "高"
+ },
+ "士林區社園里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "15-30%",
+  "LP.river_corridor_designation": "含河岸緩衝帶 (<30m)",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "士林區社子里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "士林區社新里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+  "DR.StructuralMeasures_Coverage": "中",
+  "AccessToShelters": "高"
+ },
+ "士林區福中里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "15-30%",
+  "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+  "DR.StructuralMeasures_Coverage": "中",
+  "AccessToShelters": "高"
+ },
+ "士林區福佳里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "15-30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區福安里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "中",
+  "BuildingDensity": "中",
+  "LandUseImperviousness": "中",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+  "DR.StructuralMeasures_Coverage": "中",
+  "AccessToShelters": "高"
+ },
+ "士林區福德里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區福志里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "very_high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "15-30%",
+  "LP.river_corridor_designation": "含河岸緩衝帶 (<30m)",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區福林里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "中",
+  "BuildingDensity": "中",
+  "LandUseImperviousness": "高",
+  "NbS_Coverage_Ratio": "高",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區福華里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+  "DR.StructuralMeasures_Coverage": "中",
+  "AccessToShelters": "高"
+ },
+ "士林區福順里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區義信里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區翠山里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "very_high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "中",
+  "BuildingDensity": "中",
+  "LandUseImperviousness": "低",
+  "NbS_Coverage_Ratio": "高",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "士林區聖山里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區臨溪里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "very_high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "中",
+  "BuildingDensity": "中",
+  "LandUseImperviousness": "中",
+  "NbS_Coverage_Ratio": "高",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "士林區舊佳里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區芝山里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "高",
+  "NbS_Coverage_Ratio": "中",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區菁山里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "低",
+  "BuildingDensity": "低",
+  "LandUseImperviousness": "低",
+  "NbS_Coverage_Ratio": "高",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ },
+ "士林區葫東里": {
+  "Children_Ratio": "low",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "5-15%",
+  "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+  "DR.StructuralMeasures_Coverage": "中",
+  "AccessToShelters": "高"
+ },
+ "士林區葫蘆里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "medium",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區蘭興里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "15-30%",
+  "LP.river_corridor_designation": "含河岸緩衝帶 (<30m)",
+  "DR.StructuralMeasures_Coverage": "中",
+  "AccessToShelters": "高"
+ },
+ "士林區蘭雅里": {
+  "Children_Ratio": "medium",
+  "Elderly_Ratio": "high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "高",
+  "BuildingDensity": "高",
+  "LandUseImperviousness": "極高",
+  "NbS_Coverage_Ratio": "低",
+  "LP.green_infrastructure_coverage": "<5%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "高",
+  "AccessToShelters": "高"
+ },
+ "士林區陽明里": {
+  "Children_Ratio": "very_low",
+  "Elderly_Ratio": "very_high",
+  "ElderlyAlone_Ratio": "very_high",
+  "DisabilityPopulation_Ratio": "medium",
+  "Rainfall": "大豪雨",
+  "LP.zoning_type": "都市計畫區",
+  "DR.NonStructural_DRRPolicy": "高",
+  "RiverWaterLevel": "二級警戒",
+  "Population_Density": "中",
+  "BuildingDensity": "中",
+  "LandUseImperviousness": "高",
+  "NbS_Coverage_Ratio": "中",
+  "LP.green_infrastructure_coverage": ">30%",
+  "LP.river_corridor_designation": "僅河道用地",
+  "DR.StructuralMeasures_Coverage": "低",
+  "AccessToShelters": "高"
+ }
+}

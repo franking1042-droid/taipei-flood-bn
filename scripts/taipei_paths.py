@@ -53,3 +53,21 @@ def read_csv_any(path, **kw):
         except Exception:
             continue
     raise ValueError(path)
+
+
+# ---------------------------------------------------------------- taipei_v2：里級（2026-10-26）
+OUT_V2 = ROOT / "bn_engine" / "results" / "taipei_v2_village"
+OUT_V2.mkdir(parents=True, exist_ok=True)
+
+
+def villages_gdf():
+    """士林、北投 93 里（民政局里界圖 456 里中篩出），EPSG:3826。
+    unit = 區名＋里名（例：士林區福安里），是 v2 所有里級表、evidence JSON、H2 錨定表的鍵。"""
+    import geopandas as gpd
+    d = unzip_dir("taipei_village_boundary_shp.zip")
+    v = gpd.read_file(glob.glob(str(d / "*.shp"))[0], encoding="utf-8")
+    v = v[v["TNAME"].isin(DISTRICTS)].to_crs(3826)
+    g = v[["TNAME", "VNAME", "geometry"]].rename(columns={"TNAME": "district", "VNAME": "village"}).copy()
+    g["unit"] = g["district"] + g["village"]
+    g["area_km2"] = g.geometry.area / 1e6
+    return g.sort_values(["district", "village"]).reset_index(drop=True)

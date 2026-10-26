@@ -1,0 +1,7628 @@
+{
+ "北投區一德里": {
+  "R1_EconomicLoss_new": [
+   0.6958052462019473,
+   0.18113631732481042,
+   0.08772537158403905,
+   0.035333064889203326
+  ],
+  "R2_Lifeline_new": [
+   0.010909020007547237,
+   0.1771943761674008,
+   0.5687388325465549,
+   0.24315777127849697
+  ],
+  "R3_Vulnerable_new": [
+   0.6890616523732389,
+   0.23704299573410534,
+   0.07163719579160678,
+   0.0022581561010490588
+  ],
+  "O_TotalRisk_int": [
+   0.12142388970138435,
+   0.5278665939881944,
+   0.2939363473416456,
+   0.05327022443012713,
+   0.0035029445386484674
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.8696568696568697,
+    0.005284005284005283,
+    0.009774009774009777,
+    0.045376045376045386,
+    0.06990906990906993
+   ],
+   "ModifiedFloodPotential": [
+    0.6426869660594627,
+    0.22620206729718612,
+    0.023870873577302505,
+    0.04285550924623073,
+    0.0643845838198178
+   ],
+   "FloodDuration": [
+    0.5054978002484711,
+    0.1837371220175627,
+    0.10088670687681464,
+    0.20987837085715147
+   ],
+   "OUT_FloodRiskIndex": [
+    0.11790626026076992,
+    0.264179994537194,
+    0.3230646694083812,
+    0.21590300993169692,
+    0.07894606586195808
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "15-30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "high",
+   "FloodZone_Elderly_Count": "low",
+   "FloodZone_ElderlyAlone_Count": "medium",
+   "FloodZone_Disability_Count": "low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "high",
+   "FloodZone_Agri_km2": "low",
+   "FloodZone_Vulnerable_Ratio": "high"
+  }
+ },
+ "北投區中和里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.1605371661218446,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304231,
+   0.1605371661218446,
+   0.0011273252533432472,
+   2.902943889764895e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304233,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.2747871856786873,
+   0.008593034461780657,
+   2.72078068031738e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9859540000000001,
+    0.008463000000000002,
+    0.003961,
+    0.0016210000000000003,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7290205645655377,
+    0.2560055288883775,
+    0.012662880484191768,
+    0.0018809829887347987,
+    0.0004300430731584757
+   ],
+   "FloodDuration": [
+    0.4330582166559807,
+    0.28270791268394896,
+    0.08731412609195298,
+    0.1969197445681173
+   ],
+   "OUT_FloodRiskIndex": [
+    0.10179635762155252,
+    0.24731672074662514,
+    0.32624756208693223,
+    0.23371776781100256,
+    0.09092159173388749
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區中央里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.0011273252533432472,
+   2.9029438897648936e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.838335218330423,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.2747871856786874,
+   0.008593034461780655,
+   2.7207806803173795e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.8098460000000001,
+    0.044797000000000003,
+    0.042896000000000004,
+    0.08164400000000001,
+    0.020817000000000002
+   ],
+   "ModifiedFloodPotential": [
+    0.6018155093504127,
+    0.244146436865006,
+    0.05792465287899652,
+    0.05923857001876148,
+    0.03687483088682318
+   ],
+   "FloodDuration": [
+    0.4262784826462511,
+    0.22823624145168808,
+    0.10294123409121458,
+    0.24254404181084618
+   ],
+   "OUT_FloodRiskIndex": [
+    0.11792142883248927,
+    0.26437169374652847,
+    0.3232516453791146,
+    0.21576732502969453,
+    0.0786879070121731
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區中庸里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.1605371661218446,
+   0.0011273252533432472,
+   2.9029438897648946e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.1605371661218446,
+   0.0011273252533432474,
+   2.902943889764894e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184452,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.27478718567868726,
+   0.008593034461780651,
+   2.720780680317379e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999959999999998,
+    9.999999999999997e-07,
+    1e-06,
+    1e-06,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7374917950407875,
+    0.25419208504733826,
+    0.008311021281775395,
+    4.084517504252241e-06,
+    1.0141125944987217e-06
+   ],
+   "FloodDuration": [
+    0.43599404029413125,
+    0.28371250611006893,
+    0.08617276152521212,
+    0.1941206920705877
+   ],
+   "OUT_FloodRiskIndex": [
+    0.10204657676075818,
+    0.24764980241406406,
+    0.3262710883415083,
+    0.23339176960922697,
+    0.09064076287444246
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區中心里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.1605371661218446,
+   0.0011273252533432472,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184452,
+   0.0011273252533432468,
+   2.9029438897648936e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.27478718567868743,
+   0.008593034461780658,
+   2.7207806803173802e-05,
+   7.566459096883493e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.999996,
+    1.0000000000000002e-06,
+    1e-06,
+    1e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7440240258208075,
+    0.24806728290910132,
+    0.007903771817671497,
+    3.919175356820081e-06,
+    1.0002770628215142e-06
+   ],
+   "FloodDuration": [
+    0.46559651633890503,
+    0.26210271223604986,
+    0.08619678299946039,
+    0.18610398842558465
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1016080444052658,
+    0.24712384996060213,
+    0.3262964849179205,
+    0.23392516256413567,
+    0.09104645815207571
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "中",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區八仙里": {
+  "R1_EconomicLoss_new": [
+   0.5611867292194093,
+   0.15272479428939392,
+   0.16980411740805942,
+   0.11628435908313753
+  ],
+  "R2_Lifeline_new": [
+   0.020777529867048592,
+   0.16579622242328637,
+   0.5326676282265372,
+   0.28075861948312797
+  ],
+  "R3_Vulnerable_new": [
+   0.6571053263017055,
+   0.1633684946595192,
+   0.14749143299193132,
+   0.03203474604684387
+  ],
+  "O_TotalRisk_int": [
+   0.09924068684722491,
+   0.42061365650747234,
+   0.33586303231701337,
+   0.1249551586079859,
+   0.01932746572030345
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.5697039999999999,
+    0.096145,
+    0.07126700000000001,
+    0.11089600000000001,
+    0.151988
+   ],
+   "ModifiedFloodPotential": [
+    0.44656883875670855,
+    0.2089740174350313,
+    0.09025454623212745,
+    0.11274084869477578,
+    0.1414617488813569
+   ],
+   "FloodDuration": [
+    0.4438043036089768,
+    0.15825583582263011,
+    0.14151215314538967,
+    0.2564277074230034
+   ],
+   "OUT_FloodRiskIndex": [
+    0.08802713140447892,
+    0.22785910311953306,
+    0.3235543496480677,
+    0.2523540076577144,
+    0.10820540817020596
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "中",
+   "BuildingDensity": "中",
+   "LandUseImperviousness": "中",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "含河岸緩衝帶 (<30m)",
+   "DR.StructuralMeasures_Coverage": "中",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_high",
+   "FloodZone_Elderly_Count": "high",
+   "FloodZone_ElderlyAlone_Count": "very_high",
+   "FloodZone_Disability_Count": "medium",
+   "FloodZone_Children_Count": "medium",
+   "FloodZone_Building_Pct": "very_high",
+   "FloodZone_Agri_km2": "medium",
+   "FloodZone_Vulnerable_Ratio": "very_high"
+  }
+ },
+ "北投區吉利里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432463,
+   2.9029438897648925e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.2747871856786873,
+   0.008593034461780651,
+   2.720780680317379e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9942860000000001,
+    0.005314000000000001,
+    0.0003980000000000001,
+    1.0000000000000002e-06,
+    1.0000000000000002e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7448801516914298,
+    0.24594561276370674,
+    0.009035593435526948,
+    0.00013459436951301066,
+    4.0477398234646445e-06
+   ],
+   "FloodDuration": [
+    0.43894852325816014,
+    0.28343953274816824,
+    0.08549853958101383,
+    0.19211340441265765
+   ],
+   "OUT_FloodRiskIndex": [
+    0.17446536182086225,
+    0.3130272445922942,
+    0.30493164690235214,
+    0.16127571627054513,
+    0.04630003041394637
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_high",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區吉慶里": {
+  "R1_EconomicLoss_new": [
+   0.4874521463091743,
+   0.14976346788076889,
+   0.2440766705343928,
+   0.11870771527566416
+  ],
+  "R2_Lifeline_new": [
+   0.011000247119329561,
+   0.17618545569227145,
+   0.5580621724302269,
+   0.25475212475817194
+  ],
+  "R3_Vulnerable_new": [
+   0.6125031578995525,
+   0.19717340180344953,
+   0.17145810720353724,
+   0.01886533309346076
+  ],
+  "O_TotalRisk_int": [
+   0.08363477224837818,
+   0.3890814358821749,
+   0.3657410858220425,
+   0.14347668243900386,
+   0.018066023608400567
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.417169,
+    0.030754999999999994,
+    0.21770299999999998,
+    0.33428299999999994,
+    9e-05
+   ],
+   "ModifiedFloodPotential": [
+    0.3173187419803159,
+    0.1708271673878729,
+    0.19922232427132783,
+    0.23012585878083383,
+    0.08250590757964961
+   ],
+   "FloodDuration": [
+    0.3113727338736731,
+    0.18139808287430892,
+    0.1519892204987203,
+    0.3552399627532977
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14925485514519038,
+    0.2924032240198097,
+    0.31394761315352027,
+    0.1847820778828929,
+    0.05961222979858673
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_high",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_high",
+   "FloodZone_Elderly_Count": "medium",
+   "FloodZone_ElderlyAlone_Count": "medium",
+   "FloodZone_Disability_Count": "low",
+   "FloodZone_Children_Count": "medium",
+   "FloodZone_Building_Pct": "very_high",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_high"
+  }
+ },
+ "北投區大同里": {
+  "R1_EconomicLoss_new": [
+   0.5914272789843873,
+   0.20945732094106148,
+   0.16472122602208072,
+   0.034394174052470604
+  ],
+  "R2_Lifeline_new": [
+   0.03199162531647645,
+   0.405160841209226,
+   0.5105703050960244,
+   0.052277228378273186
+  ],
+  "R3_Vulnerable_new": [
+   0.6573912230664614,
+   0.2521027314513744,
+   0.08766518686975862,
+   0.0028408586124056417
+  ],
+  "O_TotalRisk_int": [
+   0.17380161488662108,
+   0.5129735008781786,
+   0.26546417242576076,
+   0.045827385249312326,
+   0.0019333265601272857
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.6534856534856535,
+    0.03887803887803888,
+    0.06997806997806996,
+    0.1395291395291395,
+    0.0981290981290981
+   ],
+   "ModifiedFloodPotential": [
+    0.48660936470046884,
+    0.20613322717877988,
+    0.08208412014194329,
+    0.11421985887617736,
+    0.11095342910263058
+   ],
+   "FloodDuration": [
+    0.41238762582471183,
+    0.18746174388697562,
+    0.12444693525293872,
+    0.27570369503537384
+   ],
+   "OUT_FloodRiskIndex": [
+    0.11077096185043549,
+    0.255686227801018,
+    0.3234377870469744,
+    0.22450850064049468,
+    0.08559652266107749
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "中",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "medium",
+   "FloodZone_Elderly_Count": "low",
+   "FloodZone_ElderlyAlone_Count": "low",
+   "FloodZone_Disability_Count": "low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "medium",
+   "FloodZone_Agri_km2": "low",
+   "FloodZone_Vulnerable_Ratio": "medium"
+  }
+ },
+ "北投區大屯里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304233,
+   0.1605371661218446,
+   0.0011273252533432474,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.1605371661218446,
+   0.0011273252533432474,
+   2.9029438897648946e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432474,
+   2.9029438897648946e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.27478718567868726,
+   0.008593034461780651,
+   2.7207806803173785e-05,
+   7.566459096883488e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999960000000001,
+    9.999999999999997e-07,
+    1e-06,
+    1e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7447403489743889,
+    0.24739546700463683,
+    0.007859284134265712,
+    3.901128872261739e-06,
+    9.98757836360382e-07
+   ],
+   "FloodDuration": [
+    0.6320083554565812,
+    0.13294406282960644,
+    0.0952272824522011,
+    0.13982029926161124
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12322088469513968,
+    0.2707956224558363,
+    0.32308789650615566,
+    0.20929417084346144,
+    0.07360142549940704
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "低",
+   "BuildingDensity": "低",
+   "LandUseImperviousness": "低",
+   "NbS_Coverage_Ratio": "高",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區奇岩里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304233,
+   0.16053716612184457,
+   0.0011273252533432474,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304233,
+   0.16053716612184452,
+   0.0011273252533432465,
+   2.902943889764893e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184452,
+   0.001127325253343247,
+   2.9029438897648925e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.2747871856786874,
+   0.008593034461780655,
+   2.7207806803173805e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999960000000002,
+    1.0000000000000002e-06,
+    1.0000000000000002e-06,
+    1.0000000000000004e-06,
+    1.0000000000000002e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.744740348974389,
+    0.24739546700463677,
+    0.00785928413426571,
+    3.901128872261739e-06,
+    9.987578363603823e-07
+   ],
+   "FloodDuration": [
+    0.5205458282576697,
+    0.21778762202059748,
+    0.08561147256897879,
+    0.17605507715275392
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12322088469513968,
+    0.2707956224558363,
+    0.3230878965061556,
+    0.20929417084346144,
+    0.07360142549940704
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "高",
+   "NbS_Coverage_Ratio": "高",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區尊賢里": {
+  "R1_EconomicLoss_new": [
+   0.7252577731479395,
+   0.18386443754278706,
+   0.07820547973637194,
+   0.012672309572901533
+  ],
+  "R2_Lifeline_new": [
+   0.014172124970028429,
+   0.19708190838971318,
+   0.5565526477424527,
+   0.23219331889780565
+  ],
+  "R3_Vulnerable_new": [
+   0.6768068268023836,
+   0.245266296044314,
+   0.07560659495819014,
+   0.00232028219511216
+  ],
+  "O_TotalRisk_int": [
+   0.13032833576501202,
+   0.5409114912371775,
+   0.28595168598448223,
+   0.040840451270597954,
+   0.0019680357427301824
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.834762,
+    0.0732,
+    0.088384,
+    0.003653,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.6340628379013381,
+    0.26891550458373215,
+    0.07204554497786303,
+    0.023365444347284776,
+    0.0016106681897820507
+   ],
+   "FloodDuration": [
+    0.39922946291130906,
+    0.2717874974138964,
+    0.10085360633888905,
+    0.22812943333590543
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14411664038295613,
+    0.28970945849861957,
+    0.3167592858493637,
+    0.18842681058739538,
+    0.06098780468166527
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "high",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_high",
+   "FloodZone_Elderly_Count": "low",
+   "FloodZone_ElderlyAlone_Count": "medium",
+   "FloodZone_Disability_Count": "low",
+   "FloodZone_Children_Count": "medium",
+   "FloodZone_Building_Pct": "very_high",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_high"
+  }
+ },
+ "北投區建民里": {
+  "R1_EconomicLoss_new": [
+   0.7412209318496354,
+   0.22266980757096325,
+   0.03481046999492646,
+   0.001298790584474812
+  ],
+  "R2_Lifeline_new": [
+   0.1520936969333988,
+   0.670480617054218,
+   0.17494465160076433,
+   0.002481034411618939
+  ],
+  "R3_Vulnerable_new": [
+   0.6794421614016618,
+   0.24272112750738153,
+   0.07548363776013761,
+   0.0023530733308190664
+  ],
+  "O_TotalRisk_int": [
+   0.3446003025408088,
+   0.5338028618417521,
+   0.1152728200485864,
+   0.006247970815503648,
+   7.604475334891517e-05
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.8895329999999999,
+    0.014584999999999999,
+    0.040686,
+    0.055116,
+    7.999999999999999e-05
+   ],
+   "ModifiedFloodPotential": [
+    0.6746865917430662,
+    0.22977179528516234,
+    0.044097455884519715,
+    0.03858076392296317,
+    0.012863393164288752
+   ],
+   "FloodDuration": [
+    0.4115255516964089,
+    0.26996230855747977,
+    0.0949423855935695,
+    0.22356975415254182
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1428133937552969,
+    0.2883993216247968,
+    0.3170392755337347,
+    0.18982333498709195,
+    0.061924674099079695
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "含河岸緩衝帶 (<30m)",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "low",
+   "FloodZone_Elderly_Count": "low",
+   "FloodZone_ElderlyAlone_Count": "low",
+   "FloodZone_Disability_Count": "low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "low"
+  }
+ },
+ "北投區振華里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184463,
+   0.0011273252533432472,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184452,
+   0.0011273252533432476,
+   2.9029438897648936e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.1605371661218446,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862696,
+   0.2747871856786874,
+   0.008593034461780655,
+   2.7207806803173795e-05,
+   7.566459096883493e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.997758,
+    0.001986,
+    0.00025400000000000005,
+    1.0000000000000002e-06,
+    1.0000000000000002e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7381896402805559,
+    0.2529515326141725,
+    0.008775888917784773,
+    7.985012465210423e-05,
+    3.0880628346159914e-06
+   ],
+   "FloodDuration": [
+    0.4359298751791439,
+    0.28392862635002875,
+    0.08615180425424415,
+    0.19398969421658327
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14810222565559913,
+    0.29344246512027516,
+    0.31565348749559446,
+    0.18435345478877807,
+    0.05844836693975311
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區文化里": {
+  "R1_EconomicLoss_new": [
+   0.7819164038472837,
+   0.20576896194295954,
+   0.01220434439018176,
+   0.00011028981957493018
+  ],
+  "R2_Lifeline_new": [
+   0.15432072688123594,
+   0.6703319828803009,
+   0.17290959707540526,
+   0.002437693163057753
+  ],
+  "R3_Vulnerable_new": [
+   0.690830160229782,
+   0.23748676469694244,
+   0.06955457812670732,
+   0.002128496946568336
+  ],
+  "O_TotalRisk_int": [
+   0.36125282201899145,
+   0.5358928860984158,
+   0.09911780281163136,
+   0.0037103843782445817,
+   2.6104692716796803e-05
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9832670167329832,
+    0.00955999044000956,
+    0.007166992833007166,
+    9.999990000009998e-07,
+    4.999995000004999e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7279849913439919,
+    0.2559539344871142,
+    0.014217927359418082,
+    0.001779828111549963,
+    6.331869792611038e-05
+   ],
+   "FloodDuration": [
+    0.43262983183072573,
+    0.2827228920168245,
+    0.08752911252077784,
+    0.19711816363167195
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12339367110490279,
+    0.27093506303575765,
+    0.323015346694107,
+    0.2091331279713791,
+    0.0735227911938535
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "low",
+   "FloodZone_Elderly_Count": "low",
+   "FloodZone_ElderlyAlone_Count": "low",
+   "FloodZone_Disability_Count": "low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "low"
+  }
+ },
+ "北投區文林里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.1605371661218446,
+   0.0011273252533432474,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304233,
+   0.1605371661218445,
+   0.0011273252533432476,
+   2.902943889764894e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.001127325253343247,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.2747871856786874,
+   0.008593034461780655,
+   2.7207806803173795e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9808790000000001,
+    0.010513000000000002,
+    0.008606000000000003,
+    1.0000000000000002e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7276566623482947,
+    0.2550516026190526,
+    0.015104226536502313,
+    0.0021159942432431647,
+    7.15142529069828e-05
+   ],
+   "FloodDuration": [
+    0.4322865971033547,
+    0.2827532961727028,
+    0.08763328657900755,
+    0.197326820144935
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14771565925787292,
+    0.2930826143554802,
+    0.31576253442585916,
+    0.18474688913719048,
+    0.05869230282359733
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區智仁里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.001127325253343247,
+   2.902943889764893e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.838335218330423,
+   0.16053716612184454,
+   0.0011273252533432468,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862696,
+   0.2747871856786874,
+   0.008593034461780655,
+   2.72078068031738e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999959999999998,
+    9.999999999999997e-07,
+    1e-06,
+    1e-06,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7374917950407875,
+    0.2541920850473383,
+    0.008311021281775396,
+    4.084517504252242e-06,
+    1.0141125944987219e-06
+   ],
+   "FloodDuration": [
+    0.4359940402941313,
+    0.2837125061100689,
+    0.0861727615252121,
+    0.19412069207058769
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1020465767607582,
+    0.24764980241406406,
+    0.32627108834150825,
+    0.23339176960922695,
+    0.09064076287444246
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區東華里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.1605371661218446,
+   0.0011273252533432474,
+   2.9029438897648946e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304233,
+   0.16053716612184452,
+   0.0011273252533432474,
+   2.902943889764892e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.1605371661218446,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.2747871856786873,
+   0.008593034461780655,
+   2.7207806803173802e-05,
+   7.566459096883493e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9993859999999998,
+    0.00045399999999999987,
+    0.00015799999999999994,
+    9.999999999999995e-07,
+    9.999999999999993e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7535669350721661,
+    0.23891961629344124,
+    0.007469661679126862,
+    4.1662259639007704e-05,
+    2.1246956267016916e-06
+   ],
+   "FloodDuration": [
+    0.4429868179374027,
+    0.28285565758694753,
+    0.084498624501167,
+    0.18965889997448285
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14690387414077435,
+    0.2924510133686332,
+    0.3160866271054633,
+    0.18547989838606724,
+    0.059078586999061974
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "15-30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區林泉里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184452,
+   0.0011273252533432468,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304231,
+   0.16053716612184454,
+   0.0011273252533432463,
+   2.902943889764894e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.27478718567868726,
+   0.008593034461780655,
+   2.72078068031738e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999960000000002,
+    1.0000000000000002e-06,
+    1.0000000000000002e-06,
+    1.0000000000000004e-06,
+    1.0000000000000002e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7440240258208075,
+    0.24806728290910132,
+    0.007903771817671495,
+    3.91917535682008e-06,
+    1.000277062821514e-06
+   ],
+   "FloodDuration": [
+    0.5203780643894871,
+    0.21772327527019864,
+    0.0856889259727108,
+    0.17620973436760343
+   ],
+   "OUT_FloodRiskIndex": [
+    0.10160804440526584,
+    0.24712384996060216,
+    0.32629648491792057,
+    0.2339251625641357,
+    0.09104645815207572
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "中",
+   "BuildingDensity": "中",
+   "LandUseImperviousness": "高",
+   "NbS_Coverage_Ratio": "高",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區桃源里": {
+  "R1_EconomicLoss_new": [
+   0.7623630331257828,
+   0.2122955071982559,
+   0.024467564449035046,
+   0.0008738952269263293
+  ],
+  "R2_Lifeline_new": [
+   0.10524885544457625,
+   0.6320544506918645,
+   0.25669672248211034,
+   0.005999971381448805
+  ],
+  "R3_Vulnerable_new": [
+   0.6993414155279419,
+   0.23343554545996045,
+   0.06523444476972397,
+   0.001988594242373518
+  ],
+  "O_TotalRisk_int": [
+   0.32101066515481574,
+   0.5513591001613927,
+   0.12126928473860012,
+   0.006284484547222225,
+   7.646539796915732e-05
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9498980501019499,
+    0.006036993963006036,
+    0.005662994337005662,
+    0.03752796247203752,
+    0.0008739991260008738
+   ],
+   "ModifiedFloodPotential": [
+    0.7081578153153543,
+    0.24038886788322703,
+    0.020189328106046307,
+    0.021641222597298414,
+    0.00962276609807393
+   ],
+   "FloodDuration": [
+    0.5200517409729021,
+    0.20087574078297804,
+    0.09281798312665697,
+    0.18625453511746295
+   ],
+   "OUT_FloodRiskIndex": [
+    0.10000683907342695,
+    0.2448781693669227,
+    0.3260077546870812,
+    0.23608330604864702,
+    0.09302393082392213
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "高",
+   "NbS_Coverage_Ratio": "中",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "low",
+   "FloodZone_Elderly_Count": "low",
+   "FloodZone_ElderlyAlone_Count": "low",
+   "FloodZone_Disability_Count": "low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "low"
+  }
+ },
+ "北投區榮光里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432474,
+   2.9029438897648946e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304233,
+   0.16053716612184452,
+   0.0011273252533432463,
+   2.902943889764893e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432474,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.2747871856786873,
+   0.008593034461780655,
+   2.7207806803173795e-05,
+   7.56645909688349e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9988589999999999,
+    0.00045599999999999986,
+    0.0006829999999999998,
+    9.999999999999997e-07,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7471827404749556,
+    0.24452869377799963,
+    0.008120268430710925,
+    0.00016208028192158964,
+    6.217034412331654e-06
+   ],
+   "FloodDuration": [
+    0.43962119446889875,
+    0.2836253949897758,
+    0.08520841836677676,
+    0.19154499217454876
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1745308924736231,
+    0.31307478029571706,
+    0.3049043025836463,
+    0.16121922430567612,
+    0.04627080034133727
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_high",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區榮華里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.001127325253343247,
+   2.902943889764893e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862695,
+   0.27478718567868726,
+   0.008593034461780651,
+   2.7207806803173795e-05,
+   7.56645909688349e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9983439983439982,
+    0.001219001219001219,
+    0.000435000435000435,
+    1.000001000001e-06,
+    1.000001000001e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7457121299792668,
+    0.24593449716998683,
+    0.008236704803215,
+    0.00011231175161211043,
+    4.356295919137226e-06
+   ],
+   "FloodDuration": [
+    0.4660070769581699,
+    0.26141427141105517,
+    0.08438174325062453,
+    0.18819690838015038
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14750886196317461,
+    0.29295030002988065,
+    0.31586702916889825,
+    0.18491215338572353,
+    0.05876165545232282
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "含河岸緩衝帶 (<30m)",
+   "DR.StructuralMeasures_Coverage": "中",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區永和里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.902943889764893e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304231,
+   0.16053716612184454,
+   0.0011273252533432474,
+   2.902943889764893e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862696,
+   0.2747871856786873,
+   0.008593034461780651,
+   2.7207806803173795e-05,
+   7.56645909688349e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999959999999998,
+    9.999999999999997e-07,
+    9.999999999999995e-07,
+    9.999999999999995e-07,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7460525727230941,
+    0.246164769466928,
+    0.007777793762516741,
+    3.868072749352191e-06,
+    9.959747118316493e-07
+   ],
+   "FloodDuration": [
+    0.5385209957567062,
+    0.20418778609904017,
+    0.08673400772803722,
+    0.17055721041621635
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14759107028537452,
+    0.2930213196925415,
+    0.3158396098456215,
+    0.18483261893366268,
+    0.058715381242799715
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "高",
+   "NbS_Coverage_Ratio": "中",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區永明里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.1605371661218446,
+   0.0011273252533432474,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304233,
+   0.16053716612184454,
+   0.0011273252533432474,
+   2.902943889764894e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.2747871856786874,
+   0.008593034461780651,
+   2.7207806803173802e-05,
+   7.56645909688349e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9788050211949788,
+    0.016829983170016834,
+    0.004362995637004364,
+    9.99999000001e-07,
+    9.999990000009998e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7274926200044814,
+    0.25699265362307033,
+    0.014309182528734558,
+    0.0011687594386822454,
+    3.678440503147042e-05
+   ],
+   "FloodDuration": [
+    0.432482802201209,
+    0.28287882624020233,
+    0.08759230087488118,
+    0.19704607068370747
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14776021649061585,
+    0.2931294886207496,
+    0.315754162181739,
+    0.18469750820379063,
+    0.05865862450310493
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "high",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區永欣里": {
+  "R1_EconomicLoss_new": [
+   0.838335218330423,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304231,
+   0.16053716612184452,
+   0.0011273252533432476,
+   2.902943889764893e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862696,
+   0.2747871856786873,
+   0.008593034461780653,
+   2.7207806803173795e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.999996,
+    1.0000000000000002e-06,
+    1e-06,
+    1e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7609699293245256,
+    0.23217033168064255,
+    0.006855280494963626,
+    3.4942094654789936e-06,
+    9.642904029224476e-07
+   ],
+   "FloodDuration": [
+    0.41531504639142225,
+    0.3085012491927959,
+    0.08551750680862036,
+    0.19066619760716144
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14628459470308905,
+    0.29193994336752316,
+    0.31631136276779076,
+    0.18606104032480922,
+    0.05940305883678774
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "high",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "中",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區泉源里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432468,
+   2.9029438897648936e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.9029438897648946e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.2747871856786874,
+   0.008593034461780655,
+   2.7207806803173802e-05,
+   7.566459096883493e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999960000000001,
+    9.999999999999997e-07,
+    1e-06,
+    1e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7440240258208075,
+    0.2480672829091013,
+    0.007903771817671497,
+    3.919175356820079e-06,
+    1.0002770628215137e-06
+   ],
+   "FloodDuration": [
+    0.631776832770796,
+    0.13296139858907413,
+    0.09532567189040887,
+    0.13993609674972113
+   ],
+   "OUT_FloodRiskIndex": [
+    0.10160804440526584,
+    0.2471238499606022,
+    0.32629648491792057,
+    0.2339251625641357,
+    0.09104645815207571
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "低",
+   "BuildingDensity": "低",
+   "LandUseImperviousness": "低",
+   "NbS_Coverage_Ratio": "高",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區洲美里": {
+  "R1_EconomicLoss_new": [
+   0.6817366011221375,
+   0.21070290953269633,
+   0.09512876810482604,
+   0.012431721240340098
+  ],
+  "R2_Lifeline_new": [
+   0.07281904889403736,
+   0.5239672764836952,
+   0.3795502864575659,
+   0.02366338816470153
+  ],
+  "R3_Vulnerable_new": [
+   0.6873894017887674,
+   0.24285809229658115,
+   0.06777532149944318,
+   0.0019771844152082114
+  ],
+  "O_TotalRisk_int": [
+   0.25090877325338934,
+   0.5419206905764363,
+   0.18602867595745415,
+   0.020532444080521198,
+   0.0006094161321991169
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.7742932257067743,
+    0.031317968682031315,
+    0.07176192823807176,
+    0.12260087739912258,
+    2.5999974000025994e-05
+   ],
+   "ModifiedFloodPotential": [
+    0.597944946955704,
+    0.2141910517576306,
+    0.07940080809607783,
+    0.08107645194521863,
+    0.027386741245369058
+   ],
+   "FloodDuration": [
+    0.5015057728957789,
+    0.16713379458090608,
+    0.11608670024361376,
+    0.2152737322797013
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1378330764493895,
+    0.28351127203297455,
+    0.31823263711811617,
+    0.19507763659338065,
+    0.0653453778061391
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "high",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "中",
+   "BuildingDensity": "中",
+   "LandUseImperviousness": "中",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "medium",
+   "FloodZone_Elderly_Count": "low",
+   "FloodZone_ElderlyAlone_Count": "low",
+   "FloodZone_Disability_Count": "low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "medium",
+   "FloodZone_Agri_km2": "low",
+   "FloodZone_Vulnerable_Ratio": "medium"
+  }
+ },
+ "北投區清江里": {
+  "R1_EconomicLoss_new": [
+   0.7794859860326988,
+   0.20774111931751477,
+   0.01266116898816655,
+   0.0001117256616198131
+  ],
+  "R2_Lifeline_new": [
+   0.10502502111570441,
+   0.6321180419080228,
+   0.25685185048718906,
+   0.006005086489083726
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.1605371661218446,
+   0.0011273252533432474,
+   2.9029438897648946e-07
+  ],
+  "O_TotalRisk_int": [
+   0.3676070094570816,
+   0.5560350355403487,
+   0.07510189220035096,
+   0.0012532780892212931,
+   2.784712997449139e-06
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9774369999999999,
+    0.017073999999999995,
+    0.005486999999999999,
+    9.999999999999997e-07,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7175350230367833,
+    0.2652586029891338,
+    0.015662560330213175,
+    0.0014946955572951001,
+    4.911808657468236e-05
+   ],
+   "FloodDuration": [
+    0.47795999138392264,
+    0.24259015613462576,
+    0.08698384668698173,
+    0.19246600579446985
+   ],
+   "OUT_FloodRiskIndex": [
+    0.10218186122856242,
+    0.24778064533153196,
+    0.32622735954203846,
+    0.2332480028430455,
+    0.09056213105482167
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "low"
+  }
+ },
+ "北投區湖山里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184463,
+   0.0011273252533432472,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304233,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.902943889764894e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862696,
+   0.2747871856786872,
+   0.008593034461780653,
+   2.720780680317379e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.999996,
+    1.0000000000000002e-06,
+    1.0000000000000002e-06,
+    1.0000000000000002e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7447403489743889,
+    0.24739546700463677,
+    0.007859284134265712,
+    3.901128872261738e-06,
+    9.987578363603823e-07
+   ],
+   "FloodDuration": [
+    0.58256822491644,
+    0.16946737237391837,
+    0.08891420171194528,
+    0.15905020099769643
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12322088469513968,
+    0.2707956224558363,
+    0.32308789650615566,
+    0.2092941708434614,
+    0.07360142549940704
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "very_high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "低",
+   "BuildingDensity": "低",
+   "LandUseImperviousness": "中",
+   "NbS_Coverage_Ratio": "高",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區湖田里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.001127325253343247,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184463,
+   0.0011273252533432476,
+   2.9029438897648936e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304233,
+   0.16053716612184454,
+   0.0011273252533432472,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.27478718567868743,
+   0.008593034461780658,
+   2.7207806803173802e-05,
+   7.566459096883493e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.999996,
+    9.999999999999997e-07,
+    1e-06,
+    1e-06,
+    1.0000000000000002e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7447403489743889,
+    0.24739546700463677,
+    0.00785928413426571,
+    3.901128872261739e-06,
+    9.987578363603825e-07
+   ],
+   "FloodDuration": [
+    0.67008749525682,
+    0.10707292233931574,
+    0.104423532456953,
+    0.11841604994691134
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1232208846951397,
+    0.2707956224558363,
+    0.32308789650615566,
+    0.20929417084346144,
+    0.07360142549940704
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "very_high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "低",
+   "BuildingDensity": "低",
+   "LandUseImperviousness": "極低",
+   "NbS_Coverage_Ratio": "高",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區溫泉里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432474,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.902943889764895e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304231,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.2747871856786874,
+   0.008593034461780655,
+   2.72078068031738e-05,
+   7.566459096883493e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999959999999997,
+    9.999999999999997e-07,
+    9.999999999999997e-07,
+    9.999999999999997e-07,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7369126321760661,
+    0.2547350487213276,
+    0.008347204549611,
+    4.099214604052301e-06,
+    1.0153383913359302e-06
+   ],
+   "FloodDuration": [
+    0.485513460926505,
+    0.2428448228559998,
+    0.08447353877880848,
+    0.18716817743868672
+   ],
+   "OUT_FloodRiskIndex": [
+    0.10208483296433088,
+    0.24769571038698712,
+    0.32626889944506493,
+    0.23334522034143604,
+    0.09060533686218107
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "15-30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區石牌里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.1605371661218446,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.1605371661218446,
+   0.001127325253343247,
+   2.9029438897648957e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.9029438897648946e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.27478718567868726,
+   0.008593034461780653,
+   2.720780680317379e-05,
+   7.56645909688349e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9997840000000001,
+    0.00021300000000000003,
+    1.0000000000000002e-06,
+    1.0000000000000002e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7380694031199762,
+    0.2536072064799668,
+    0.008316558370568567,
+    5.818724987333771e-06,
+    1.013304501133829e-06
+   ],
+   "FloodDuration": [
+    0.43607416516737835,
+    0.2838211860769441,
+    0.08612176673288355,
+    0.19398288202279396
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12371411373881645,
+    0.27129166109482983,
+    0.3229734042566758,
+    0.20876398413431682,
+    0.07325683677536102
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區福興里": {
+  "R1_EconomicLoss_new": [
+   0.7043186275275726,
+   0.24209991250848262,
+   0.051574000205424186,
+   0.0020074597585205286
+  ],
+  "R2_Lifeline_new": [
+   0.1577166825699461,
+   0.6692040352540214,
+   0.17068279230554,
+   0.002396489870492577
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.1605371661218446,
+   0.0011273252533432472,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.38431764218212655,
+   0.5332609933803277,
+   0.08041252116440135,
+   0.0020013197285771644,
+   7.523544567197938e-06
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.79404,
+    0.03798099999999999,
+    0.090989,
+    0.076989,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.602268704829807,
+    0.23616795081277486,
+    0.08053357884346979,
+    0.06224214576977262,
+    0.018787619744175792
+   ],
+   "FloodDuration": [
+    0.38346398184867575,
+    0.26133385805357384,
+    0.10467808785112226,
+    0.2505240722466281
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14049038468609085,
+    0.2860814734696709,
+    0.3175705711739974,
+    0.19230328688242024,
+    0.06355428378782076
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "high",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "low"
+  }
+ },
+ "北投區秀山里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304233,
+   0.1605371661218446,
+   0.0011273252533432474,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304233,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.9029438897648925e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.2747871856786873,
+   0.008593034461780653,
+   2.7207806803173795e-05,
+   7.566459096883493e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999960000000001,
+    9.999999999999997e-07,
+    1e-06,
+    1e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7447403489743889,
+    0.24739546700463683,
+    0.007859284134265712,
+    3.901128872261739e-06,
+    9.98757836360382e-07
+   ],
+   "FloodDuration": [
+    0.6320083554565812,
+    0.13294406282960644,
+    0.0952272824522011,
+    0.13982029926161124
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12322088469513968,
+    0.2707956224558363,
+    0.32308789650615566,
+    0.20929417084346144,
+    0.07360142549940704
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "中",
+   "BuildingDensity": "中",
+   "LandUseImperviousness": "低",
+   "NbS_Coverage_Ratio": "高",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區稻香里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432474,
+   2.9029438897648946e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.1605371661218446,
+   0.001127325253343247,
+   2.902943889764893e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304233,
+   0.16053716612184457,
+   0.0011273252533432474,
+   2.902943889764895e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862696,
+   0.2747871856786874,
+   0.008593034461780655,
+   2.720780680317379e-05,
+   7.566459096883493e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.999495,
+    0.00010600000000000002,
+    0.000185,
+    3.1e-05,
+    0.000183
+   ],
+   "ModifiedFloodPotential": [
+    0.7433719110686654,
+    0.24832533157968986,
+    0.008049154102255615,
+    0.00010659010812329307,
+    0.00014701314126575678
+   ],
+   "FloodDuration": [
+    0.5821123288662827,
+    0.16943656935277795,
+    0.08909620466867457,
+    0.15935489711226464
+   ],
+   "OUT_FloodRiskIndex": [
+    0.08270753232402138,
+    0.22262891252701134,
+    0.3253279398730449,
+    0.258131931018208,
+    0.11120368425771415
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "中",
+   "NbS_Coverage_Ratio": "高",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區立賢里": {
+  "R1_EconomicLoss_new": [
+   0.5360101905297034,
+   0.15728166685252176,
+   0.20505334317441296,
+   0.10165479944336196
+  ],
+  "R2_Lifeline_new": [
+   0.011301840640045885,
+   0.17877555879637314,
+   0.5580812071122624,
+   0.2518413934513185
+  ],
+  "R3_Vulnerable_new": [
+   0.6171855703862728,
+   0.1970534263494325,
+   0.1674796343896627,
+   0.018281368874632033
+  ],
+  "O_TotalRisk_int": [
+   0.09117571635656403,
+   0.4136029193032234,
+   0.3525411324067675,
+   0.12706483812530484,
+   0.015615393808140452
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.4782844782844783,
+    0.0738030738030738,
+    0.20788920788920787,
+    0.18373418373418376,
+    0.05628905628905629
+   ],
+   "ModifiedFloodPotential": [
+    0.3755901817390772,
+    0.20461812186221043,
+    0.17286749465195317,
+    0.15982814521918948,
+    0.08709605652756987
+   ],
+   "FloodDuration": [
+    0.2942141423731644,
+    0.22544268261134878,
+    0.13403334600405542,
+    0.3463098290114314
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12794790526319413,
+    0.2735304660561385,
+    0.32037434556926886,
+    0.2057132227957198,
+    0.0724340603156788
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "high",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_high",
+   "FloodZone_Elderly_Count": "medium",
+   "FloodZone_ElderlyAlone_Count": "high",
+   "FloodZone_Disability_Count": "medium",
+   "FloodZone_Children_Count": "high",
+   "FloodZone_Building_Pct": "very_high",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_high"
+  }
+ },
+ "北投區立農里": {
+  "R1_EconomicLoss_new": [
+   0.6040530532520962,
+   0.15960742277497228,
+   0.14722633826753367,
+   0.08911318570539777
+  ],
+  "R2_Lifeline_new": [
+   0.012478944943760801,
+   0.18584041475059976,
+   0.5575989509255291,
+   0.24408168938011027
+  ],
+  "R3_Vulnerable_new": [
+   0.6414311351615188,
+   0.19404310440180048,
+   0.14860313274481748,
+   0.015922627691863023
+  ],
+  "O_TotalRisk_int": [
+   0.10541693538671605,
+   0.4512495073663146,
+   0.32696419375770835,
+   0.10381970730539912,
+   0.012549656183861752
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.6558243441756557,
+    0.053410946589053404,
+    0.09381190618809382,
+    0.0913079086920913,
+    0.10564489435510563
+   ],
+   "ModifiedFloodPotential": [
+    0.5026251831938405,
+    0.21121268118172032,
+    0.08847253177388294,
+    0.09606616205978162,
+    0.10162344179077454
+   ],
+   "FloodDuration": [
+    0.3446685517954078,
+    0.24546081750834928,
+    0.11577295967043391,
+    0.29409767102580897
+   ],
+   "OUT_FloodRiskIndex": [
+    0.13331779619056489,
+    0.2785870880959902,
+    0.31889505206210345,
+    0.20020285154579084,
+    0.06899721210555067
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "high",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_high",
+   "FloodZone_Elderly_Count": "medium",
+   "FloodZone_ElderlyAlone_Count": "high",
+   "FloodZone_Disability_Count": "medium",
+   "FloodZone_Children_Count": "medium",
+   "FloodZone_Building_Pct": "very_high",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_high"
+  }
+ },
+ "北投區裕民里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432474,
+   2.9029438897648946e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304233,
+   0.16053716612184454,
+   0.0011273252533432465,
+   2.902943889764894e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.001127325253343247,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.27478718567868743,
+   0.008593034461780653,
+   2.72078068031738e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999959999999998,
+    9.999999999999997e-07,
+    1e-06,
+    1e-06,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7394029595542341,
+    0.2524001858338731,
+    0.008191808434643762,
+    4.036111845707874e-06,
+    1.0100654033762087e-06
+   ],
+   "FloodDuration": [
+    0.4363085384527555,
+    0.284040692917053,
+    0.08599153569340301,
+    0.19365923293678858
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14813855409505192,
+    0.29347540788407384,
+    0.3156425590385262,
+    0.18431713471173358,
+    0.05842634427061443
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區豐年里": {
+  "R1_EconomicLoss_new": [
+   0.6732533113154097,
+   0.20882170687932416,
+   0.10007457693915416,
+   0.01785040486611206
+  ],
+  "R2_Lifeline_new": [
+   0.03831954998825134,
+   0.42532260547844986,
+   0.4883656852754958,
+   0.04799215925780297
+  ],
+  "R3_Vulnerable_new": [
+   0.6779647047184911,
+   0.24367126602046238,
+   0.07598714183462824,
+   0.002376887426418335
+  ],
+  "O_TotalRisk_int": [
+   0.20337958767419503,
+   0.5449984632726568,
+   0.22156963284675754,
+   0.028988031348065657,
+   0.0010642848583249929
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.7748367748367747,
+    0.05097605097605097,
+    0.06074106074106073,
+    0.05852605852605853,
+    0.05492005492005491
+   ],
+   "ModifiedFloodPotential": [
+    0.5828045106342042,
+    0.23778977026175177,
+    0.06385523569256739,
+    0.05889057223124437,
+    0.05665991118023237
+   ],
+   "FloodDuration": [
+    0.46190263109385105,
+    0.19601279669008131,
+    0.10994716115378485,
+    0.2321374110622828
+   ],
+   "OUT_FloodRiskIndex": [
+    0.09543282517941114,
+    0.23838978677394088,
+    0.3250885025136242,
+    0.24229206409089923,
+    0.09879682144212457
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "中",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "medium",
+   "FloodZone_Elderly_Count": "low",
+   "FloodZone_ElderlyAlone_Count": "low",
+   "FloodZone_Disability_Count": "low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "medium",
+   "FloodZone_Agri_km2": "low",
+   "FloodZone_Vulnerable_Ratio": "medium"
+  }
+ },
+ "北投區長安里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184463,
+   0.0011273252533432472,
+   2.9029438897648946e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304233,
+   0.1605371661218445,
+   0.0011273252533432465,
+   2.902943889764894e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184452,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.2747871856786872,
+   0.00859303446178065,
+   2.7207806803173785e-05,
+   7.56645909688349e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9958029958029958,
+    0.0040940040940040945,
+    0.00010100010100010101,
+    1.0000010000010001e-06,
+    1.0000010000010001e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7288187603695583,
+    0.2613838720714335,
+    0.009731174455954136,
+    6.428059196930607e-05,
+    1.912511084706041e-06
+   ],
+   "FloodDuration": [
+    0.4820284735779858,
+    0.24326600507344126,
+    0.0854020842829228,
+    0.18930343706565012
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1241827866745758,
+    0.2717601010343169,
+    0.3228618198274135,
+    0.20826227558286003,
+    0.07293301688083384
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區開明里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184465,
+   0.001127325253343247,
+   2.9029438897648957e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.0011273252533432468,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.2747871856786873,
+   0.008593034461780653,
+   2.7207806803173788e-05,
+   7.56645909688349e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999959999999998,
+    9.999999999999997e-07,
+    9.999999999999997e-07,
+    9.999999999999995e-07,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7303566740018964,
+    0.26088039502866084,
+    0.00875763576382358,
+    4.266001574022355e-06,
+    1.0292040452829208e-06
+   ],
+   "FloodDuration": [
+    0.4826220688343439,
+    0.24329122113600737,
+    0.0851729437893813,
+    0.18891376624026743
+   ],
+   "OUT_FloodRiskIndex": [
+    0.10251003608116568,
+    0.24820624004585096,
+    0.3262448616934344,
+    0.2328276480997906,
+    0.09021121407975842
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "北投區關渡里": {
+  "R1_EconomicLoss_new": [
+   0.7342862411116912,
+   0.2179715884197069,
+   0.04497578681026859,
+   0.00276638365833328
+  ],
+  "R2_Lifeline_new": [
+   0.09832014876528011,
+   0.6290477626155947,
+   0.2662917719298402,
+   0.0063403166892849715
+  ],
+  "R3_Vulnerable_new": [
+   0.7036678816698431,
+   0.23005704443038985,
+   0.06428141962323371,
+   0.001993654276533369
+  ],
+  "O_TotalRisk_int": [
+   0.30919798492920053,
+   0.5495645422990038,
+   0.13260229335742882,
+   0.00849984764093908,
+   0.00013533177342775154
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9044720955279045,
+    0.0131989868010132,
+    0.012802987197012804,
+    0.013972986027013972,
+    0.05555294444705555
+   ],
+   "ModifiedFloodPotential": [
+    0.6772460575845991,
+    0.2332491728700781,
+    0.020443038033519927,
+    0.023807076045046515,
+    0.04525465546675653
+   ],
+   "FloodDuration": [
+    0.5676003275901436,
+    0.15371990440210648,
+    0.10124836522570038,
+    0.1774314027820495
+   ],
+   "OUT_FloodRiskIndex": [
+    0.11921437407153061,
+    0.2658926266721016,
+    0.32315132570899496,
+    0.21421616043977634,
+    0.07752551310759664
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "中",
+   "NbS_Coverage_Ratio": "中",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "low",
+   "FloodZone_Elderly_Count": "low",
+   "FloodZone_ElderlyAlone_Count": "low",
+   "FloodZone_Disability_Count": "low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "low"
+  }
+ },
+ "士林區三玉里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432468,
+   2.902943889764893e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862696,
+   0.27478718567868726,
+   0.008593034461780653,
+   2.720780680317379e-05,
+   7.56645909688349e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9991949999999999,
+    0.0007119999999999997,
+    9.099999999999998e-05,
+    9.999999999999997e-07,
+    9.999999999999995e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7534835150335863,
+    0.23899659419496191,
+    0.007489516786879349,
+    2.8736895621995662e-05,
+    1.6370889504559419e-06
+   ],
+   "FloodDuration": [
+    0.4429656989683811,
+    0.2828507136729943,
+    0.08450815500988669,
+    0.18967543234873785
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14690238726554383,
+    0.2924497770253988,
+    0.31608716312865104,
+    0.1854813015120933,
+    0.05907937106831295
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "15-30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區仁勇里": {
+  "R1_EconomicLoss_new": [
+   0.838335218330423,
+   0.16053716612184457,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.838335218330423,
+   0.1605371661218446,
+   0.0011273252533432472,
+   2.902943889764893e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.2747871856786873,
+   0.008593034461780651,
+   2.7207806803173795e-05,
+   7.56645909688349e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.999994,
+    3e-06,
+    1e-06,
+    1e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7381781757299762,
+    0.253548130769672,
+    0.008268597206798834,
+    4.083630540447111e-06,
+    1.012663012647884e-06
+   ],
+   "FloodDuration": [
+    0.4361068354463622,
+    0.28383047162219205,
+    0.08610771136887492,
+    0.19395498156257066
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12371678204168356,
+    0.27129453560246625,
+    0.32297296426313477,
+    0.20876097797164364,
+    0.07325474012107189
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區公館里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184463,
+   0.0011273252533432472,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304233,
+   0.16053716612184454,
+   0.0011273252533432472,
+   2.9029438897648936e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862695,
+   0.2747871856786874,
+   0.008593034461780657,
+   2.72078068031738e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.999996,
+    1.0000000000000002e-06,
+    1.0000000000000002e-06,
+    1.0000000000000002e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7447403489743889,
+    0.24739546700463677,
+    0.007859284134265712,
+    3.901128872261738e-06,
+    9.987578363603823e-07
+   ],
+   "FloodDuration": [
+    0.58256822491644,
+    0.16946737237391837,
+    0.08891420171194528,
+    0.15905020099769643
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12322088469513968,
+    0.2707956224558363,
+    0.32308789650615566,
+    0.2092941708434614,
+    0.07360142549940704
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "very_high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "中",
+   "BuildingDensity": "中",
+   "LandUseImperviousness": "中",
+   "NbS_Coverage_Ratio": "高",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區前港里": {
+  "R1_EconomicLoss_new": [
+   0.7790574284013746,
+   0.2072521820155669,
+   0.013542614158480282,
+   0.00014777542457811762
+  ],
+  "R2_Lifeline_new": [
+   0.1624211469307083,
+   0.668797142222215,
+   0.1664753672858264,
+   0.002306343561250234
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432468,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.414888976180972,
+   0.5247720866849335,
+   0.059470415547162744,
+   0.0008667883938879203,
+   1.7331930438649393e-06
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.950448,
+    0.037351,
+    0.011803999999999999,
+    0.000396,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7233997332788523,
+    0.2515195107390088,
+    0.0217764222029324,
+    0.003125033465214786,
+    0.00017930031399177433
+   ],
+   "FloodDuration": [
+    0.43351750962709573,
+    0.27977601944643743,
+    0.08845871251129533,
+    0.19824775841517142
+   ],
+   "OUT_FloodRiskIndex": [
+    0.10036885083292794,
+    0.2455580674979688,
+    0.32627766672346503,
+    0.23548514731724698,
+    0.09231026762839122
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "15-30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "low"
+  }
+ },
+ "士林區名山里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.1605371661218446,
+   0.001127325253343247,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.27478718567868726,
+   0.008593034461780655,
+   2.7207806803173795e-05,
+   7.56645909688349e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9996919999999998,
+    0.0003049999999999999,
+    9.999999999999995e-07,
+    9.999999999999995e-07,
+    9.999999999999995e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7679697227940823,
+    0.22554710611497497,
+    0.00647695593637539,
+    5.265402781756589e-06,
+    9.497517856248362e-07
+   ],
+   "FloodDuration": [
+    0.41870511990347187,
+    0.30789172888449917,
+    0.08479845796489123,
+    0.18860469324713777
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14562230558142247,
+    0.2913926358195019,
+    0.31655109282184735,
+    0.18668309705329225,
+    0.05975086872393587
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "中",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "含河岸緩衝帶 (<30m)",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區天和里": {
+  "R1_EconomicLoss_new": [
+   0.838335218330423,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304231,
+   0.16053716612184452,
+   0.0011273252533432474,
+   2.902943889764895e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304233,
+   0.16053716612184454,
+   0.0011273252533432472,
+   2.9029438897648946e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862696,
+   0.2747871856786873,
+   0.008593034461780655,
+   2.72078068031738e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.999996,
+    1.0000000000000002e-06,
+    1e-06,
+    1e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7609699293245256,
+    0.23217033168064255,
+    0.006855280494963626,
+    3.4942094654789936e-06,
+    9.642904029224476e-07
+   ],
+   "FloodDuration": [
+    0.41531504639142225,
+    0.3085012491927959,
+    0.08551750680862036,
+    0.19066619760716144
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14628459470308905,
+    0.29193994336752316,
+    0.31631136276779076,
+    0.18606104032480922,
+    0.05940305883678774
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "中",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區天壽里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.1605371661218446,
+   0.0011273252533432474,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304233,
+   0.16053716612184457,
+   0.0011273252533432474,
+   2.902943889764894e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304231,
+   0.16053716612184454,
+   0.0011273252533432468,
+   2.902943889764893e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862696,
+   0.2747871856786874,
+   0.008593034461780655,
+   2.72078068031738e-05,
+   7.566459096883495e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.999686,
+    0.00015599999999999994,
+    0.000156,
+    9.999999999999997e-07,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.740028877804522,
+    0.25166995426671185,
+    0.008257255773395391,
+    4.164188551521e-05,
+    2.2702698555593743e-06
+   ],
+   "FloodDuration": [
+    0.48623620578631366,
+    0.2431484480680044,
+    0.08417110788681904,
+    0.186444238258863
+   ],
+   "OUT_FloodRiskIndex": [
+    0.17522726188436555,
+    0.31354214677046127,
+    0.3045913196228582,
+    0.16064780809705523,
+    0.04599146362525988
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "high",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "含河岸緩衝帶 (<30m)",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區天山里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.001127325253343247,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432465,
+   2.902943889764893e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304231,
+   0.16053716612184454,
+   0.0011273252533432468,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.27478718567868726,
+   0.008593034461780653,
+   2.7207806803173788e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999959999999998,
+    9.999999999999997e-07,
+    9.999999999999997e-07,
+    9.999999999999995e-07,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7466632324761823,
+    0.24559206616584864,
+    0.007739853997076883,
+    3.852681139052633e-06,
+    9.94679753393958e-07
+   ],
+   "FloodDuration": [
+    0.4396750016409403,
+    0.2834929218650921,
+    0.08522264587463665,
+    0.19160943061933106
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1475396675186024,
+    0.2929787130959856,
+    0.31585812935492047,
+    0.184880996495002,
+    0.05874249353548941
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區天母里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.0011273252533432468,
+   2.9029438897648946e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304233,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.27478718567868726,
+   0.008593034461780653,
+   2.720780680317379e-05,
+   7.56645909688349e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.999996,
+    1.0000000000000002e-06,
+    1.0000000000000002e-06,
+    1.0000000000000002e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7536201118519634,
+    0.2390665853649754,
+    0.007308645030418632,
+    3.677837586556634e-06,
+    9.7991505582709e-07
+   ],
+   "FloodDuration": [
+    0.5701961326095666,
+    0.18114937711088014,
+    0.08651620857834566,
+    0.1621382817012077
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1469412368070134,
+    0.29248304158962174,
+    0.31607397597113035,
+    0.1854439384955717,
+    0.05905780713666267
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "中",
+   "NbS_Coverage_Ratio": "高",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "中",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區天玉里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.1605371661218446,
+   0.0011273252533432474,
+   2.9029438897648946e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184463,
+   0.0011273252533432476,
+   2.902943889764893e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304231,
+   0.16053716612184452,
+   0.0011273252533432468,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.27478718567868726,
+   0.008593034461780651,
+   2.7207806803173795e-05,
+   7.56645909688349e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9986949986949986,
+    0.001173001173001173,
+    0.00013000013000013,
+    1.000001000001e-06,
+    1.000001000001e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7395212832563948,
+    0.25195892480426213,
+    0.00847391512002086,
+    4.381509538819064e-05,
+    2.06172393399571e-06
+   ],
+   "FloodDuration": [
+    0.4628673697207176,
+    0.262169297870322,
+    0.08504055877858045,
+    0.18992277363038
+   ],
+   "OUT_FloodRiskIndex": [
+    0.17521215558471248,
+    0.31353118138489283,
+    0.30459761490395154,
+    0.1606608361261736,
+    0.04599821200026957
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "high",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "中",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區天祿里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.1605371661218446,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304233,
+   0.16053716612184446,
+   0.0011273252533432468,
+   2.902943889764893e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.2747871856786873,
+   0.008593034461780653,
+   2.7207806803173785e-05,
+   7.566459096883488e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9932170000000001,
+    0.005329,
+    0.001452,
+    1e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7355809139709978,
+    0.25385155993716435,
+    0.010165351083323585,
+    0.00038926557180892884,
+    1.2909436705307127e-05
+   ],
+   "FloodDuration": [
+    0.43507789085135984,
+    0.28366616320485866,
+    0.08650597403276078,
+    0.19474997191102086
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1480165524976193,
+    0.2933637871111777,
+    0.31567849062548975,
+    0.1844398473895666,
+    0.05850132237614672
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區天福里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304235,
+   0.16053716612184463,
+   0.0011273252533432474,
+   2.9029438897648946e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304233,
+   0.16053716612184463,
+   0.0011273252533432474,
+   2.902943889764894e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.27478718567868726,
+   0.008593034461780655,
+   2.720780680317379e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999959999999998,
+    9.999999999999997e-07,
+    1e-06,
+    1e-06,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7405236585743261,
+    0.251349421238761,
+    0.008121904766707457,
+    4.007728085067351e-06,
+    1.0076921204484581e-06
+   ],
+   "FloodDuration": [
+    0.4364929761578769,
+    0.2842331276428589,
+    0.0858852654351258,
+    0.19338863076413826
+   ],
+   "OUT_FloodRiskIndex": [
+    0.17520953688722235,
+    0.3135310426462392,
+    0.30459976591845045,
+    0.16066174818266865,
+    0.045997906365419304
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "high",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區富光里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.1605371661218446,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304231,
+   0.1605371661218446,
+   0.0011273252533432465,
+   2.9029438897648925e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304233,
+   0.1605371661218446,
+   0.0011273252533432474,
+   2.9029438897648946e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862696,
+   0.2747871856786874,
+   0.008593034461780653,
+   2.7207806803173795e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.999996,
+    1.0000000000000002e-06,
+    1e-06,
+    1e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.759450605788474,
+    0.23359615899181335,
+    0.006948735658190493,
+    3.5320381525186333e-06,
+    9.67523369643937e-07
+   ],
+   "FloodDuration": [
+    0.5215317780520572,
+    0.22102246754180957,
+    0.08403880246307566,
+    0.17340695194305766
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1005324939991488,
+    0.24583634457136752,
+    0.32636135427645574,
+    0.23523167209673526,
+    0.0920381350562927
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區富洲里": {
+  "R1_EconomicLoss_new": [
+   0.7694119272886297,
+   0.191898014798807,
+   0.036736988435653546,
+   0.0019530694769097348
+  ],
+  "R2_Lifeline_new": [
+   0.03472495050151614,
+   0.29712726973535525,
+   0.5396470065963039,
+   0.12850077316682476
+  ],
+  "R3_Vulnerable_new": [
+   0.7145870269716283,
+   0.22894848711595933,
+   0.054919118410958985,
+   0.0015453675014534944
+  ],
+  "O_TotalRisk_int": [
+   0.18888485360925378,
+   0.5775907212338793,
+   0.21513760523771405,
+   0.017955561677147545,
+   0.0004312582420051477
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9690829690829691,
+    0.01572701572701573,
+    0.014572014572014574,
+    0.0006170006170006171,
+    1.000001000001e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7252776768727468,
+    0.2514897390966728,
+    0.01915910028152727,
+    0.0038118391249756132,
+    0.00026164462407726383
+   ],
+   "FloodDuration": [
+    0.586152527948182,
+    0.1606179455938227,
+    0.09315822731538298,
+    0.16007129914261228
+   ],
+   "OUT_FloodRiskIndex": [
+    0.08219596251847278,
+    0.2218452527618504,
+    0.3251556132419613,
+    0.2588631029770791,
+    0.11194006850063655
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "中",
+   "BuildingDensity": "中",
+   "LandUseImperviousness": "中",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+   "DR.StructuralMeasures_Coverage": "中",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "high",
+   "FloodZone_Elderly_Count": "low",
+   "FloodZone_ElderlyAlone_Count": "medium",
+   "FloodZone_Disability_Count": "low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "high",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "medium"
+  }
+ },
+ "士林區岩山里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.001127325253343248,
+   2.9029438897648936e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.2747871856786873,
+   0.008593034461780655,
+   2.7207806803173795e-05,
+   7.56645909688349e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9491689999999999,
+    0.033209999999999996,
+    0.016602000000000002,
+    0.0010180000000000002,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7161467320363655,
+    0.25484402823250585,
+    0.02404145679293761,
+    0.004598731909812089,
+    0.00036905102837893154
+   ],
+   "FloodDuration": [
+    0.42774250014159126,
+    0.28229257301702043,
+    0.09052052385390745,
+    0.19944440298748073
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1465266630704581,
+    0.29203354849827,
+    0.31614215824745767,
+    0.18591361979513238,
+    0.05938401038868194
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "中",
+   "LP.green_infrastructure_coverage": "15-30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "中",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區平等里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432468,
+   2.9029438897648936e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.9029438897648946e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.2747871856786874,
+   0.008593034461780655,
+   2.7207806803173802e-05,
+   7.566459096883493e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999960000000001,
+    9.999999999999997e-07,
+    1e-06,
+    1e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7440240258208075,
+    0.2480672829091013,
+    0.007903771817671497,
+    3.919175356820079e-06,
+    1.0002770628215137e-06
+   ],
+   "FloodDuration": [
+    0.631776832770796,
+    0.13296139858907413,
+    0.09532567189040887,
+    0.13993609674972113
+   ],
+   "OUT_FloodRiskIndex": [
+    0.10160804440526584,
+    0.2471238499606022,
+    0.32629648491792057,
+    0.2339251625641357,
+    0.09104645815207571
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "低",
+   "BuildingDensity": "低",
+   "LandUseImperviousness": "低",
+   "NbS_Coverage_Ratio": "高",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區後港里": {
+  "R1_EconomicLoss_new": [
+   0.7695598838957604,
+   0.20014985243093175,
+   0.029177877943916287,
+   0.001112385729391508
+  ],
+  "R2_Lifeline_new": [
+   0.048835307329840844,
+   0.48853175271795624,
+   0.4326950579845092,
+   0.029937881967693793
+  ],
+  "R3_Vulnerable_new": [
+   0.6906515932470267,
+   0.23749911425706283,
+   0.06971203286804377,
+   0.0021372596278666977
+  ],
+  "O_TotalRisk_int": [
+   0.2487383441374236,
+   0.5755701191319207,
+   0.1648172668833256,
+   0.010699879860501749,
+   0.00017438998682834124
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9385710614289386,
+    0.02783197216802783,
+    0.03302196697803303,
+    0.0005739994260005741,
+    9.99999000001e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7285230571997966,
+    0.23432447869889172,
+    0.029511973400138596,
+    0.007306767702560537,
+    0.000333722998612652
+   ],
+   "FloodDuration": [
+    0.4362736143571408,
+    0.27735194117057255,
+    0.08847838604016887,
+    0.19789605843211788
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1441816119808839,
+    0.29002522229055966,
+    0.31693754266604357,
+    0.1881691330293413,
+    0.06068649003317167
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "15-30%",
+   "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "medium",
+   "FloodZone_Elderly_Count": "low",
+   "FloodZone_ElderlyAlone_Count": "medium",
+   "FloodZone_Disability_Count": "low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "medium",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "medium"
+  }
+ },
+ "士林區德華里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.1605371661218445,
+   0.0011273252533432474,
+   2.9029438897648925e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304231,
+   0.16053716612184452,
+   0.0011273252533432468,
+   2.902943889764893e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.27478718567868726,
+   0.008593034461780653,
+   2.7207806803173795e-05,
+   7.56645909688349e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9982840000000001,
+    0.0013719999999999997,
+    0.00022899999999999996,
+    0.00011399999999999999,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7532518173882349,
+    0.23888591653006414,
+    0.007709615676940548,
+    0.00012436643058472504,
+    2.828397417565078e-05
+   ],
+   "FloodDuration": [
+    0.4695137615526615,
+    0.260783436346,
+    0.08357234959228219,
+    0.18613045250905633
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1468574264745896,
+    0.29241031319496086,
+    0.31610165318650285,
+    0.18552526160127647,
+    0.05910534554267026
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+   "DR.StructuralMeasures_Coverage": "中",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區德行里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304233,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304235,
+   0.16053716612184454,
+   0.0011273252533432472,
+   2.9029438897648936e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.2747871856786875,
+   0.008593034461780655,
+   2.7207806803173805e-05,
+   7.566459096883493e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9788199999999999,
+    0.014033999999999996,
+    0.007144,
+    9.999999999999997e-07,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7341214000442808,
+    0.24948834336413958,
+    0.01459153431102238,
+    0.0017424175143289434,
+    5.6304766228302556e-05
+   ],
+   "FloodDuration": [
+    0.4619144056950608,
+    0.26051085897853987,
+    0.08600317430210366,
+    0.19157156102429568
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1471172613602644,
+    0.2925871767641704,
+    0.31597865018124915,
+    0.18530966567248602,
+    0.059007246021829954
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "含河岸緩衝帶 (<30m)",
+   "DR.StructuralMeasures_Coverage": "中",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區忠誠里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432474,
+   2.9029438897648946e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304233,
+   0.16053716612184454,
+   0.0011273252533432465,
+   2.902943889764894e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.001127325253343247,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.27478718567868743,
+   0.008593034461780653,
+   2.72078068031738e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999959999999998,
+    9.999999999999997e-07,
+    1e-06,
+    1e-06,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7394029595542341,
+    0.2524001858338731,
+    0.008191808434643762,
+    4.036111845707874e-06,
+    1.0100654033762087e-06
+   ],
+   "FloodDuration": [
+    0.4363085384527555,
+    0.284040692917053,
+    0.08599153569340301,
+    0.19365923293678858
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14813855409505192,
+    0.29347540788407384,
+    0.3156425590385262,
+    0.18431713471173358,
+    0.05842634427061443
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區承德里": {
+  "R1_EconomicLoss_new": [
+   0.7815995034297303,
+   0.20580307177223603,
+   0.012478108685731485,
+   0.00011931611230231532
+  ],
+  "R2_Lifeline_new": [
+   0.1543349331391008,
+   0.6703333127125515,
+   0.17289445815381665,
+   0.0024372959945310026
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.41110458751758777,
+   0.5279673427216928,
+   0.06006399768257248,
+   0.0008624100486903867,
+   1.6620294564541944e-06
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.971093,
+    0.021174,
+    0.007527,
+    0.00020499999999999997,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7286791575357172,
+    0.2526886820619785,
+    0.01651822131946745,
+    0.0020058331395298493,
+    0.000108105943307126
+   ],
+   "FloodDuration": [
+    0.43400564658614393,
+    0.28160451589737906,
+    0.08759936139445303,
+    0.19679047612202408
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1226905967381323,
+    0.27021267613052385,
+    0.32316415685317873,
+    0.20989992107487762,
+    0.07403264920328749
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "low"
+  }
+ },
+ "士林區新安里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304231,
+   0.16053716612184454,
+   0.0011273252533432465,
+   2.902943889764893e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.27478718567868726,
+   0.008593034461780653,
+   2.7207806803173795e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999960000000001,
+    1e-06,
+    1e-06,
+    1.0000000000000002e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7447403489743888,
+    0.24739546700463677,
+    0.00785928413426571,
+    3.901128872261739e-06,
+    9.987578363603823e-07
+   ],
+   "FloodDuration": [
+    0.6023569680722127,
+    0.15376857156129448,
+    0.08964259719632177,
+    0.15423186317017115
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12322088469513966,
+    0.2707956224558363,
+    0.32308789650615566,
+    0.2092941708434614,
+    0.07360142549940703
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "very_high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "中",
+   "BuildingDensity": "中",
+   "LandUseImperviousness": "中",
+   "NbS_Coverage_Ratio": "中",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區明勝里": {
+  "R1_EconomicLoss_new": [
+   0.7716511368037586,
+   0.20211243524836384,
+   0.025566267383470596,
+   0.0006701605644071649
+  ],
+  "R2_Lifeline_new": [
+   0.025538683535761483,
+   0.3538180927492646,
+   0.5458872422358505,
+   0.07475598147912346
+  ],
+  "R3_Vulnerable_new": [
+   0.6955519095784184,
+   0.2346597722260945,
+   0.06770315128491473,
+   0.0020851669105723235
+  ],
+  "O_TotalRisk_int": [
+   0.19891762838743596,
+   0.5869128193433932,
+   0.19973775080352202,
+   0.014189739737603539,
+   0.00024206172804523636
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9677199999999999,
+    0.024563999999999996,
+    0.0070399999999999985,
+    0.0006749999999999999,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7198117242014597,
+    0.26001455069804663,
+    0.01771671866758863,
+    0.0022334235845658038,
+    0.00022358284833942665
+   ],
+   "FloodDuration": [
+    0.47924409944368984,
+    0.2418611354786252,
+    0.08690907864089134,
+    0.19198568643679365
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12317849811365872,
+    0.270700048134406,
+    0.32304761846269414,
+    0.2093777997539092,
+    0.07369603553533184
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "medium",
+   "FloodZone_Elderly_Count": "low",
+   "FloodZone_ElderlyAlone_Count": "low",
+   "FloodZone_Disability_Count": "low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "medium",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "medium"
+  }
+ },
+ "士林區東山里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184452,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.27478718567868726,
+   0.008593034461780653,
+   2.7207806803173788e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9998909999999999,
+    0.00010599999999999999,
+    9.999999999999997e-07,
+    1e-06,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7609156856930324,
+    0.23220211228000692,
+    0.006877024021226818,
+    4.2134544255776304e-06,
+    9.645513084617725e-07
+   ],
+   "FloodDuration": [
+    0.5585169257747422,
+    0.19211812784477938,
+    0.08466714524906217,
+    0.1646978011314163
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14628315662061075,
+    0.29193863743885595,
+    0.316311795069462,
+    0.1860624796651042,
+    0.059403931205967216
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "中",
+   "BuildingDensity": "中",
+   "LandUseImperviousness": "中",
+   "NbS_Coverage_Ratio": "高",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區永倫里": {
+  "R1_EconomicLoss_new": [
+   0.7857589028624548,
+   0.2031606384461125,
+   0.01099699823865937,
+   8.346045277327916e-05
+  ],
+  "R2_Lifeline_new": [
+   0.09968035075695836,
+   0.6300444329359293,
+   0.264018197091729,
+   0.006257019215383392
+  ],
+  "R3_Vulnerable_new": [
+   0.7078028296525174,
+   0.22849419116237638,
+   0.061814316086119606,
+   0.00188866309898661
+  ],
+  "O_TotalRisk_int": [
+   0.32561893338605785,
+   0.5568195035312805,
+   0.11298491692383208,
+   0.004542116292623242,
+   3.452986620623132e-05
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9893629999999999,
+    0.009048999999999998,
+    0.0013919999999999998,
+    0.000195,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7394893517750053,
+    0.24935444402813906,
+    0.0106008315279637,
+    0.0004976375685220737,
+    5.773510037003625e-05
+   ],
+   "FloodDuration": [
+    0.5545642079028672,
+    0.18870444307901607,
+    0.08641422710034968,
+    0.17031712191776716
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12301417111168401,
+    0.2705723746589734,
+    0.32312138259359585,
+    0.20952742705437458,
+    0.07376464458137223
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "low",
+   "FloodZone_Elderly_Count": "low",
+   "FloodZone_ElderlyAlone_Count": "low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "low"
+  }
+ },
+ "士林區永福里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.1605371661218446,
+   0.0011273252533432474,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184452,
+   0.0011273252533432465,
+   2.902943889764893e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.2747871856786873,
+   0.008593034461780653,
+   2.72078068031738e-05,
+   7.566459096883493e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999959999999998,
+    9.999999999999997e-07,
+    9.999999999999995e-07,
+    9.999999999999995e-07,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7447403489743888,
+    0.24739546700463683,
+    0.00785928413426571,
+    3.901128872261739e-06,
+    9.98757836360382e-07
+   ],
+   "FloodDuration": [
+    0.5382100526896338,
+    0.2040807940838025,
+    0.0868811494972545,
+    0.17082800372930912
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1232208846951397,
+    0.2707956224558363,
+    0.3230878965061556,
+    0.20929417084346147,
+    0.07360142549940704
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "very_high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "中",
+   "BuildingDensity": "中",
+   "LandUseImperviousness": "高",
+   "NbS_Coverage_Ratio": "中",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區溪山里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432468,
+   2.9029438897648936e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.9029438897648946e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.2747871856786874,
+   0.008593034461780655,
+   2.7207806803173802e-05,
+   7.566459096883493e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999960000000001,
+    9.999999999999997e-07,
+    1e-06,
+    1e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7440240258208075,
+    0.2480672829091013,
+    0.007903771817671497,
+    3.919175356820079e-06,
+    1.0002770628215137e-06
+   ],
+   "FloodDuration": [
+    0.631776832770796,
+    0.13296139858907413,
+    0.09532567189040887,
+    0.13993609674972113
+   ],
+   "OUT_FloodRiskIndex": [
+    0.10160804440526584,
+    0.2471238499606022,
+    0.32629648491792057,
+    0.2339251625641357,
+    0.09104645815207571
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "低",
+   "BuildingDensity": "低",
+   "LandUseImperviousness": "低",
+   "NbS_Coverage_Ratio": "高",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區百齡里": {
+  "R1_EconomicLoss_new": [
+   0.7825001690553745,
+   0.2044147348637565,
+   0.01293206159647388,
+   0.00015303448439534176
+  ],
+  "R2_Lifeline_new": [
+   0.12426797937255614,
+   0.6545831404697827,
+   0.2170822304024491,
+   0.004066649755212043
+  ],
+  "R3_Vulnerable_new": [
+   0.6952910007725858,
+   0.23501940893300322,
+   0.067617003374629,
+   0.0020725869197820387
+  ],
+  "O_TotalRisk_int": [
+   0.3414605759386056,
+   0.5464801731906959,
+   0.10767095449247126,
+   0.004353823944297533,
+   3.447243392986551e-05
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9631349631349632,
+    0.022029022029022027,
+    0.013711013711013707,
+    0.0011240011240011237,
+    1.000001000001e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7387046315057989,
+    0.2383957911661792,
+    0.01887487548022048,
+    0.003683432055685889,
+    0.0003412697921156179
+   ],
+   "FloodDuration": [
+    0.4650795876885873,
+    0.2584294585851178,
+    0.08583264388829553,
+    0.1906583098379994
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1454788144950597,
+    0.29118265162955137,
+    0.31653309785670225,
+    0.18688652401358416,
+    0.05991891200510269
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "15-30%",
+   "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+   "DR.StructuralMeasures_Coverage": "中",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "low",
+   "FloodZone_Elderly_Count": "low",
+   "FloodZone_ElderlyAlone_Count": "low",
+   "FloodZone_Disability_Count": "low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "low"
+  }
+ },
+ "士林區社園里": {
+  "R1_EconomicLoss_new": [
+   0.7800116901637375,
+   0.20687248131144326,
+   0.012987415479305884,
+   0.00012841304551327592
+  ],
+  "R2_Lifeline_new": [
+   0.10510606393946362,
+   0.6321732436168703,
+   0.25672099832526285,
+   0.005999694118403141
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.3677915829415847,
+   0.5558343341121282,
+   0.07510853066345695,
+   0.0012626886481026441,
+   2.8636347272560194e-06
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9636040000000001,
+    0.026833999999999997,
+    0.00956,
+    1e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.724102289606553,
+    0.2545857598194206,
+    0.018825013652784172,
+    0.0024109344682155124,
+    7.600245302680297e-05
+   ],
+   "FloodDuration": [
+    0.48136912896412015,
+    0.24127367065433997,
+    0.08654772961419531,
+    0.19080947076734453
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12259437119188608,
+    0.2701047697586181,
+    0.3231760572002232,
+    0.21001139189203638,
+    0.07411340995723617
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "15-30%",
+   "LP.river_corridor_designation": "含河岸緩衝帶 (<30m)",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "low"
+  }
+ },
+ "士林區社子里": {
+  "R1_EconomicLoss_new": [
+   0.7870848305359032,
+   0.20228358366056853,
+   0.010558559458278891,
+   7.30263452494582e-05
+  ],
+  "R2_Lifeline_new": [
+   0.1069680651356699,
+   0.6330572278830275,
+   0.2540709305746812,
+   0.005903776406621188
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304233,
+   0.16053716612184457,
+   0.001127325253343247,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.37149039676822054,
+   0.5544224536138096,
+   0.07292817954499248,
+   0.0011565958913685457,
+   2.374181608816634e-06
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.997803,
+    0.001176,
+    0.0010189999999999997,
+    1e-06,
+    1.0000000000000002e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7432659983745047,
+    0.24781433515091694,
+    0.008663142339060442,
+    0.00024751593373600715,
+    9.008201782009478e-06
+   ],
+   "FloodDuration": [
+    0.5560987308709495,
+    0.1886204163927757,
+    0.08585511297648511,
+    0.1694257397597896
+   ],
+   "OUT_FloodRiskIndex": [
+    0.10152946913864047,
+    0.24702504853237364,
+    0.3262958309432134,
+    0.23402375387385155,
+    0.09112589751192082
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "low"
+  }
+ },
+ "士林區社新里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304233,
+   0.16053716612184454,
+   0.0011273252533432465,
+   2.902943889764894e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.2747871856786874,
+   0.008593034461780653,
+   2.72078068031738e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.99418,
+    0.0034540000000000005,
+    0.002364,
+    1e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7413950281851235,
+    0.24815357754714817,
+    0.009857542297385533,
+    0.0005743045869878024,
+    1.954738335501657e-05
+   ],
+   "FloodDuration": [
+    0.46481554224761734,
+    0.2608873450211646,
+    0.0849167294109141,
+    0.189380383320304
+   ],
+   "OUT_FloodRiskIndex": [
+    0.10145130431040256,
+    0.24692458593584282,
+    0.32629270504786195,
+    0.23412327505360503,
+    0.09120812965228749
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+   "DR.StructuralMeasures_Coverage": "中",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區福中里": {
+  "R1_EconomicLoss_new": [
+   0.768284065495183,
+   0.20209007764597914,
+   0.028681484386994405,
+   0.0009443724718434434
+  ],
+  "R2_Lifeline_new": [
+   0.04016238367685354,
+   0.43289200752911966,
+   0.48056142292026116,
+   0.04638418587376566
+  ],
+  "R3_Vulnerable_new": [
+   0.6930469730495635,
+   0.2371173993054876,
+   0.06778359534341925,
+   0.0020520323015296845
+  ],
+  "O_TotalRisk_int": [
+   0.22893871674397417,
+   0.5797440588005592,
+   0.17889421755136536,
+   0.012215044716458349,
+   0.00020796218764290874
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9261369999999999,
+    0.05453299999999999,
+    0.018676,
+    0.0006529999999999999,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7171625284312778,
+    0.24955927695072028,
+    0.028258650816502456,
+    0.0047451022000841205,
+    0.0002744416014152081
+   ],
+   "FloodDuration": [
+    0.45816155707425255,
+    0.2569522596362831,
+    0.08864403604804554,
+    0.1962421472414188
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1208187545151541,
+    0.26824665587321594,
+    0.3235199982442237,
+    0.21197216103069247,
+    0.07544243033671376
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "15-30%",
+   "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+   "DR.StructuralMeasures_Coverage": "中",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "medium",
+   "FloodZone_Elderly_Count": "low",
+   "FloodZone_ElderlyAlone_Count": "medium",
+   "FloodZone_Disability_Count": "low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "medium",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "medium"
+  }
+ },
+ "士林區福佳里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.0011273252533432465,
+   2.9029438897648936e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.2747871856786873,
+   0.008593034461780653,
+   2.7207806803173795e-05,
+   7.56645909688349e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9986150013849985,
+    0.001236998763001237,
+    0.00014599985400014597,
+    9.999990000009998e-07,
+    9.999990000009996e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7517809646251007,
+    0.24045376218851236,
+    0.007718161895318316,
+    4.505651491361356e-05,
+    2.0547761550112077e-06
+   ],
+   "FloodDuration": [
+    0.44263679099781406,
+    0.2825876590543631,
+    0.0846808727113471,
+    0.19009467723647575
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12259317132010561,
+    0.2701630804867794,
+    0.32323237081298034,
+    0.20996981056106198,
+    0.07404156681907273
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "15-30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區福安里": {
+  "R1_EconomicLoss_new": [
+   0.7616454192922749,
+   0.19182966070062182,
+   0.043131794123499836,
+   0.0033931258836033605
+  ],
+  "R2_Lifeline_new": [
+   0.03446632560263386,
+   0.29636914944251314,
+   0.5401172416018604,
+   0.12904728335299268
+  ],
+  "R3_Vulnerable_new": [
+   0.7126261776951317,
+   0.22993745927482226,
+   0.055859283546320075,
+   0.0015770794837260285
+  ],
+  "O_TotalRisk_int": [
+   0.18686014325705916,
+   0.5740700065892547,
+   0.2187556784822846,
+   0.01976025203944621,
+   0.0005539196319556733
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.940272,
+    0.024784,
+    0.03136200000000001,
+    0.0035810000000000004,
+    1.0000000000000002e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7129378424958972,
+    0.24684348002735215,
+    0.030064437463577925,
+    0.009098867656035023,
+    0.001055372357137795
+   ],
+   "FloodDuration": [
+    0.5802721061333093,
+    0.16029602276218696,
+    0.09581137616181606,
+    0.16362049494268777
+   ],
+   "OUT_FloodRiskIndex": [
+    0.08124999772896475,
+    0.22042396691766555,
+    0.324873852534126,
+    0.26019875622625793,
+    0.11325342659298576
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "中",
+   "BuildingDensity": "中",
+   "LandUseImperviousness": "中",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+   "DR.StructuralMeasures_Coverage": "中",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "high",
+   "FloodZone_Elderly_Count": "low",
+   "FloodZone_ElderlyAlone_Count": "low",
+   "FloodZone_Disability_Count": "low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "high",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "medium"
+  }
+ },
+ "士林區福德里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304233,
+   0.1605371661218446,
+   0.0011273252533432474,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304233,
+   0.1605371661218446,
+   0.001127325253343247,
+   2.9029438897648946e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.1605371661218446,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.27478718567868743,
+   0.008593034461780655,
+   2.72078068031738e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9976569999999999,
+    0.0014319999999999997,
+    0.000799,
+    0.00011099999999999999,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7360863945614657,
+    0.25453408458883986,
+    0.009080757276021059,
+    0.00026421888362578526,
+    3.454469004763434e-05
+   ],
+   "FloodDuration": [
+    0.43551450728046404,
+    0.2835559109267099,
+    0.0863652982097853,
+    0.19456428358304084
+   ],
+   "OUT_FloodRiskIndex": [
+    0.10200708643964648,
+    0.24759767626911794,
+    0.32626791528571514,
+    0.23344294336247637,
+    0.09068437864304403
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區福志里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.1605371661218445,
+   0.0011273252533432468,
+   2.9029438897648936e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304231,
+   0.16053716612184452,
+   0.001127325253343247,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.27478718567868743,
+   0.008593034461780658,
+   2.7207806803173805e-05,
+   7.566459096883493e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.99767,
+    0.0009319999999999999,
+    0.001211,
+    0.00018599999999999997,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7597274741477673,
+    0.23214532214566205,
+    0.007710091063184685,
+    0.00036726152784785377,
+    4.985111553816073e-05
+   ],
+   "FloodDuration": [
+    0.4460827580372105,
+    0.2820459471453438,
+    0.0838812244411689,
+    0.18799007037627688
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14619926349389098,
+    0.2918617154450891,
+    0.3163363117314638,
+    0.1861469718121648,
+    0.05945573751739116
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "very_high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "15-30%",
+   "LP.river_corridor_designation": "含河岸緩衝帶 (<30m)",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區福林里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.0011273252533432474,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304231,
+   0.1605371661218446,
+   0.0011273252533432472,
+   2.902943889764893e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.001127325253343247,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.2747871856786874,
+   0.008593034461780657,
+   2.720780680317381e-05,
+   7.566459096883493e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9856600000000001,
+    0.006570000000000001,
+    0.007753000000000001,
+    1.6000000000000003e-05,
+    1.0000000000000002e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7503472338844693,
+    0.23547161555000728,
+    0.012396752281623088,
+    0.0017263059825830963,
+    5.809230131720436e-05
+   ],
+   "FloodDuration": [
+    0.483772007056613,
+    0.24829454848787333,
+    0.08496123780699641,
+    0.18297220664851724
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12175301673870594,
+    0.26928420824072613,
+    0.3233952401227917,
+    0.21089729580824032,
+    0.07467023908953575
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "中",
+   "BuildingDensity": "中",
+   "LandUseImperviousness": "高",
+   "NbS_Coverage_Ratio": "高",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區福華里": {
+  "R1_EconomicLoss_new": [
+   0.7593291275392,
+   0.19348172961091772,
+   0.04423151667335796,
+   0.0029576261765243655
+  ],
+  "R2_Lifeline_new": [
+   0.015251477072959367,
+   0.2385987611381596,
+   0.576472441009358,
+   0.16967732077952308
+  ],
+  "R3_Vulnerable_new": [
+   0.6902165390794968,
+   0.2374698743655747,
+   0.07015034727197039,
+   0.0021632392829581512
+  ],
+  "O_TotalRisk_int": [
+   0.15262255235688352,
+   0.5714601252830364,
+   0.2503137896420393,
+   0.0248906369842518,
+   0.0007128957337888857
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9128300871699129,
+    0.05943894056105943,
+    0.026832973167026836,
+    0.000896999103000897,
+    9.999990000009998e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7014249160372799,
+    0.25685096618545855,
+    0.0344428181742543,
+    0.006878145948872633,
+    0.0004031536541346992
+   ],
+   "FloodDuration": [
+    0.45152562171948846,
+    0.25675099977850063,
+    0.09069428962923569,
+    0.20102908887277526
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12107483634721085,
+    0.2684692712120182,
+    0.3234274405272905,
+    0.21172196921156938,
+    0.07530648270191102
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+   "DR.StructuralMeasures_Coverage": "中",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "high",
+   "FloodZone_Elderly_Count": "low",
+   "FloodZone_ElderlyAlone_Count": "medium",
+   "FloodZone_Disability_Count": "low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "high",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "high"
+  }
+ },
+ "士林區福順里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764893e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304231,
+   0.16053716612184463,
+   0.0011273252533432474,
+   2.9029438897648957e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862696,
+   0.2747871856786874,
+   0.008593034461780653,
+   2.7207806803173788e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.998132,
+    0.0018649999999999995,
+    9.999999999999997e-07,
+    9.999999999999997e-07,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7591966092819326,
+    0.233493513126753,
+    0.0072925313472406396,
+    1.63755603733224e-05,
+    9.706837004055988e-07
+   ],
+   "FloodDuration": [
+    0.44625132875652346,
+    0.28187974562244633,
+    0.08389064613884854,
+    0.1879782794821817
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12197664490046267,
+    0.2695443396099883,
+    0.32337658574853,
+    0.21063157420277262,
+    0.07447085553824659
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區義信里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.001127325253343247,
+   2.902943889764893e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432465,
+   2.902943889764893e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.2747871856786873,
+   0.008593034461780653,
+   2.720780680317379e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.981022,
+    0.014191999999999998,
+    0.004784,
+    1.0000000000000002e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7273312612514091,
+    0.2573516654188027,
+    0.014023252843178579,
+    0.0012532279716418943,
+    4.059251496759784e-05
+   ],
+   "FloodDuration": [
+    0.432571813437076,
+    0.2827461885117995,
+    0.08757895859799865,
+    0.19710303945312585
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12340201982805486,
+    0.27094786834886114,
+    0.3230176175145601,
+    0.2091210035480473,
+    0.07351149076047646
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區翠山里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184452,
+   0.0011273252533432472,
+   2.902943889764893e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.2747871856786872,
+   0.008593034461780653,
+   2.7207806803173788e-05,
+   7.566459096883488e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999960000000001,
+    9.999999999999997e-07,
+    1e-06,
+    1e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7447403489743889,
+    0.24739546700463674,
+    0.00785928413426571,
+    3.901128872261738e-06,
+    9.98757836360382e-07
+   ],
+   "FloodDuration": [
+    0.6320083554565812,
+    0.13294406282960647,
+    0.09522728245220109,
+    0.13982029926161124
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12322088469513967,
+    0.27079562245583627,
+    0.3230878965061556,
+    0.20929417084346136,
+    0.07360142549940703
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "very_high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "中",
+   "BuildingDensity": "中",
+   "LandUseImperviousness": "低",
+   "NbS_Coverage_Ratio": "高",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區聖山里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432474,
+   2.9029438897648946e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304233,
+   0.16053716612184454,
+   0.0011273252533432465,
+   2.902943889764894e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.001127325253343247,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.27478718567868743,
+   0.008593034461780653,
+   2.72078068031738e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999959999999998,
+    9.999999999999997e-07,
+    1e-06,
+    1e-06,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7394029595542341,
+    0.2524001858338731,
+    0.008191808434643762,
+    4.036111845707874e-06,
+    1.0100654033762087e-06
+   ],
+   "FloodDuration": [
+    0.4363085384527555,
+    0.284040692917053,
+    0.08599153569340301,
+    0.19365923293678858
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14813855409505192,
+    0.29347540788407384,
+    0.3156425590385262,
+    0.18431713471173358,
+    0.05842634427061443
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區臨溪里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.9029438897648946e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862696,
+   0.27478718567868726,
+   0.008593034461780653,
+   2.720780680317379e-05,
+   7.56645909688349e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.999715,
+    1e-06,
+    0.000282,
+    1e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.744533145579747,
+    0.24738799457464203,
+    0.008007089498764358,
+    6.856373692338553e-05,
+    3.2066099231575054e-06
+   ],
+   "FloodDuration": [
+    0.5824679442743614,
+    0.16947032647843896,
+    0.08895194802188633,
+    0.1591097812253132
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12321303981618513,
+    0.2707866986635334,
+    0.3230887383838771,
+    0.2093033464280685,
+    0.07360817670833601
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "very_high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "中",
+   "BuildingDensity": "中",
+   "LandUseImperviousness": "中",
+   "NbS_Coverage_Ratio": "高",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區舊佳里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432474,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184463,
+   0.0011273252533432474,
+   2.9029438897648925e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764893e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.2747871856786873,
+   0.008593034461780655,
+   2.7207806803173795e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.985374,
+    0.011699999999999999,
+    0.0029239999999999995,
+    1e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7371313582353525,
+    0.2501255647016445,
+    0.01195298935193651,
+    0.0007661998457096154,
+    2.3887865356843888e-05
+   ],
+   "FloodDuration": [
+    0.4368265924394318,
+    0.28248151330093585,
+    0.08644595215691973,
+    0.19424594210271262
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12294629727767169,
+    0.2704975357562832,
+    0.32313098342998253,
+    0.20960513769877512,
+    0.0738200458372875
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區芝山里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432474,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.0011273252533432468,
+   2.9029438897648936e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304231,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.2747871856786873,
+   0.008593034461780657,
+   2.72078068031738e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9998100000000001,
+    0.00014500000000000003,
+    4.300000000000001e-05,
+    1.0000000000000002e-06,
+    1.0000000000000002e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7608639307723825,
+    0.23221412420735477,
+    0.006907226691292365,
+    1.3465856616463048e-05,
+    1.2524723539598057e-06
+   ],
+   "FloodDuration": [
+    0.49658940134277035,
+    0.24184227645770695,
+    0.08427516682363652,
+    0.17729315537588608
+   ],
+   "OUT_FloodRiskIndex": [
+    0.14628131937058908,
+    0.2919369025241429,
+    0.31631229481457324,
+    0.18606436809933383,
+    0.05940511519136105
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "高",
+   "NbS_Coverage_Ratio": "中",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區菁山里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432468,
+   2.9029438897648936e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432472,
+   2.9029438897648946e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.2747871856786874,
+   0.008593034461780655,
+   2.7207806803173802e-05,
+   7.566459096883493e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999960000000001,
+    9.999999999999997e-07,
+    1e-06,
+    1e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7440240258208075,
+    0.2480672829091013,
+    0.007903771817671497,
+    3.919175356820079e-06,
+    1.0002770628215137e-06
+   ],
+   "FloodDuration": [
+    0.631776832770796,
+    0.13296139858907413,
+    0.09532567189040887,
+    0.13993609674972113
+   ],
+   "OUT_FloodRiskIndex": [
+    0.10160804440526584,
+    0.2471238499606022,
+    0.32629648491792057,
+    0.2339251625641357,
+    0.09104645815207571
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "低",
+   "BuildingDensity": "低",
+   "LandUseImperviousness": "低",
+   "NbS_Coverage_Ratio": "高",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區葫東里": {
+  "R1_EconomicLoss_new": [
+   0.7874445081926816,
+   0.2018744813416124,
+   0.010605309042177213,
+   7.57014235287584e-05
+  ],
+  "R2_Lifeline_new": [
+   0.13223869692698076,
+   0.6552756153267811,
+   0.20865075981015457,
+   0.0038349279360835077
+  ],
+  "R3_Vulnerable_new": [
+   0.6970561191080411,
+   0.23519362498818416,
+   0.06577079555600596,
+   0.0019794603477686643
+  ],
+  "O_TotalRisk_int": [
+   0.34843716051004503,
+   0.543910797830741,
+   0.10368177169957969,
+   0.0039424228465351095,
+   2.7847113099290163e-05
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.988698,
+    0.010312,
+    0.0009880000000000002,
+    1e-06,
+    1e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.746023809196279,
+    0.24352445972194772,
+    0.010143529014991961,
+    0.0002998863393096217,
+    8.315727471672797e-06
+   ],
+   "FloodDuration": [
+    0.46744334759174183,
+    0.2601699907842465,
+    0.08445170824144844,
+    0.18793495338256322
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1009158932648261,
+    0.24628127775051403,
+    0.32632241442574966,
+    0.23477529885199186,
+    0.0917051157069184
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "low",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "5-15%",
+   "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+   "DR.StructuralMeasures_Coverage": "中",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "low",
+   "FloodZone_Elderly_Count": "low",
+   "FloodZone_ElderlyAlone_Count": "low",
+   "FloodZone_Disability_Count": "low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "low"
+  }
+ },
+ "士林區葫蘆里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184463,
+   0.0011273252533432474,
+   2.9029438897648946e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304233,
+   0.1605371661218446,
+   0.0011273252533432478,
+   2.9029438897648946e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304233,
+   0.1605371661218446,
+   0.0011273252533432472,
+   2.902943889764894e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862698,
+   0.27478718567868726,
+   0.008593034461780653,
+   2.720780680317379e-05,
+   7.566459096883492e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9756449999999997,
+    0.018201999999999992,
+    0.0061509999999999985,
+    9.999999999999997e-07,
+    9.999999999999995e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7391252255207292,
+    0.24484773083802436,
+    0.014479867444968318,
+    0.0015010223632162206,
+    4.615383306184832e-05
+   ],
+   "FloodDuration": [
+    0.5129777607063175,
+    0.2215052904805107,
+    0.08673286713243629,
+    0.1787840816807355
+   ],
+   "OUT_FloodRiskIndex": [
+    0.12217054079615625,
+    0.26969833254373116,
+    0.3232931046736737,
+    0.21045271702442636,
+    0.07438530496201251
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "medium",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "完整河川廊道 (≥30m + 生態緩衝)",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區蘭興里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304232,
+   0.16053716612184457,
+   0.0011273252533432474,
+   2.9029438897648936e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.902943889764893e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304231,
+   0.16053716612184452,
+   0.0011273252533432465,
+   2.902943889764893e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.2747871856786873,
+   0.008593034461780653,
+   2.7207806803173795e-05,
+   7.566459096883493e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9983869999999999,
+    0.0014869999999999998,
+    0.00012399999999999998,
+    1e-06,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7530581825187926,
+    0.23922577130124936,
+    0.007672492029168627,
+    4.1674497804098386e-05,
+    1.8796529852863276e-06
+   ],
+   "FloodDuration": [
+    0.46942574307740936,
+    0.2608283965269696,
+    0.08358886044334335,
+    0.18615699995227775
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1468905982462393,
+    0.29243906974260736,
+    0.316090702051236,
+    0.18549310145567788,
+    0.059086528504239406
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "15-30%",
+   "LP.river_corridor_designation": "含河岸緩衝帶 (<30m)",
+   "DR.StructuralMeasures_Coverage": "中",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ },
+ "士林區蘭雅里": {
+  "R1_EconomicLoss_new": [
+   0.772029707631645,
+   0.2117090719224979,
+   0.01604290433692575,
+   0.00021831610893126768
+  ],
+  "R2_Lifeline_new": [
+   0.15373462176300265,
+   0.6703734182701201,
+   0.17344279936922896,
+   0.0024491605976483624
+  ],
+  "R3_Vulnerable_new": [
+   0.6873998603489346,
+   0.23912299500025905,
+   0.07128571800887015,
+   0.0021914266419362206
+  ],
+  "O_TotalRisk_int": [
+   0.3569813741859486,
+   0.536106958101041,
+   0.10271899070062668,
+   0.004159242136124127,
+   3.3434876259537565e-05
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.945078945078945,
+    0.02937602937602937,
+    0.02491502491502491,
+    0.0006290006290006289,
+    1.0000010000009997e-06
+   ],
+   "ModifiedFloodPotential": [
+    0.7054787425899628,
+    0.25962322070452276,
+    0.028094520538377486,
+    0.006446089293644824,
+    0.00035742687349226055
+   ],
+   "FloodDuration": [
+    0.4246270330876847,
+    0.2802622430861772,
+    0.09072959502316873,
+    0.20438112880296946
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1468993344763194,
+    0.292321529978924,
+    0.3159917746528225,
+    0.18557857442010167,
+    0.05920878647183238
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "medium",
+   "Elderly_Ratio": "high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "高",
+   "BuildingDensity": "高",
+   "LandUseImperviousness": "極高",
+   "NbS_Coverage_Ratio": "低",
+   "LP.green_infrastructure_coverage": "<5%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "高",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "low",
+   "FloodZone_Elderly_Count": "low",
+   "FloodZone_ElderlyAlone_Count": "low",
+   "FloodZone_Disability_Count": "low",
+   "FloodZone_Children_Count": "low",
+   "FloodZone_Building_Pct": "low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "low"
+  }
+ },
+ "士林區陽明里": {
+  "R1_EconomicLoss_new": [
+   0.8383352183304231,
+   0.1605371661218446,
+   0.0011273252533432474,
+   2.902943889764894e-07
+  ],
+  "R2_Lifeline_new": [
+   0.8383352183304232,
+   0.16053716612184452,
+   0.0011273252533432465,
+   2.902943889764893e-07
+  ],
+  "R3_Vulnerable_new": [
+   0.8383352183304232,
+   0.16053716612184454,
+   0.001127325253343247,
+   2.9029438897648936e-07
+  ],
+  "O_TotalRisk_int": [
+   0.7165925644862697,
+   0.2747871856786873,
+   0.008593034461780653,
+   2.72078068031738e-05,
+   7.566459096883493e-09
+  ],
+  "_frame": {
+   "OriginalFloodPotential": [
+    0.9999959999999998,
+    9.999999999999997e-07,
+    9.999999999999995e-07,
+    9.999999999999995e-07,
+    9.999999999999997e-07
+   ],
+   "ModifiedFloodPotential": [
+    0.7447403489743888,
+    0.24739546700463683,
+    0.00785928413426571,
+    3.901128872261739e-06,
+    9.98757836360382e-07
+   ],
+   "FloodDuration": [
+    0.5382100526896338,
+    0.2040807940838025,
+    0.0868811494972545,
+    0.17082800372930912
+   ],
+   "OUT_FloodRiskIndex": [
+    0.1232208846951397,
+    0.2707956224558363,
+    0.3230878965061556,
+    0.20929417084346147,
+    0.07360142549940704
+   ]
+  },
+  "_evidence": {
+   "Children_Ratio": "very_low",
+   "Elderly_Ratio": "very_high",
+   "ElderlyAlone_Ratio": "very_high",
+   "DisabilityPopulation_Ratio": "medium",
+   "LP.zoning_type": "都市計畫區",
+   "DR.NonStructural_DRRPolicy": "高",
+   "RiverWaterLevel": "二級警戒",
+   "Population_Density": "中",
+   "BuildingDensity": "中",
+   "LandUseImperviousness": "高",
+   "NbS_Coverage_Ratio": "中",
+   "LP.green_infrastructure_coverage": ">30%",
+   "LP.river_corridor_designation": "僅河道用地",
+   "DR.StructuralMeasures_Coverage": "低",
+   "AccessToShelters": "高",
+   "Rainfall": "超大豪雨",
+   "FloodZone_Population_Ratio": "very_low",
+   "FloodZone_Elderly_Count": "very_low",
+   "FloodZone_ElderlyAlone_Count": "very_low",
+   "FloodZone_Disability_Count": "very_low",
+   "FloodZone_Children_Count": "very_low",
+   "FloodZone_Building_Pct": "very_low",
+   "FloodZone_Agri_km2": "very_low",
+   "FloodZone_Vulnerable_Ratio": "very_low"
+  }
+ }
+}

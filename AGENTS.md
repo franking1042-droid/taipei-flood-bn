@@ -41,6 +41,24 @@
 
 上游任何一步有改動，下游都要依序重跑。規劃中但尚未存在的檔案：`check_consistency_taipei.py`（C30），以及 `run_inference_taipei.py` 的 `regress`、`validate` stage（C30、C04）。
 
+## taipei_v2_village（里級版）腳本順序
+
+| 順序 | 腳本 | 輸出（`bn_engine/...`） |
+|---|---|---|
+| 1 | `build_shp_baseline_village.py` | `results/taipei_v2_village/shp_baseline_village_v2.csv`、`cpt_priors/h2_village_conditional_table_taipei_v2.json` |
+| 2 | `build_village_base.py` | `results/taipei_v2_village/village_base_indicators_v2.csv`、`lulc_aggregation_village_v2.csv`、`pump_catchment_mapping_v2.csv`、`shelter_service_mapping_v2.csv` |
+| 3 | `compute_E_exposure_village.py` | `E_stratified_exposure_village_v2.csv`、`E_node_levels_village_v2.csv` |
+| 4 | `compose_evidence_village.py` | `evidence_per_village_taipei_v2.json` |
+| 5 | `run_inference_village.py [all\|baseline\|mc\|policy]` | `results_village_v2.csv`、`posteriors_all_h1_village_v2.csv`、`ototal_*_village_v2.*`、`taipei_v2_village_summary.json` |
+| 6 | `make_village_maps.py` | `map_village_v2_超大豪雨.png`、`results_village_v2.geojson`、`bstp_neighbourhood_villages_v2.csv` |
+
+注意：
+- 里的鍵是 `unit`＝區名＋里名（`士林區福安里`），由 `taipei_paths.villages_gdf()` 產生；所有 v2 表、evidence JSON、H2 錨定表都用這個鍵。
+- v2 腳本 import v1 的規則函式（`compose_evidence_taipei`、`compute_E_exposure_taipei`、`run_inference_taipei`），所以要在 `scripts/` 目錄下執行，**不能用 `python -I`**（會拿掉同目錄 import）。
+- v1 模組 import 時已把 stdout 包成 UTF-8；v2 腳本用 `if getattr(sys.stdout, "encoding", "")...` 守衛避免重複包裝（重複包裝會造成 `I/O operation on closed file`）。
+- 里級人口檔 `data/taipei/pop_by_age_village_shilin_beitou_112-115.csv` 是 data.taipei「臺北市各里人口數按年齡分」的里列子集（112/1–115/9）；v1 用的 `pop_by_age_village_2023-01.csv` 其實是區列，別拿來當里級。
+- `bn_engine/results/taipei_v2_village/` 是 v2 基準輸出；下一版輸出到 `taipei_v2a/` 等新目錄。
+
 ## 不可碰的東西
 
 1. `bn_engine/bn_v0220.pkl`，以及任何 CPT、節點、狀態、邊。模型問題一律回臺南 repo 開 DRT，本 repo 只能記錄成「需要臺南端回覆」。

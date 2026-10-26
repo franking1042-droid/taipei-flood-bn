@@ -10,6 +10,33 @@
 
 研究區：臺北市士林區、北投區（北投士林科技園區所在），作為子二 BN 落地北士科的第一步；之後的「B. 北士科專用小模型」另立版本。
 
+## 最新：taipei_v2_village（里級版，2026-10-26）
+
+空間單元由 2 區改為 **93 里**（士林 51、北投 42），模型本體不動、節點集合與切點不動，只把三份輸入換成里級：
+潛勢圖 overlay 里界的 H2 錨定表、里級 evidence（人口 115/9、LULC、集水分區加權抽水量、服務里別收容所；獨居／身障／知識法則節點為區級複製）、里級 E 節點。
+
+| 內容 | 位置 |
+|---|---|
+| **資料輸入尺度清單**（每一項輸入的原生尺度、v1／v2 用的尺度、到里的方法、里級分布、拿不到里級的補法） | `docs/data_input_scale_taipei_v2.md` |
+| 決策紀錄 | `docs/DRT-TPE-20261026-002_village_level_inputs.md` |
+| 結案報告 | `bn_engine/results/taipei_v2_village/taipei_v2_village_close_report.md` |
+| 里級 H2 錨定表（含 2 區回推檢核） | `bn_engine/cpt_priors/h2_village_conditional_table_taipei_v2.json` |
+| 里級 evidence／E 節點／原始指標 | `bn_engine/results/taipei_v2_village/evidence_per_village_taipei_v2.json`、`E_node_levels_village_v2.csv`、`village_base_indicators_v2.csv` |
+| 推論結果（每里一列摘要、全部後驗、MC、政策分解） | `bn_engine/results/taipei_v2_village/results_village_v2.csv` 等 |
+| 地圖、GeoJSON、北士科周邊 25 里 | `bn_engine/results/taipei_v2_village/map_village_v2_超大豪雨.png`、`results_village_v2.geojson`、`bstp_neighbourhood_villages_v2.csv` |
+
+```bash
+cd scripts
+python build_shp_baseline_village.py     # 潛勢圖 → 93 里 H2 錨定表
+python build_village_base.py             # 里級人口、LULC、抽水量、收容所
+python compute_E_exposure_village.py     # 里級潛勢區暴露 → E 節點
+python compose_evidence_village.py       # 93 里 × 16 節點 evidence
+python run_inference_village.py all      # baseline / mc / policy
+python make_village_maps.py              # 地圖、GeoJSON、北士科周邊里
+```
+
+結果一眼看（H1＝超大豪雨＋E 24h500，錨定）：64 里無潛勢區暴露、O_total 停在底值 0.292；前十里 吉慶 1.62、立賢 1.56、八仙 1.54、立農 1.47、一德 1.29、尊賢 1.24、大同 1.19、福華 1.15、豐年 1.08、福安 1.07。熱點在關渡平原東側（石牌）與社子島，北士科周邊（洲美 0.98、建民 0.78）居中。區級值與里級值不能直接比大小（E 節點是絕對暴露量）。
+
 ## 內容導覽
 
 | 內容 | 位置 |

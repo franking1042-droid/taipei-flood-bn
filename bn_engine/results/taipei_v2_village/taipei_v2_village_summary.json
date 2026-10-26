@@ -1,0 +1,944 @@
+{
+ "version": "taipei_v2_village",
+ "date": "2026-10-26",
+ "model": "bn_v0220.pkl",
+ "H1_base": "超大豪雨",
+ "n_units": 93,
+ "baseline_EV": {
+  "北投區一德里": {
+   "R1_EconomicLoss_new": 0.4626,
+   "R2_Lifeline_new": 2.0441,
+   "R3_Vulnerable_new": 0.3871,
+   "O_TotalRisk_int": 1.2896
+  },
+  "北投區中和里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區中央里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區中庸里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區中心里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區八仙里": {
+   "R1_EconomicLoss_new": 0.8412,
+   "R2_Lifeline_new": 2.0734,
+   "R3_Vulnerable_new": 0.5545,
+   "O_TotalRisk_int": 1.5445
+  },
+  "北投區吉利里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區吉慶里": {
+   "R1_EconomicLoss_new": 0.994,
+   "R2_Lifeline_new": 2.0566,
+   "R3_Vulnerable_new": 0.5967,
+   "O_TotalRisk_int": 1.6233
+  },
+  "北投區大同里": {
+   "R1_EconomicLoss_new": 0.6421,
+   "R2_Lifeline_new": 1.5831,
+   "R3_Vulnerable_new": 0.436,
+   "O_TotalRisk_int": 1.1891
+  },
+  "北投區大屯里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區奇岩里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區尊賢里": {
+   "R1_EconomicLoss_new": 0.3783,
+   "R2_Lifeline_new": 2.0068,
+   "R3_Vulnerable_new": 0.4034,
+   "O_TotalRisk_int": 1.2432
+  },
+  "北投區建民里": {
+   "R1_EconomicLoss_new": 0.2962,
+   "R2_Lifeline_new": 1.0278,
+   "R3_Vulnerable_new": 0.4007,
+   "O_TotalRisk_int": 0.7834
+  },
+  "北投區振華里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區文化里": {
+   "R1_EconomicLoss_new": 0.2305,
+   "R2_Lifeline_new": 1.0235,
+   "R3_Vulnerable_new": 0.383,
+   "O_TotalRisk_int": 0.7454
+  },
+  "北投區文林里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區智仁里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區東華里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區林泉里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區桃源里": {
+   "R1_EconomicLoss_new": 0.2639,
+   "R2_Lifeline_new": 1.1634,
+   "R3_Vulnerable_new": 0.3699,
+   "O_TotalRisk_int": 0.8131
+  },
+  "北投區榮光里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區榮華里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區永和里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區永明里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區永欣里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區泉源里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區洲美里": {
+   "R1_EconomicLoss_new": 0.4383,
+   "R2_Lifeline_new": 1.3541,
+   "R3_Vulnerable_new": 0.3843,
+   "O_TotalRisk_int": 0.978
+  },
+  "北投區清江里": {
+   "R1_EconomicLoss_new": 0.2334,
+   "R2_Lifeline_new": 1.1638,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.71
+  },
+  "北投區湖山里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區湖田里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區溫泉里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區石牌里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區福興里": {
+   "R1_EconomicLoss_new": 0.3513,
+   "R2_Lifeline_new": 1.0178,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.7001
+  },
+  "北投區秀山里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區稻香里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區立賢里": {
+   "R1_EconomicLoss_new": 0.8724,
+   "R2_Lifeline_new": 2.0505,
+   "R3_Vulnerable_new": 0.5869,
+   "O_TotalRisk_int": 1.5623
+  },
+  "北投區立農里": {
+   "R1_EconomicLoss_new": 0.7214,
+   "R2_Lifeline_new": 2.0333,
+   "R3_Vulnerable_new": 0.539,
+   "O_TotalRisk_int": 1.4668
+  },
+  "北投區裕民里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區豐年里": {
+   "R1_EconomicLoss_new": 0.4625,
+   "R2_Lifeline_new": 1.546,
+   "R3_Vulnerable_new": 0.4028,
+   "O_TotalRisk_int": 1.0794
+  },
+  "北投區長安里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區開明里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "北投區關渡里": {
+   "R1_EconomicLoss_new": 0.3162,
+   "R2_Lifeline_new": 1.1807,
+   "R3_Vulnerable_new": 0.3646,
+   "O_TotalRisk_int": 0.8408
+  },
+  "士林區三玉里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區仁勇里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區公館里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區前港里": {
+   "R1_EconomicLoss_new": 0.2348,
+   "R2_Lifeline_new": 1.0087,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.6463
+  },
+  "士林區名山里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區天和里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區天壽里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區天山里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區天母里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區天玉里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區天祿里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區天福里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區富光里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區富洲里": {
+   "R1_EconomicLoss_new": 0.2712,
+   "R2_Lifeline_new": 1.7619,
+   "R3_Vulnerable_new": 0.3434,
+   "O_TotalRisk_int": 1.0635
+  },
+  "士林區岩山里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區平等里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區後港里": {
+   "R1_EconomicLoss_new": 0.2618,
+   "R2_Lifeline_new": 1.4437,
+   "R3_Vulnerable_new": 0.3833,
+   "O_TotalRisk_int": 0.938
+  },
+  "士林區德華里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區德行里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區忠誠里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區承德里": {
+   "R1_EconomicLoss_new": 0.2311,
+   "R2_Lifeline_new": 1.0234,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.6507
+  },
+  "士林區新安里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區明勝里": {
+   "R1_EconomicLoss_new": 0.2553,
+   "R2_Lifeline_new": 1.6699,
+   "R3_Vulnerable_new": 0.3763,
+   "O_TotalRisk_int": 1.0299
+  },
+  "士林區東山里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區永倫里": {
+   "R1_EconomicLoss_new": 0.2254,
+   "R2_Lifeline_new": 1.1769,
+   "R3_Vulnerable_new": 0.3578,
+   "O_TotalRisk_int": 0.7966
+  },
+  "士林區永福里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區溪山里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區百齡里": {
+   "R1_EconomicLoss_new": 0.2307,
+   "R2_Lifeline_new": 1.1009,
+   "R3_Vulnerable_new": 0.3765,
+   "O_TotalRisk_int": 0.775
+  },
+  "士林區社園里": {
+   "R1_EconomicLoss_new": 0.2332,
+   "R2_Lifeline_new": 1.1636,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.7099
+  },
+  "士林區社子里": {
+   "R1_EconomicLoss_new": 0.2236,
+   "R2_Lifeline_new": 1.1589,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.7038
+  },
+  "士林區社新里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區福中里": {
+   "R1_EconomicLoss_new": 0.2623,
+   "R2_Lifeline_new": 1.5332,
+   "R3_Vulnerable_new": 0.3788,
+   "O_TotalRisk_int": 0.975
+  },
+  "士林區福佳里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區福安里": {
+   "R1_EconomicLoss_new": 0.2883,
+   "R2_Lifeline_new": 1.7637,
+   "R3_Vulnerable_new": 0.3464,
+   "O_TotalRisk_int": 1.0731
+  },
+  "士林區福德里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區福志里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區福林里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區福華里": {
+   "R1_EconomicLoss_new": 0.2908,
+   "R2_Lifeline_new": 1.9006,
+   "R3_Vulnerable_new": 0.3843,
+   "O_TotalRisk_int": 1.1496
+  },
+  "士林區福順里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區義信里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區翠山里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區聖山里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區臨溪里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區舊佳里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區芝山里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區菁山里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區葫東里": {
+   "R1_EconomicLoss_new": 0.2233,
+   "R2_Lifeline_new": 1.0841,
+   "R3_Vulnerable_new": 0.3727,
+   "O_TotalRisk_int": 0.7632
+  },
+  "士林區葫蘆里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區蘭興里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  },
+  "士林區蘭雅里": {
+   "R1_EconomicLoss_new": 0.2444,
+   "R2_Lifeline_new": 1.0246,
+   "R3_Vulnerable_new": 0.3883,
+   "O_TotalRisk_int": 0.7542
+  },
+  "士林區陽明里": {
+   "R1_EconomicLoss_new": 0.1628,
+   "R2_Lifeline_new": 0.1628,
+   "R3_Vulnerable_new": 0.1628,
+   "O_TotalRisk_int": 0.2921
+  }
+ },
+ "n_evidence": {
+  "北投區一德里": 24,
+  "北投區中和里": 24,
+  "北投區中央里": 24,
+  "北投區中庸里": 24,
+  "北投區中心里": 24,
+  "北投區八仙里": 24,
+  "北投區吉利里": 24,
+  "北投區吉慶里": 24,
+  "北投區大同里": 24,
+  "北投區大屯里": 24,
+  "北投區奇岩里": 24,
+  "北投區尊賢里": 24,
+  "北投區建民里": 24,
+  "北投區振華里": 24,
+  "北投區文化里": 24,
+  "北投區文林里": 24,
+  "北投區智仁里": 24,
+  "北投區東華里": 24,
+  "北投區林泉里": 24,
+  "北投區桃源里": 24,
+  "北投區榮光里": 24,
+  "北投區榮華里": 24,
+  "北投區永和里": 24,
+  "北投區永明里": 24,
+  "北投區永欣里": 24,
+  "北投區泉源里": 24,
+  "北投區洲美里": 24,
+  "北投區清江里": 24,
+  "北投區湖山里": 24,
+  "北投區湖田里": 24,
+  "北投區溫泉里": 24,
+  "北投區石牌里": 24,
+  "北投區福興里": 24,
+  "北投區秀山里": 24,
+  "北投區稻香里": 24,
+  "北投區立賢里": 24,
+  "北投區立農里": 24,
+  "北投區裕民里": 24,
+  "北投區豐年里": 24,
+  "北投區長安里": 24,
+  "北投區開明里": 24,
+  "北投區關渡里": 24,
+  "士林區三玉里": 24,
+  "士林區仁勇里": 24,
+  "士林區公館里": 24,
+  "士林區前港里": 24,
+  "士林區名山里": 24,
+  "士林區天和里": 24,
+  "士林區天壽里": 24,
+  "士林區天山里": 24,
+  "士林區天母里": 24,
+  "士林區天玉里": 24,
+  "士林區天祿里": 24,
+  "士林區天福里": 24,
+  "士林區富光里": 24,
+  "士林區富洲里": 24,
+  "士林區岩山里": 24,
+  "士林區平等里": 24,
+  "士林區後港里": 24,
+  "士林區德華里": 24,
+  "士林區德行里": 24,
+  "士林區忠誠里": 24,
+  "士林區承德里": 24,
+  "士林區新安里": 24,
+  "士林區明勝里": 24,
+  "士林區東山里": 24,
+  "士林區永倫里": 24,
+  "士林區永福里": 24,
+  "士林區溪山里": 24,
+  "士林區百齡里": 24,
+  "士林區社園里": 24,
+  "士林區社子里": 24,
+  "士林區社新里": 24,
+  "士林區福中里": 24,
+  "士林區福佳里": 24,
+  "士林區福安里": 24,
+  "士林區福德里": 24,
+  "士林區福志里": 24,
+  "士林區福林里": 24,
+  "士林區福華里": 24,
+  "士林區福順里": 24,
+  "士林區義信里": 24,
+  "士林區翠山里": 24,
+  "士林區聖山里": 24,
+  "士林區臨溪里": 24,
+  "士林區舊佳里": 24,
+  "士林區芝山里": 24,
+  "士林區菁山里": 24,
+  "士林區葫東里": 24,
+  "士林區葫蘆里": 24,
+  "士林區蘭興里": 24,
+  "士林區蘭雅里": 24,
+  "士林區陽明里": 24
+ },
+ "mc_top15": [
+  {
+   "unit": "北投區吉慶里",
+   "district": "北投區",
+   "village": "吉慶里",
+   "city": "臺北市",
+   "R1_EV": 0.994,
+   "R2_EV": 2.0566,
+   "R3_EV": 0.5967,
+   "O_EV_exact_eqw": 1.6233,
+   "O_EV_approx_eqw": 1.6229,
+   "approx_gap": -0.0004,
+   "O_EV_mc_mean": 1.6232,
+   "O_EV_mc_sd": 0.2266,
+   "O_EV_ci2.5": 1.2217,
+   "O_EV_ci97.5": 2.1037,
+   "rank_if_placed_among_tainan37": 1,
+   "rank_among_93_villages": 1
+  },
+  {
+   "unit": "北投區立賢里",
+   "district": "北投區",
+   "village": "立賢里",
+   "city": "臺北市",
+   "R1_EV": 0.8724,
+   "R2_EV": 2.0505,
+   "R3_EV": 0.5869,
+   "O_EV_exact_eqw": 1.5623,
+   "O_EV_approx_eqw": 1.5619,
+   "approx_gap": -0.0004,
+   "O_EV_mc_mean": 1.5624,
+   "O_EV_mc_sd": 0.2333,
+   "O_EV_ci2.5": 1.1451,
+   "O_EV_ci97.5": 2.0605,
+   "rank_if_placed_among_tainan37": 1,
+   "rank_among_93_villages": 2
+  },
+  {
+   "unit": "北投區八仙里",
+   "district": "北投區",
+   "village": "八仙里",
+   "city": "臺北市",
+   "R1_EV": 0.8412,
+   "R2_EV": 2.0734,
+   "R3_EV": 0.5545,
+   "O_EV_exact_eqw": 1.5445,
+   "O_EV_approx_eqw": 1.544,
+   "approx_gap": -0.0005,
+   "O_EV_mc_mean": 1.5448,
+   "O_EV_mc_sd": 0.2427,
+   "O_EV_ci2.5": 1.1108,
+   "O_EV_ci97.5": 2.0639,
+   "rank_if_placed_among_tainan37": 1,
+   "rank_among_93_villages": 3
+  },
+  {
+   "unit": "北投區立農里",
+   "district": "北投區",
+   "village": "立農里",
+   "city": "臺北市",
+   "R1_EV": 0.7214,
+   "R2_EV": 2.0333,
+   "R3_EV": 0.539,
+   "O_EV_exact_eqw": 1.4668,
+   "O_EV_approx_eqw": 1.4664,
+   "approx_gap": -0.0004,
+   "O_EV_mc_mean": 1.4671,
+   "O_EV_mc_sd": 0.2453,
+   "O_EV_ci2.5": 1.0423,
+   "O_EV_ci97.5": 2.0037,
+   "rank_if_placed_among_tainan37": 1,
+   "rank_among_93_villages": 4
+  },
+  {
+   "unit": "北投區一德里",
+   "district": "北投區",
+   "village": "一德里",
+   "city": "臺北市",
+   "R1_EV": 0.4626,
+   "R2_EV": 2.0441,
+   "R3_EV": 0.3871,
+   "O_EV_exact_eqw": 1.2896,
+   "O_EV_approx_eqw": 1.2891,
+   "approx_gap": -0.0004,
+   "O_EV_mc_mean": 1.2902,
+   "O_EV_mc_sd": 0.2818,
+   "O_EV_ci2.5": 0.8062,
+   "O_EV_ci97.5": 1.9022,
+   "rank_if_placed_among_tainan37": 9,
+   "rank_among_93_villages": 5
+  },
+  {
+   "unit": "北投區尊賢里",
+   "district": "北投區",
+   "village": "尊賢里",
+   "city": "臺北市",
+   "R1_EV": 0.3783,
+   "R2_EV": 2.0068,
+   "R3_EV": 0.4034,
+   "O_EV_exact_eqw": 1.2432,
+   "O_EV_approx_eqw": 1.2428,
+   "approx_gap": -0.0004,
+   "O_EV_mc_mean": 1.2439,
+   "O_EV_mc_sd": 0.2811,
+   "O_EV_ci2.5": 0.7608,
+   "O_EV_ci97.5": 1.8427,
+   "rank_if_placed_among_tainan37": 9,
+   "rank_among_93_villages": 6
+  },
+  {
+   "unit": "北投區大同里",
+   "district": "北投區",
+   "village": "大同里",
+   "city": "臺北市",
+   "R1_EV": 0.6421,
+   "R2_EV": 1.5831,
+   "R3_EV": 0.436,
+   "O_EV_exact_eqw": 1.1891,
+   "O_EV_approx_eqw": 1.1883,
+   "approx_gap": -0.0008,
+   "O_EV_mc_mean": 1.1891,
+   "O_EV_mc_sd": 0.183,
+   "O_EV_ci2.5": 0.866,
+   "O_EV_ci97.5": 1.5826,
+   "rank_if_placed_among_tainan37": 11,
+   "rank_among_93_villages": 7
+  },
+  {
+   "unit": "士林區福華里",
+   "district": "士林區",
+   "village": "福華里",
+   "city": "臺北市",
+   "R1_EV": 0.2908,
+   "R2_EV": 1.9006,
+   "R3_EV": 0.3843,
+   "O_EV_exact_eqw": 1.1496,
+   "O_EV_approx_eqw": 1.1493,
+   "approx_gap": -0.0004,
+   "O_EV_mc_mean": 1.1503,
+   "O_EV_mc_sd": 0.272,
+   "O_EV_ci2.5": 0.6827,
+   "O_EV_ci97.5": 1.7318,
+   "rank_if_placed_among_tainan37": 13,
+   "rank_among_93_villages": 8
+  },
+  {
+   "unit": "北投區豐年里",
+   "district": "北投區",
+   "village": "豐年里",
+   "city": "臺北市",
+   "R1_EV": 0.4625,
+   "R2_EV": 1.546,
+   "R3_EV": 0.4028,
+   "O_EV_exact_eqw": 1.0794,
+   "O_EV_approx_eqw": 1.0786,
+   "approx_gap": -0.0007,
+   "O_EV_mc_mean": 1.0797,
+   "O_EV_mc_sd": 0.1927,
+   "O_EV_ci2.5": 0.7526,
+   "O_EV_ci97.5": 1.5007,
+   "rank_if_placed_among_tainan37": 16,
+   "rank_among_93_villages": 9
+  },
+  {
+   "unit": "士林區福安里",
+   "district": "士林區",
+   "village": "福安里",
+   "city": "臺北市",
+   "R1_EV": 0.2883,
+   "R2_EV": 1.7637,
+   "R3_EV": 0.3464,
+   "O_EV_exact_eqw": 1.0731,
+   "O_EV_approx_eqw": 1.0725,
+   "approx_gap": -0.0005,
+   "O_EV_mc_mean": 1.0737,
+   "O_EV_mc_sd": 0.2511,
+   "O_EV_ci2.5": 0.6469,
+   "O_EV_ci97.5": 1.6104,
+   "rank_if_placed_among_tainan37": 16,
+   "rank_among_93_villages": 10
+  },
+  {
+   "unit": "士林區富洲里",
+   "district": "士林區",
+   "village": "富洲里",
+   "city": "臺北市",
+   "R1_EV": 0.2712,
+   "R2_EV": 1.7619,
+   "R3_EV": 0.3434,
+   "O_EV_exact_eqw": 1.0635,
+   "O_EV_approx_eqw": 1.0629,
+   "approx_gap": -0.0005,
+   "O_EV_mc_mean": 1.0641,
+   "O_EV_mc_sd": 0.2526,
+   "O_EV_ci2.5": 0.6331,
+   "O_EV_ci97.5": 1.6046,
+   "rank_if_placed_among_tainan37": 17,
+   "rank_among_93_villages": 11
+  },
+  {
+   "unit": "士林區明勝里",
+   "district": "士林區",
+   "village": "明勝里",
+   "city": "臺北市",
+   "R1_EV": 0.2553,
+   "R2_EV": 1.6699,
+   "R3_EV": 0.3763,
+   "O_EV_exact_eqw": 1.0299,
+   "O_EV_approx_eqw": 1.0296,
+   "approx_gap": -0.0004,
+   "O_EV_mc_mean": 1.0306,
+   "O_EV_mc_sd": 0.2354,
+   "O_EV_ci2.5": 0.6306,
+   "O_EV_ci97.5": 1.5363,
+   "rank_if_placed_among_tainan37": 19,
+   "rank_among_93_villages": 12
+  },
+  {
+   "unit": "北投區洲美里",
+   "district": "北投區",
+   "village": "洲美里",
+   "city": "臺北市",
+   "R1_EV": 0.4383,
+   "R2_EV": 1.3541,
+   "R3_EV": 0.3843,
+   "O_EV_exact_eqw": 0.978,
+   "O_EV_approx_eqw": 0.9771,
+   "approx_gap": -0.001,
+   "O_EV_mc_mean": 0.9785,
+   "O_EV_mc_sd": 0.1628,
+   "O_EV_ci2.5": 0.7045,
+   "O_EV_ci97.5": 1.3355,
+   "rank_if_placed_among_tainan37": 21,
+   "rank_among_93_villages": 13
+  },
+  {
+   "unit": "士林區福中里",
+   "district": "士林區",
+   "village": "福中里",
+   "city": "臺北市",
+   "R1_EV": 0.2623,
+   "R2_EV": 1.5332,
+   "R3_EV": 0.3788,
+   "O_EV_exact_eqw": 0.975,
+   "O_EV_approx_eqw": 0.9746,
+   "approx_gap": -0.0004,
+   "O_EV_mc_mean": 0.9758,
+   "O_EV_mc_sd": 0.2106,
+   "O_EV_ci2.5": 0.6203,
+   "O_EV_ci97.5": 1.4284,
+   "rank_if_placed_among_tainan37": 21,
+   "rank_among_93_villages": 14
+  },
+  {
+   "unit": "士林區後港里",
+   "district": "士林區",
+   "village": "後港里",
+   "city": "臺北市",
+   "R1_EV": 0.2618,
+   "R2_EV": 1.4437,
+   "R3_EV": 0.3833,
+   "O_EV_exact_eqw": 0.938,
+   "O_EV_approx_eqw": 0.9376,
+   "approx_gap": -0.0004,
+   "O_EV_mc_mean": 0.9389,
+   "O_EV_mc_sd": 0.1947,
+   "O_EV_ci2.5": 0.6064,
+   "O_EV_ci97.5": 1.3577,
+   "rank_if_placed_among_tainan37": 22,
+   "rank_among_93_villages": 15
+  }
+ ],
+ "policy_RR_total_stats": {
+  "count": 93.0,
+  "mean": 0.0099,
+  "std": 0.0245,
+  "min": -0.0088,
+  "25%": 0.0,
+  "50%": 0.0,
+  "75%": 0.0,
+  "max": 0.1147
+ }
+}
