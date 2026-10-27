@@ -92,9 +92,25 @@
 | 救災機具能量 | 鄉鎮 | response_capacity | — |
 | 建物屋齡 | 區 | PHY_BuildingAge | 使用執照只有 90 年後；房屋稅籍需稅捐處 |
 
-## 5. 北士科＋洲美：示意中心 1.5 km 內的 25 里
+## 5. 北士科與里的對應
 
-中心沿 10/22 簡報（121.507°E、25.105°N），**不是正式園區邊界**；區段徵收範圍目前只有地號表，待取得地籍圖才能換成正式範圍。完整表：`bn_engine/results/taipei_v2_village/bstp_neighbourhood_villages_v2.csv`。
+### 5.1 正式範圍：地政局「臺北市區段徵收區」SHP（2026-10-27 補）
+
+來源：data.taipei 1ab43adf「臺北市區段徵收區」（地政局開發總隊，2026-04 版），北投士林科技園區 ID 018，**104.99 ha**，含 67 個街廓（T1–T18、R1–R32）。檔案副本 `data/taipei/taipei_zone_expropriation_ZEPN.zip`；示意地圖 `bn_engine/results/taipei_v2_village/map_bstp_villages_v2.png`；表 `bstp_villages_v2.csv`；GIS `bstp_boundary_and_villages_v2.geojson`。
+
+園區只跟 **3 個里**有交集，而且幾乎各占一半：
+
+| 里 | 交集面積 ha | 占園區 % | 占該里 % | 里人口（115/9） | 24h500 淹水面積 % | O_total 期望值（超大豪雨） |
+|---|---:|---:|---:|---:|---:|---:|
+| 北投區建民里 | 52.9 | 50.4 | 47.7 | 4,754 | 18.5 | 0.78 |
+| 北投區洲美里 | 51.6 | 49.2 | 29.6 | 2,343 | 27.5 | 0.98 |
+| 北投區福興里 | 0.45 | 0.4 | 1.3 | 6,942 | 22.5 | 0.70 |
+
+福興里的 0.45 ha 是里界與徵收範圍兩套圖資的邊界切割，實質上園區＝建民里西半＋洲美里東半。老師要的「北士科＋洲美一起看」，在里級就是這兩個里；社子島（福安、富洲）與石牌（吉慶、立賢、立農、尊賢）不在園區內，是周邊。
+
+### 5.2 參考：示意中心 1.5 km 內的 25 里
+
+中心沿 10/22 簡報（121.507°E、25.105°N），只作周邊參考。完整表：`bn_engine/results/taipei_v2_village/bstp_neighbourhood_villages_v2.csv`。
 
 | 里 | 圓內面積比 % | 24h500 淹水面積 % | 24h500 潛勢區內建築比 % | O_total 期望值（超大豪雨） |
 |---|---:|---:|---:|---:|
@@ -132,6 +148,8 @@
 | 里級 evidence（16 節點＋原始值＋解析度註記） | `.../evidence_per_village_taipei_v2.json` |
 | 推論結果（每里一列摘要／全部後驗／MC／政策分解） | `.../results_village_v2.csv`、`posteriors_all_h1_village_v2.csv`、`ototal_mc_village_v2.csv`、`ototal_policy_decomposition_village_v2.csv` |
 | 地圖與 GIS | `.../map_village_v2_超大豪雨.png`、`results_village_v2.geojson` |
-| 北士科周邊里 | `.../bstp_neighbourhood_villages_v2.csv` |
+| 北士科正式範圍示意地圖、交集 3 里表、GIS | `.../map_bstp_villages_v2.png`、`bstp_villages_v2.csv`、`bstp_boundary_and_villages_v2.geojson` |
+| 北士科周邊 1.5 km 參考里 | `.../bstp_neighbourhood_villages_v2.csv` |
+| 地政局區段徵收區 SHP（園區外框＋街廓）、河川／堤防／河川區域線底圖 | `data/taipei/taipei_zone_expropriation_ZEPN.zip`、`taipei_rivers_watergreen.geojson`、`taipei_levees_watergreen.geojson`、`taipei_river_zone_lines.kml` |
 | 決策紀錄、結案報告 | `docs/DRT-TPE-20261026-002_village_level_inputs.md`、`.../taipei_v2_village_close_report.md` |
 | 里級人口原始檔（士林北投 93 里，112/1–115/9，每月） | `data/taipei/pop_by_age_village_shilin_beitou_112-115.csv` |

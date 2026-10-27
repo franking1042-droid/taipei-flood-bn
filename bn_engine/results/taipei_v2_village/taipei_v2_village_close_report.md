@@ -51,7 +51,7 @@
 1. 這仍是移植版：切點、CPT、權重全是臺南的；E 節點等級語意是「放進臺南 37 區分布屬第幾級」。
 2. 區級複製的四個節點（獨居、身障、DR.NonStructural、RiverWaterLevel）在里級地圖上沒有變化。
 3. AccessToShelters 全為「高」、ElderlyAlone_Ratio 全為 very_high、DisabilityPopulation_Ratio 全為 medium，在臺北無鑑別力。
-4. 關渡、知行兩個集水分區無對應站（暫 0 cms）；北士科範圍為示意圓。
+4. 關渡、知行兩個集水分區無對應站（暫 0 cms）。北士科正式範圍（地政局區段徵收區 SHP，104.99 ha）只與建民里、洲美里各約一半交集，見 `map_bstp_villages_v2.png`、`bstp_villages_v2.csv`。
 5. 計數型 E 節點在里尺度多為 very_low，是尺度效應；替代分級 `level_q93` 未用於推論。
 6. 臺南端未裁定的問題原樣存在（VS 切點版本、SMC→DSE 與 NbS→RC 方向反置、降雨幅度傳不到 O_total、Brier 數字不可引用）。
 7. 數字是事件條件下的風險等級期望值，不是年度風險。

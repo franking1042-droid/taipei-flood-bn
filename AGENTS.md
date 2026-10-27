@@ -51,6 +51,7 @@
 | 4 | `compose_evidence_village.py` | `evidence_per_village_taipei_v2.json` |
 | 5 | `run_inference_village.py [all\|baseline\|mc\|policy]` | `results_village_v2.csv`、`posteriors_all_h1_village_v2.csv`、`ototal_*_village_v2.*`、`taipei_v2_village_summary.json` |
 | 6 | `make_village_maps.py` | `map_village_v2_超大豪雨.png`、`results_village_v2.geojson`、`bstp_neighbourhood_villages_v2.csv` |
+| 7 | `make_bstp_map.py`（用 `data/taipei/taipei_zone_expropriation_ZEPN.zip` 地政局區段徵收區 SHP） | `map_bstp_villages_v2.png`、`bstp_villages_v2.csv`、`bstp_boundary_and_villages_v2.geojson` |
 
 注意：
 - 里的鍵是 `unit`＝區名＋里名（`士林區福安里`），由 `taipei_paths.villages_gdf()` 產生；所有 v2 表、evidence JSON、H2 錨定表都用這個鍵。
