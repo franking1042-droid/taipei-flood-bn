@@ -25,6 +25,7 @@
 | 推論結果（每里一列摘要、全部後驗、MC、政策分解） | `bn_engine/results/taipei_v2_village/results_village_v2.csv` 等 |
 | 地圖、GeoJSON、北士科周邊 25 里 | `bn_engine/results/taipei_v2_village/map_village_v2_超大豪雨.png`、`results_village_v2.geojson`、`bstp_neighbourhood_villages_v2.csv` |
 | **北士科正式範圍示意地圖**（地政局區段徵收區 SHP 104.99 ha；只與建民里 50%、洲美里 49% 交集） | `bn_engine/results/taipei_v2_village/map_bstp_villages_v2.png`、`bstp_villages_v2.csv`、`bstp_boundary_and_villages_v2.geojson` |
+| **樞紐周邊結構圖**（修正淹水潛勢的四個父節點、抽水與河川兩條線的現況；標出建議新增的兩條邊：抽水 cms → 抽水運作、河川水位 → 外水頂托；24 項證據只有 15 項通到綜合風險，見 DRT-002 §10） | `docs/figures/bn_hub_two_edges.png`、`.svg` |
 
 ```bash
 cd scripts
@@ -35,6 +36,7 @@ python compose_evidence_village.py       # 93 里 × 16 節點 evidence
 python run_inference_village.py all      # baseline / mc / policy
 python make_village_maps.py              # 地圖、GeoJSON、北士科周邊里
 python make_bstp_map.py                  # 北士科正式範圍 × 里 示意地圖
+python make_bn_hub_edges_figure.py       # 樞紐周邊結構圖（pkl 逐邊核對，標出建議新增的兩條邊）
 ```
 
 結果一眼看（H1＝超大豪雨＋E 24h500，錨定）：64 里無潛勢區暴露、O_total 停在底值 0.292；前十里 吉慶 1.62、立賢 1.56、八仙 1.54、立農 1.47、一德 1.29、尊賢 1.24、大同 1.19、福華 1.15、豐年 1.08、福安 1.07。熱點在關渡平原東側（石牌）與社子島，北士科周邊（洲美 0.98、建民 0.78）居中。區級值與里級值不能直接比大小（E 節點是絕對暴露量）。
