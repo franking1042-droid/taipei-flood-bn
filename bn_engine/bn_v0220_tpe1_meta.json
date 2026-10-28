@@ -1,0 +1,61 @@
+{
+ "name": "bn_v0220_tpe1.pkl",
+ "date": "2026-10-29",
+ "base": "bn_v0220.pkl",
+ "base_sha256": "2cbe3f43e2fc860ce88d283d0693ebb0d9d43ca6c7aa3027148d246fa84c2ce0",
+ "sha256": "e145d9125bfc4740eeb6445b525d86821177a59b3777c778b6551dfb796a5fd1",
+ "nodes": 193,
+ "edges": 271,
+ "status": "臺北端提案模型；未經臺南端裁定，不是共用基線",
+ "rule": "新 CPT ∝ 舊 CPT × K^(方向 × ℓ × c)；ℓ=新父節點等級 ∈ [-1,1]，c=子節點置中序位；ℓ=0 時與 v0220 相同",
+ "edges_added": [
+  {
+   "edge": "DR.StructuralMeasures_Coverage -> PumpStationOperation",
+   "K": 2.0,
+   "direction": -1,
+   "old_parents": [
+    "PowerSupplyReliability",
+    "PumpMaintenanceFreq"
+   ],
+   "new_parents": [
+    "PowerSupplyReliability",
+    "PumpMaintenanceFreq",
+    "DR.StructuralMeasures_Coverage"
+   ],
+   "child_states": [
+    "正常",
+    "低於正常",
+    "失效"
+   ],
+   "new_parent_states": [
+    "低",
+    "中",
+    "高"
+   ]
+  },
+  {
+   "edge": "RiverWaterLevel -> TidalBackwater",
+   "K": 2.0,
+   "direction": 1,
+   "old_parents": [
+    "NZ.SeaLevelRise_Scenario"
+   ],
+   "new_parents": [
+    "NZ.SeaLevelRise_Scenario",
+    "RiverWaterLevel"
+   ],
+   "child_states": [
+    "低",
+    "中",
+    "高"
+   ],
+   "new_parent_states": [
+    "正常",
+    "三級警戒",
+    "二級警戒",
+    "一級警戒"
+   ]
+  }
+ ],
+ "drt": "docs/DRT-TPE-20261029-003_hub_edges_proposal.md"
+}

@@ -16,6 +16,7 @@
 | 路徑 | 內容 |
 |---|---|
 | `bn_engine/bn_v0220.pkl` | 臺南 v0.22.0 原檔。**不可修改** |
+| `bn_engine/bn_v0220_tpe1.pkl` | 臺北提案模型（2026-10-29）：v0220 加兩條邊 `DR.StructuralMeasures_Coverage → PumpStationOperation`、`RiverWaterLevel → TidalBackwater`，CPT 以勝算權重擴充（K=2 佔位）。**不是共用基線**，只供提案與前後比較；由 `scripts/build_bn_tpe1_hub_edges.py` 產生，不要手改。見 `docs/DRT-TPE-20261029-003_hub_edges_proposal.md` |
 | `bn_engine/cpt_priors/h2_district_conditional_table_taipei_v1.json` | 臺北 H2 錨定表：2 區 × 4 雨級 × FD1–5 |
 | `bn_engine/reference_tainan/` | 臺南參考表副本，是切點與對照來源，含 `ototal_mc_v0220.csv`、`ototal_baseline_posteriors_v0220.json`、`E_node_levels_v0213.csv` 等。**既有檔不可修改**，可新增，但要註明來源與 md5 |
 | `bn_engine/results/taipei_v1/` | v1 全部輸出與 `taipei_v1_close_report.md`、`taipei_v1_summary.json`。保留原樣，作為比對基準 |
