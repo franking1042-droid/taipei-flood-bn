@@ -1,0 +1,97 @@
+{
+ "date": "2026-10-30",
+ "n_units": 67,
+ "H1_base": "超大豪雨",
+ "models": [
+  "v0220",
+  "tpe1"
+ ],
+ "O_EV_v0220_planned": {
+  "mean": 0.8068,
+  "min": 0.6707,
+  "max": 0.9704,
+  "by_kind": {
+   "P": 0.7509,
+   "R": 0.8157,
+   "T": 0.8606
+  }
+ },
+ "O_EV_top10": {
+  "T13": {
+   "kind": "T",
+   "zoning_name": "科技產業專用區",
+   "flooded_area_pct": 12.849,
+   "O_EV": 0.9704
+  },
+  "T14": {
+   "kind": "T",
+   "zoning_name": "科技產業專用區",
+   "flooded_area_pct": 10.478,
+   "O_EV": 0.9523
+  },
+  "T11": {
+   "kind": "T",
+   "zoning_name": "科技產業專用區",
+   "flooded_area_pct": 10.016,
+   "O_EV": 0.9494
+  },
+  "T10": {
+   "kind": "T",
+   "zoning_name": "科技產業專用區",
+   "flooded_area_pct": 6.183,
+   "O_EV": 0.939
+  },
+  "T6": {
+   "kind": "T",
+   "zoning_name": "科技產業專用區",
+   "flooded_area_pct": 1.693,
+   "O_EV": 0.9163
+  },
+  "T7": {
+   "kind": "T",
+   "zoning_name": "科技產業專用區",
+   "flooded_area_pct": 1.315,
+   "O_EV": 0.9152
+  },
+  "T8": {
+   "kind": "T",
+   "zoning_name": "科技產業專用區",
+   "flooded_area_pct": 0.543,
+   "O_EV": 0.9144
+  },
+  "T12": {
+   "kind": "T",
+   "zoning_name": "科技產業專用區",
+   "flooded_area_pct": 0.072,
+   "O_EV": 0.9113
+  },
+  "T9": {
+   "kind": "T",
+   "zoning_name": "科技產業專用區",
+   "flooded_area_pct": 0.0,
+   "O_EV": 0.9112
+  },
+  "R30": {
+   "kind": "R",
+   "zoning_name": "第三種住宅區(特)",
+   "flooded_area_pct": 0.0,
+   "O_EV": 0.9112
+  }
+ },
+ "planned_minus_inherited_O_EV": {
+  "mean": 0.004,
+  "min": -0.0709,
+  "max": 0.051
+ },
+ "tpe1_minus_v0220_O_EV": {
+  "mean": -0.0076,
+  "min": -0.0098,
+  "max": -0.0062
+ },
+ "O_EV_by_H1_mean_v0220_planned": {
+  "大豪雨": 0.2921,
+  "極端降雨": 1.1464,
+  "豪雨": 0.2921,
+  "超大豪雨": 0.8068
+ }
+}

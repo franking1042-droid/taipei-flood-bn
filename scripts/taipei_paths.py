@@ -71,3 +71,9 @@ def villages_gdf():
     g["unit"] = g["district"] + g["village"]
     g["area_km2"] = g.geometry.area / 1e6
     return g.sort_values(["district", "village"]).reset_index(drop=True)
+
+
+# ---------------------------------------------------------------- taipei_v3：北士科街廓（土地使用單元）級（2026-10-30）
+OUT_V3 = ROOT / "bn_engine" / "results" / "taipei_v3_bstp_units"
+OUT_V3.mkdir(parents=True, exist_ok=True)
+WEB = ROOT / "webmap"          # 互動地圖（純靜態：Leaflet + 瀏覽器端 BN 推論引擎 + data/*.js）

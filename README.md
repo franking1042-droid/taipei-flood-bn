@@ -10,7 +10,33 @@
 
 研究區：臺北市士林區、北投區（北投士林科技園區所在），作為子二 BN 落地北士科的第一步；之後的「B. 北士科專用小模型」另立版本。
 
-## 最新：taipei_v2_village（里級版，2026-10-26）
+## 最新：taipei_v3_bstp_units（北士科街廓級＋互動地圖，2026-10-30）
+
+空間單元改為**北士科 67 個街廓**（地政局區段徵收區 ZEPN_1：T 17、R 29、公設 21），每個街廓一組風險值（R1、R2、R3、O 與全部分布），
+直接給子計畫一。潛勢錨定為街廓原生；evidence 繼承宿主里再依**計畫用途規則**覆寫土地使用節點；E 節點繼承宿主里。
+另附**純靜態互動地圖**：模型 CPT 載進瀏覽器，用 `webmap/bn_engine.js` 做精確推論（與 pgmpy 逐格對照，60 案例最大誤差 1.3e-10），
+改雨級、模型、任一證據或機制節點就重算 67 個街廓（0.05 s），點街廓看分布與證據來源，可匯出 CSV。
+
+| 內容 | 位置 |
+|---|---|
+| **互動地圖**（直接開 html；Leaflet 由 CDN 載入，底圖需網路，推論離線可用；`?selftest=1` 跑自我檢核） | `webmap/bstp_risk_map.html`、`bn_engine.js`、`data/*.js`；截圖 `docs/figures/bstp_webmap_screenshot.jpg`、`bstp_webmap_popup.jpg` |
+| 決策紀錄（單元定義、計畫用途規則、錨定等價性、結果、限制） | `docs/DRT-TPE-20261030-004_bstp_unit_level_webmap.md` |
+| 街廓單元表、GeoJSON、潛勢統計、錨定表 | `bn_engine/results/taipei_v3_bstp_units/bstp_units_v3.csv`、`.geojson`、`shp_baseline_bstp_units_v3.csv`、`bn_engine/cpt_priors/h2_bstp_unit_conditional_table_v3.json` |
+| 街廓 evidence（inherited／planned＋來源）、E 節點 | `evidence_per_bstp_unit_v3.json`、`E_node_levels_bstp_unit_v3.csv` |
+| **靜態結果**（67 × v0220／tpe1 × 4 雨級；每列 R1–R3／O 期望值、P(O≥高)、抽水運作、外水頂托） | `results_bstp_units_v3.csv`、`posteriors_all_bstp_units_v3.csv`、`taipei_v3_bstp_units_summary.json`、`map_bstp_units_v3_超大豪雨.png` |
+| 細部計畫分區（裁到園區外框） | `data/taipei/bstp_detail_plan_zoning.geojson` |
+
+```bash
+cd scripts
+python build_bstp_units.py               # 街廓單元表、H2 錨定表、evidence、E 節點
+python run_inference_bstp_units.py       # 靜態結果（pgmpy，兩模型）與地圖 PNG
+python export_webmap_data.py             # webmap/data/*.js 與 60 個 pgmpy 自我檢核案例
+```
+
+結果一眼看（v0220、計畫用途、街廓錨定）：豪雨／大豪雨 67 街廓全在底值 0.292（街廓無潛勢）；超大豪雨 平均 0.807（T 0.861、R 0.816、公設 0.751），
+最高洲美側 T13 0.970、T14 0.952、T11 0.949；極端降雨 平均 1.146（最高 1.71）。街廓間差異來自潛勢、宿主里、計畫用途三層；tpe1 比 v0220 低 0.006–0.010。
+
+## taipei_v2_village（里級版，2026-10-26）
 
 空間單元由 2 區改為 **93 里**（士林 51、北投 42），模型本體不動、節點集合與切點不動，只把三份輸入換成里級：
 潛勢圖 overlay 里界的 H2 錨定表、里級 evidence（人口 115/9、LULC、集水分區加權抽水量、服務里別收容所；獨居／身障／知識法則節點為區級複製）、里級 E 節點。

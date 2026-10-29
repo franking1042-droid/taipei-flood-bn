@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>北士科街廓風險地圖</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="bn_engine.js"></script>
+<script src="data/bn_v0220.js"></script>
+<script src="data/bn_v0220_tpe1.js"></script>
+<script src="data/bstp_units.js"></script>
+<script src="data/selftest.js"></script>
+<style>
+  :root { color-scheme: light; --surface-1:#fcfcfb; --surface-2:#f3f2ef; --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#7a7975;
+          --border:#e2e1dc; --series-1:#2a78d6; --good:#0ca30c; --critical:#d03b3b; --panel-w:380px; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { color-scheme: dark; --surface-1:#1a1a19; --surface-2:#242423; --text-primary:#f0efec;
+          --text-secondary:#c3c2b7; --text-muted:#8f8e88; --border:#3a3936; --series-1:#3987e5; } }
+  :root[data-theme="dark"] { color-scheme: dark; --surface-1:#1a1a19; --surface-2:#242423; --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#8f8e88; --border:#3a3936; --series-1:#3987e5; }
+  html, body { height:100%; margin:0; }
+  body { font-family:"Microsoft JhengHei","Noto Sans TC",system-ui,sans-serif; background:var(--surface-1); color:var(--text-primary); font-size:13px; line-height:1.45; }
+  #panel { position:absolute; left:0; top:0; bottom:0; width:var(--panel-w); box-sizing:border-box; overflow:auto; padding:12px 16px 24px; background:var(--surface-1); border-right:1px solid var(--border); z-index:1000; }
+  #map { position:absolute; left:var(--panel-w); top:0; right:0; bottom:0; background:#e9eef2; }
+  @media (max-width:800px) { #panel { position:relative; width:auto; height:46vh; border-right:none; border-bottom:1px solid var(--border); }
+                             #map { position:relative; left:0; height:54vh; } }
+  h1 { font-size:16px; margin:0 0 4px; }
+  .sub { color:var(--text-secondary); margin:0 0 10px; }
+  .row { display:flex; align-items:center; gap:8px; margin:6px 0; flex-wrap:wrap; }
+  .row > label:first-child { width:92px; color:var(--text-secondary); flex:none; }
+  select, button { font:inherit; color:var(--text-primary); background:var(--surface-1); border:1px solid var(--border); border-radius:6px; padding:4px 6px; }
+  select { max-width:240px; }
+  button { cursor:pointer; }
+  button.primary { background:var(--series-1); color:#fff; border-color:var(--series-1); }
+  .btns { display:flex; gap:6px; flex-wrap:wrap; margin:8px 0; }
+  .status { color:var(--text-secondary); font-size:12px; margin:6px 0; min-height:16px; }
+  details { border:1px solid var(--border); border-radius:8px; padding:6px 10px; margin:8px 0; background:var(--surface-2); }
+  summary { cursor:pointer; font-weight:600; }
+  .grp { margin:6px 0 4px; color:var(--text-secondary); font-weight:600; font-size:12px; }
+  .ov { display:grid; grid-template-columns:1fr 150px; gap:4px 8px; align-items:center; margin:3px 0; }
+  .ov .nm { font-size:12px; }
+  .ov .nm small { color:var(--text-muted); }
+  .ov select { width:150px; max-width:150px; font-size:12px; }
+  .ov select.set { border-color:var(--series-1); box-shadow:0 0 0 1px var(--series-1) inset; }
+  .dead { color:var(--text-muted); }
+  table.rules { border-collapse:collapse; width:100%; font-size:12px; }
+  table.rules td, table.rules th { border-bottom:1px solid var(--border); padding:3px 4px; text-align:left; vertical-align:top; }
+  .note { color:var(--text-secondary); font-size:12px; }
+  code { font-family:Consolas,monospace; font-size:12px; }
+  /* legend */
+  #legend { position:absolute; right:12px; bottom:24px; z-index:1000; background:var(--surface-1); border:1px solid var(--border); border-radius:8px; padding:8px 10px; min-width:200px; font-size:12px; }
+  #legend .bar { height:10px; border-radius:4px; margin:4px 0 2px; }
+  #legend .lab { display:flex; justify-content:space-between; color:var(--text-secondary); }
+  /* popup */
+  .leaflet-popup-content { margin:10px 12px; font-family:inherit; font-size:12px; color:#0b0b0b; }
+  .pp { max-height:66vh; overflow:auto; width:380px; }
+  .pp h3 { margin:0 0 2px; font-size:14px; }
+  .pp .meta { color:#52514e; margin-bottom:6px; }
+  .pp h4 { margin:8px 0 3px; font-size:12px; color:#52514e; border-bottom:1px solid #e2e1dc; }
+  .bars { display:grid; grid-template-columns:62px 1fr 44px; gap:2px 6px; align-items:center; }
+  .bars .bl { color:#52514e; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .bars .bt { height:8px; background:#eeede9; border-radius:4px; overflow:hidden; }
+  .bars .bf { display:block; height:100%; background:#2a78d6; border-radius:4px; }
+  .bars .bv { text-align:right; color:#0b0b0b; font-variant-numeric:tabular-nums; }
+  .ev { width:100%; border-collapse:collapse; }
+  .ev td { padding:1px 3px; border-bottom:1px solid #f0efec; vertical-align:top; }
+  .badge { display:inline-block; padding:0 5px; border-radius:8px; font-size:10px; background:#eeede9; color:#52514e; }
+  .badge.rule { background:#dcebfb; color:#1c5cab; }
+  .badge.user { background:#fde7d2; color:#8a3d0a; }
+  .badge.e { background:#e4f3e4; color:#0a5a0a; }
+  .kv { display:flex; justify-content:space-between; }
+  .vlabel { background:rgba(255,255,255,.75); border:none; box-shadow:none; color:#444; font-size:11px; white-space:nowrap; }
+  .sr { color:var(--good); } .er { color:var(--critical); }
+</style>
+</head>
+<body>
+<div id="panel">
+  <h1>北士科街廓淹水風險 — 互動推論</h1>
+  <p class="sub">67 個街廓（46 個 T／R 街廓＋21 個公設用地）各一組風險值。改任何參數，瀏覽器內的貝氏網路立刻重算整張圖（精確推論，不是查表）。點街廓看該單元的風險分布與用了哪些證據。</p>
+  <div class="row"><label>模型</label><select id="model"><option value="v0220">bn_v0220（臺南共用基線）</option><option value="tpe1">bn_v0220_tpe1（臺北提案：加兩條邊）</option></select></div>
+  <div class="row"><label>雨級 H1</label><select id="h1"></select></div>
+  <div class="row"><label>evidence</label><select id="variant"><option value="planned">計畫用途（繼承宿主里＋計畫用途規則）</option><option value="inherited">只繼承宿主里（現況）</option></select></div>
+  <div class="row"><label></label><label><input type="checkbox" id="anchor" checked> 以街廓潛勢圖錨定原始淹水潛勢</label></div>
+  <div class="row"><label>地圖指標</label><select id="indicator"></select></div>
+  <div class="row"><label></label><label><input type="checkbox" id="autoscale" checked> 色階依目前結果縮放（否則用指標全距）</label></div>
+  <div class="status" id="status">載入中…</div>
+  <div class="btns"><button id="export" class="primary">匯出 CSV（子計畫一輸入）</button><button id="reset">清除覆寫</button><button id="selftest">自我檢核（對照 pgmpy）</button></div>
+  <div class="status" id="testout"></div>
+  <details open><summary>證據覆寫（套用到全部街廓）</summary>
+    <div class="note">「預設」＝用各街廓自己的值；機制節點預設不給證據、由模型推估。標「不通到 O」的節點改了也不影響綜合總風險。</div>
+    <div id="controls"></div>
+  </details>
+  <details><summary>計畫用途規則（evidence＝計畫用途 時套用）</summary>
+    <div class="note">街廓現況是空置地／營建中，所以土地使用相關節點依細部計畫分區定狀態，其餘節點繼承宿主里。</div>
+    <table class="rules" id="rules"></table>
+  </details>
+  <details><summary>方法與限制</summary>
+    <div class="note">
+      <p><b>單元</b>：地政局區段徵收區 ZEPN_1 北士科街廓；分區＝細部計畫使用分區交集最大者。<b>錨定</b>：潛勢圖 10 情境 overlay 街廓 → 每街廓 P_shp(FD1–5｜雨級)，同臺南／里級方法。<b>evidence</b>：繼承與街廓交集最大的里（洲美、建民、福興）的里級值，再依計畫用途規則覆寫；<b>E 節點</b>（潛勢區暴露）繼承宿主里，8 個只有 3 個通到綜合總風險。</p>
+      <p><b>推論</b>：瀏覽器端 variable elimination，與 pgmpy 同語意；錨定為 virtual evidence（lik＝P_shp／P(OFP|e)）。同一組證據的 P(目標, OFP|e) 只算一次，各街廓以自己的 P_shp 加權，所以 67 個街廓幾乎不比 1 個慢。OUT_FloodRiskIndex（390,625 格）未放進網頁，靜態 CSV 有。</p>
+      <p><b>限制</b>：里級節點（人口比例、獨居、身障、收容所、河川水位、抽水 cms）在同一宿主里的街廓之間同值，街廓間差異主要來自潛勢錨定與計畫用途；E 節點為里級絕對暴露量，街廓級計畫暴露量（計畫人口、樓地板）是下一步；tpe1 的兩張 CPT 是 K＝2 佔位；v0220 既有問題（CPT 方向反置、豪雨／大豪雨同值）原樣存在。</p>
+      <p>資料與程式：<code>taipei-flood-bn/webmap/</code>、<code>scripts/build_bstp_units.py</code>、<code>export_webmap_data.py</code>；靜態對照 <code>bn_engine/results/taipei_v3_bstp_units/results_bstp_units_v3.csv</code>。</p>
+    </div>
+  </details>
+</div>
+<div id="map"></div>
+<div id="legend"></div>
+<script>
+(function () {
+  "use strict";
+  const M = window.BSTP.meta, UNITS = window.BSTP.units, CTX = window.BSTP.context, H2 = window.BSTP.h2, EV = window.BSTP.evidence, EL = window.BSTP.e_levels;
+  const SPECS = { v0220: window.BN_SPEC_v0220, tpe1: window.BN_SPEC_tpe1 };
+  const RAMP = ["#cde2fb", "#b7d3f6", "#9ec5f4", "#86b6ef", "#6da7ec", "#5598e7", "#3987e5", "#2a78d6", "#256abf", "#1c5cab", "#184f95", "#104281", "#0d366b"];
+  const INDICATORS = [
+    { key: "O_EV", label: "綜合總風險 O 期望值（0 極低…4 極高）", node: "O_TotalRisk_int", kind: "ev" },
+    { key: "P_O_high", label: "P(綜合總風險 ≥ 高)", node: "O_TotalRisk_int", kind: "ptail", from: 3 },
+    { key: "R1_EV", label: "經濟損失 R1 期望值（0…3）", node: "R1_EconomicLoss_new", kind: "ev" },
+    { key: "R2_EV", label: "生命線中斷 R2 期望值（0…3）", node: "R2_Lifeline_new", kind: "ev" },
+    { key: "R3_EV", label: "弱勢人口 R3 期望值（0…3）", node: "R3_Vulnerable_new", kind: "ev" },
+    { key: "FD_EV", label: "淹水延時期望值（0 短…3 極長）", node: "FloodDuration", kind: "ev" },
+    { key: "MFP_EV", label: "修正淹水潛勢期望值（0…4）", node: "ModifiedFloodPotential", kind: "ev" },
+    { key: "P_OFP_ge_FD2", label: "P(原始淹水潛勢 ≥ FD2，即 ≥0.3 m)", node: "OriginalFloodPotential", kind: "ptail", from: 1 },
+    { key: "P_PSO_normal", label: "P(抽水站運作＝正常)", node: "PumpStationOperation", kind: "pstate", idx: 0 },
+    { key: "P_TB_high", label: "P(外水頂托＝高)", node: "TidalBackwater", kind: "pstate", idx: 2 },
+  ];
+  const TARGET_ORDER = ["O_TotalRisk_int", "R1_EconomicLoss_new", "R2_Lifeline_new", "R3_Vulnerable_new", "FloodDuration", "ModifiedFloodPotential", "OriginalFloodPotential", "PumpStationOperation", "TidalBackwater"];
+  const state = { model: "v0220", h1: M.H1_BASE, variant: "planned", anchor: true, indicator: "O_EV", autoscale: true, overrides: {}, results: {} };
+  const models = {};
+  function getModel(name) { if (!models[name]) models[name] = new BNEngine.Model(SPECS[name]); return models[name]; }
+  const $ = (id) => document.getElementById(id);
+  const label = (n) => M.node_label[n] || n;
+
+  // ---------- evidence（與 run_inference_bstp_units.unit_evidence 同規則）
+  function buildEvidence(uid, h1, variant, overrides, model) {
+    const base = EV[uid]["evidence_" + variant], ev = {};
+    for (const k in base) {
+      if (k === "Rainfall" || k.startsWith("_") || !model.has(k)) continue;
+      if (model.states(k).indexOf(base[k]) >= 0) ev[k] = base[k];
+    }
+    ev.Rainfall = h1;
+    const el = (EL[uid] || {})[M.SCEN_BY_H1[h1]] || {};
+    for (const n in el) if (model.has(n) && model.states(n).indexOf(el[n]) >= 0) ev[n] = el[n];
+    for (const n in overrides) if (overrides[n]) ev[n] = overrides[n];
+    return ev;
+  }
+  function provenance(uid, node, ev) {
+    if (state.overrides[node]) return ["使用者覆寫", "user"];
+    const el = (EL[uid] || {})[M.SCEN_BY_H1[state.h1]] || {};
+    if (node === "Rainfall") return ["雨級設定", "e"];
+    if (node in el) return ["E 節點（繼承 " + EV[uid].provenance_village + "）", "e"];
+    const p = (EV[uid].provenance || {})[node] || "";
+    if (state.variant === "planned" && p.startsWith("計畫用途規則")) return [p, "rule"];
+    return [p.replace("計畫用途規則", "里級繼承"), ""];
+  }
+
+  // ---------- compute
+  function indVal(post, ind) {
+    const p = post[ind.node];
+    if (!p) return null;
+    if (ind.kind === "ev") return p.reduce((s, x, i) => s + i * x, 0);
+    if (ind.kind === "ptail") return p.slice(ind.from).reduce((a, b) => a + b, 0);
+    return p[ind.idx];
+  }
+  function compute() {
+    const t0 = performance.now(), model = getModel(state.model), results = {}, keys = new Set();
+    for (const f of UNITS.features) {
+      const uid = f.properties.unit_id;
+      const ev = buildEvidence(uid, state.h1, state.variant, state.overrides, model);
+      keys.add(JSON.stringify(ev));
+      const pshp = state.anchor ? H2[uid][state.h1].p_FD1_5 : null;
+      results[uid] = { ev, pshp, post: model.anchoredQuery(ev, pshp, M.targets) };
+    }
+    state.results = results;
+    const dt = (performance.now() - t0) / 1000;
+    $("status").textContent = `已重算 67 個街廓：${dt.toFixed(2)} s（${keys.size} 組不同證據，模型 ${state.model}，${state.h1}，E 情境 ${M.SCEN_BY_H1[state.h1]}）`;
+    restyle();
+  }
+  let timer = null;
+  function schedule() { clearTimeout(timer); timer = setTimeout(compute, 30); }
+
+  // ---------- map
+  const map = L.map("map", { zoomControl: true });
+  const emap = L.tileLayer("https://wmts.nlsc.gov.tw/wmts/EMAP/default/GoogleMapsCompatible/{z}/{y}/{x}", { maxZoom: 19, attribution: "底圖：內政部國土測繪中心 臺灣通用電子地圖" });
+  const photo = L.tileLayer("https://wmts.nlsc.gov.tw/wmts/PHOTO2/default/GoogleMapsCompatible/{z}/{y}/{x}", { maxZoom: 19, attribution: "底圖：內政部國土測繪中心 正射影像" });
+  const osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: "© OpenStreetMap contributors" });
+  emap.addTo(map);
+  const villages = L.geoJSON({ type: "FeatureCollection", features: CTX.features.filter(f => f.properties.layer === "village") }, {
+    style: { color: "#6b6a66", weight: 1.2, dashArray: "5 4", fill: false },
+    onEachFeature: (f, layer) => {
+      const c = layer.getBounds().getCenter();
+      L.marker(c, { icon: L.divIcon({ className: "vlabel", html: `${f.properties.village}<br><small>${f.properties.pct_of_village_in_bstp}% 在園區內</small>`, iconSize: null }), interactive: false }).addTo(map);
+    },
+  }).addTo(map);
+  const boundary = L.geoJSON({ type: "FeatureCollection", features: CTX.features.filter(f => f.properties.layer === "bstp_boundary") }, { style: { color: "#c00000", weight: 2.5, fill: false } }).addTo(map);
+  let domain = [0, 1];
+  function colorOf(v) {
+    if (v === null || v === undefined) return "#d9d8d3";
+    const [lo, hi] = domain, t = hi > lo ? (v - lo) / (hi - lo) : 0.5;
+    return RAMP[Math.max(0, Math.min(RAMP.length - 1, Math.round(t * (RAMP.length - 1))))];
+  }
+  function currentValue(uid) { const r = state.results[uid]; return r ? indVal(r.post, INDICATORS.find(i => i.key === state.indicator)) : null; }
+  function styleFor(f) { return { color: "#ffffff", weight: 1, fillColor: colorOf(currentValue(f.properties.unit_id)), fillOpacity: 0.85 }; }
+  const units = L.geoJSON(UNITS, {
+    style: styleFor,
+    onEachFeature: (f, layer) => {
+      layer.bindTooltip(() => tooltipHtml(f), { sticky: true, direction: "top", opacity: 0.95 });
+      layer.on("click", () => layer.bindPopup(popupHtml(f), { maxWidth: 420, autoPan: true }).openPopup());
+      layer.on("mouseover", () => layer.setStyle({ weight: 2.5, color: "#0b0b0b" }));
+      layer.on("mouseout", () => units.resetStyle(layer));
+    },
+  }).addTo(map);
+  L.control.layers({ "臺灣通用電子地圖": emap, "正射影像": photo, "OpenStreetMap": osm }, { "街廓": units, "里界": villages, "園區外框": boundary }, { collapsed: true }).addTo(map);
+  map.fitBounds(units.getBounds().pad(0.08));
+
+  function restyle() {
+    const ind = INDICATORS.find(i => i.key === state.indicator);
+    const vals = UNITS.features.map(f => currentValue(f.properties.unit_id)).filter(v => v !== null);
+    if (state.autoscale && vals.length) domain = [Math.min(...vals), Math.max(...vals)];
+    else domain = ind.kind === "ev" ? [0, M.states[ind.node].length - 1] : [0, 1];
+    units.setStyle(styleFor);
+    const fmt = (x) => (ind.kind === "ev" ? x.toFixed(2) : (x * 100).toFixed(0) + "%");
+    $("legend").innerHTML = `<div><b>${ind.label}</b></div><div class="bar" style="background:linear-gradient(90deg,${RAMP.join(",")})"></div>` +
+      `<div class="lab"><span>${fmt(domain[0])}</span><span>${fmt(domain[1])}</span></div>` +
+      `<div class="lab"><span>${state.autoscale ? "色階＝目前結果的最小–最大" : "色階＝指標全距"}</span></div>` +
+      (vals.length < UNITS.features.length ? `<div class="lab"><span>灰＝該節點已設為證據</span></div>` : "");
+  }
+  function tooltipHtml(f) {
+    const p = f.properties, v = currentValue(p.unit_id), ind = INDICATORS.find(i => i.key === state.indicator);
+    const s = v === null ? "（已設為證據）" : (ind.kind === "ev" ? v.toFixed(3) : (v * 100).toFixed(1) + "%");
+    return `<b>${p.name}</b><br>${ind.label.split("（")[0]}：${s}<br><small>${p.area_ha} ha · 淹水面積 ${H2[p.unit_id][state.h1].flooded_area_pct.toFixed(1)}%（${state.h1}）</small>`;
+  }
+  function bars(states, p, fmtv) {
+    return `<div class="bars">` + states.map((s, i) => `<span class="bl" title="${s}">${s}</span><span class="bt"><span class="bf" style="width:${(p[i] * 100).toFixed(1)}%"></span></span><span class="bv">${(p[i] * 100).toFixed(1)}%</span>`).join("") + `</div>`;
+  }
+  function ev_of(p) { return p.reduce((s, x, i) => s + i * x, 0); }
+  function popupHtml(f) {
+    const p = f.properties, uid = p.unit_id, r = state.results[uid];
+    if (!r) return "尚未計算";
+    const h2 = H2[uid][state.h1];
+    let html = `<div class="pp"><h3>${p.name}</h3><div class="meta">${p.kind_label} · ${p.zoning_name}（${p.zoning_share_pct}%） · ${p.area_ha} ha · 宿主里 ${p.host_village}（${p.host_share_pct}%）<br>現況 LULC 112 年：${p.lulc_now_2023}</div>`;
+    html += `<h4>風險（${state.model}，${state.h1}，${state.anchor ? "街廓錨定" : "未錨定"}）</h4>`;
+    for (const t of TARGET_ORDER) {
+      const q = r.post[t];
+      if (!q) { html += `<div class="kv"><span>${label(t)}</span><span class="badge user">已設為證據：${r.ev[t]}</span></div>`; continue; }
+      html += `<div class="kv"><span><b>${label(t)}</b></span><span>期望值 ${ev_of(q).toFixed(3)}</span></div>` + bars(M.states[t], q);
+    }
+    html += `<h4>錨定用的潛勢圖統計（${state.h1}：${h2.scenarios.join("、")}）</h4><div class="kv"><span>街廓內淹水面積（≥0.3 m）</span><span>${h2.flooded_area_pct.toFixed(2)}%</span></div>` + bars(M.fd_states, h2.p_FD1_5);
+    html += `<h4>這個街廓用的證據（${Object.keys(r.ev).length} 項）</h4><table class="ev">`;
+    for (const n of Object.keys(r.ev)) {
+      const [src, cls] = provenance(uid, n, r.ev);
+      const dead = SPECS[state.model].reaches_O[n] ? "" : ` <span class="badge">不通到 O</span>`;
+      html += `<tr><td>${label(n)}${dead}</td><td><b>${r.ev[n]}</b></td><td><span class="badge ${cls}">${src}</span></td></tr>`;
+    }
+    html += `</table></div>`;
+    return html;
+  }
+
+  // ---------- controls
+  function buildControls() {
+    const h1 = $("h1");
+    h1.innerHTML = M.H1_LIST.map(h => `<option value="${h}" ${h === state.h1 ? "selected" : ""}>${h}（E 節點用 ${M.SCEN_BY_H1[h]}）</option>`).join("");
+    $("indicator").innerHTML = INDICATORS.map(i => `<option value="${i.key}">${i.label}</option>`).join("");
+    const box = $("controls");
+    box.innerHTML = "";
+    for (const g of M.controls) {
+      const d = document.createElement("div");
+      d.innerHTML = `<div class="grp">${g.group}</div>`;
+      for (const nd of g.nodes) {
+        const row = document.createElement("div");
+        row.className = "ov";
+        const dead = !SPECS[state.model].reaches_O[nd.name];
+        row.innerHTML = `<div class="nm ${dead ? "dead" : ""}">${nd.label}<br><small>${nd.name}${dead ? "（不通到 O）" : ""}</small></div>` +
+          `<select data-node="${nd.name}"><option value="">${nd.scenario ? "不設定（模型推估）" : "預設（各街廓自己的值）"}</option>` +
+          nd.states.map(s => `<option value="${s}" ${state.overrides[nd.name] === s ? "selected" : ""}>${s}</option>`).join("") + `</select>`;
+        const sel = row.querySelector("select");
+        if (state.overrides[nd.name]) sel.classList.add("set");
+        sel.addEventListener("change", () => {
+          if (sel.value) state.overrides[nd.name] = sel.value; else delete state.overrides[nd.name];
+          sel.classList.toggle("set", !!sel.value);
+          schedule();
+        });
+        d.appendChild(row);
+      }
+      box.appendChild(d);
+    }
+    const rules = $("rules");
+    const zc = Object.keys(M.planned_rules);
+    rules.innerHTML = `<tr><th>分區</th><th>覆寫的節點 → 狀態</th></tr>` + zc.map(z => {
+      const name = Object.values(M.unit_index).find(u => u.zoning_code === z);
+      return `<tr><td>${z}<br><small>${name ? name.zoning_name : ""}</small></td><td>${Object.entries(M.planned_rules[z]).map(([n, s]) => `${label(n)} → <b>${s}</b>`).join("；")}</td></tr>`;
+    }).join("") + `<tr><td colspan="2"><small>${Object.entries(M.rule_basis).map(([n, b]) => `<b>${label(n)}</b>：${b}`).join("<br>")}</small></td></tr>`;
+  }
+  $("model").addEventListener("change", (e) => { state.model = e.target.value; buildControls(); schedule(); });
+  $("h1").addEventListener("change", (e) => { state.h1 = e.target.value; schedule(); });
+  $("variant").addEventListener("change", (e) => { state.variant = e.target.value; schedule(); });
+  $("anchor").addEventListener("change", (e) => { state.anchor = e.target.checked; schedule(); });
+  $("indicator").addEventListener("change", (e) => { state.indicator = e.target.value; restyle(); });
+  $("autoscale").addEventListener("change", (e) => { state.autoscale = e.target.checked; restyle(); });
+  $("reset").addEventListener("click", () => { state.overrides = {}; buildControls(); schedule(); });
+
+  // ---------- export
+  function exportCsv() {
+    const cols = ["unit_id", "code", "name", "kind", "zoning_name", "area_ha", "host_village", "model", "H1", "E_scenario", "variant", "anchor", "overrides", "flooded_area_pct"].concat(INDICATORS.map(i => i.key));
+    const dist = [];
+    for (const t of TARGET_ORDER) for (const s of M.states[t]) dist.push(`P(${t}=${s})`);
+    const lines = [cols.concat(dist).join(",")];
+    for (const f of UNITS.features) {
+      const p = f.properties, r = state.results[p.unit_id];
+      const row = [p.unit_id, p.code, p.name, p.kind, p.zoning_name, p.area_ha, p.host_village, state.model, state.h1, M.SCEN_BY_H1[state.h1], state.variant, state.anchor,
+        JSON.stringify(state.overrides), H2[p.unit_id][state.h1].flooded_area_pct].concat(INDICATORS.map(i => { const v = indVal(r.post, i); return v === null ? "" : v.toFixed(6); }));
+      for (const t of TARGET_ORDER) for (let i = 0; i < M.states[t].length; i++) row.push(r.post[t] ? r.post[t][i].toFixed(6) : (r.ev[t] === M.states[t][i] ? "1" : "0"));
+      lines.push(row.map(x => { const s = String(x); return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; }).join(","));
+    }
+    const blob = new Blob(["﻿" + lines.join("\n")], { type: "text/csv;charset=utf-8" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `bstp_units_risk_${state.model}_${state.h1}_${state.variant}${Object.keys(state.overrides).length ? "_overrides" : ""}.csv`;
+    a.click();
+  }
+  $("export").addEventListener("click", exportCsv);
+
+  // ---------- self test（對照 pgmpy 的案例）
+  function sortObj(o) { const r = {}; for (const k of Object.keys(o).sort()) r[k] = o[k]; return r; }
+  function selfTest() {
+    const cases = window.SELFTEST.cases, tol = window.SELFTEST.tolerance;
+    let maxd = 0, evMismatch = 0, n = 0;
+    const bad = [];
+    const t0 = performance.now();
+    for (const c of cases) {
+      const model = getModel(c.model);
+      const ev = buildEvidence(c.unit, c.h1, c.variant, c.overrides, model);
+      if (JSON.stringify(sortObj(ev)) !== JSON.stringify(sortObj(c.evidence))) evMismatch++;
+      const post = model.anchoredQuery(c.evidence, c.anchor ? c.pshp : null, M.targets);
+      for (const t in c.expected) {
+        const e = c.expected[t], g = post[t];
+        if (!g) { bad.push(`${c.id} ${t} 缺`); continue; }
+        for (let i = 0; i < e.length; i++) { const d = Math.abs(e[i] - g[i]); n++; if (d > maxd) maxd = d; if (d > tol) bad.push(`${c.id} ${c.model} ${c.unit} ${c.h1} ${t}[${i}] Δ=${d.toExponential(2)}`); }
+      }
+    }
+    const dt = ((performance.now() - t0) / 1000).toFixed(2);
+    const ok = bad.length === 0 && evMismatch === 0;
+    $("testout").innerHTML = `<span class="${ok ? "sr" : "er"}">${ok ? "通過" : "不通過"}</span>：${cases.length} 個案例、${n} 個機率值，最大誤差 ${maxd.toExponential(2)}（容忍 ${tol}）；證據字典不一致 ${evMismatch}；${dt} s` + (bad.length ? `<br>${bad.slice(0, 8).join("<br>")}` : "");
+    return { ok, maxd, evMismatch, n, bad };
+  }
+  $("selftest").addEventListener("click", selfTest);
+  window.bstpSelfTest = selfTest;
+  window.bstpState = state;
+
+  buildControls();
+  compute();
+  if (location.search.indexOf("selftest") >= 0) selfTest();
+})();
+</script>
+</body>
+</html>

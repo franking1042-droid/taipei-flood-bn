@@ -20,6 +20,10 @@
 | `bn_engine/cpt_priors/h2_district_conditional_table_taipei_v1.json` | 臺北 H2 錨定表：2 區 × 4 雨級 × FD1–5 |
 | `bn_engine/reference_tainan/` | 臺南參考表副本，是切點與對照來源，含 `ototal_mc_v0220.csv`、`ototal_baseline_posteriors_v0220.json`、`E_node_levels_v0213.csv` 等。**既有檔不可修改**，可新增，但要註明來源與 md5 |
 | `bn_engine/results/taipei_v1/` | v1 全部輸出與 `taipei_v1_close_report.md`、`taipei_v1_summary.json`。保留原樣，作為比對基準 |
+| `bn_engine/results/taipei_v3_bstp_units/` | v3（2026-10-30）：北士科 67 個街廓的單元表、潛勢統計、evidence、E 節點、靜態推論結果與地圖。見 `docs/DRT-TPE-20261030-004_bstp_unit_level_webmap.md` |
+| `bn_engine/cpt_priors/h2_bstp_unit_conditional_table_v3.json` | 街廓級 H2 錨定表：67 街廓 × 4 雨級 × FD1–5 |
+| `webmap/` | 純靜態互動地圖：`bstp_risk_map.html`（Leaflet）、`bn_engine.js`（瀏覽器端 variable elimination，與 pgmpy 同語意）、`data/*.js`（由 `scripts/export_webmap_data.py` 產生，**不要手改**：兩個模型的 CPT、街廓資料、自我檢核案例） |
+| `data/taipei/bstp_detail_plan_zoning.geojson` | 都市計畫細部計畫使用分區，裁到北士科外框 100 m 內（由 Data_taipei 全市 SHP 裁出，原檔無 .prj，設 EPSG:3826） |
 | `data/taipei/` | 臺北輸入副本，共 12 檔：潛勢圖 zip、LULC zip、里界 zip、抽水站、收容所、人口、獨居、身障、低收、集水分區 KML |
 | `data/_unzipped/` | 執行時自動解壓的目錄，已列入 .gitignore |
 | `docs/DRT-TPE-*.md` | 臺北端決策紀錄，格式比照臺南 DRT |
@@ -60,6 +64,20 @@
 - v1 模組 import 時已把 stdout 包成 UTF-8；v2 腳本用 `if getattr(sys.stdout, "encoding", "")...` 守衛避免重複包裝（重複包裝會造成 `I/O operation on closed file`）。
 - 里級人口檔 `data/taipei/pop_by_age_village_shilin_beitou_112-115.csv` 是 data.taipei「臺北市各里人口數按年齡分」的里列子集（112/1–115/9）；v1 用的 `pop_by_age_village_2023-01.csv` 其實是區列，別拿來當里級。
 - `bn_engine/results/taipei_v2_village/` 是 v2 基準輸出；下一版輸出到 `taipei_v2a/` 等新目錄。
+
+## taipei_v3_bstp_units（北士科街廓級＋互動地圖）腳本順序
+
+| 順序 | 腳本 | 輸出 |
+|---|---|---|
+| 1 | `build_bstp_units.py`（用 ZEPN_1 街廓、細部計畫分區、里界、LULC、潛勢圖 zip、v2 里級 evidence 與 E 節點） | `results/taipei_v3_bstp_units/bstp_units_v3.csv`／`.geojson`、`shp_baseline_bstp_units_v3.csv`、`evidence_per_bstp_unit_v3.json`、`E_node_levels_bstp_unit_v3.csv`、`cpt_priors/h2_bstp_unit_conditional_table_v3.json`、`data/taipei/bstp_detail_plan_zoning.geojson`（首次） |
+| 2 | `run_inference_bstp_units.py`（pgmpy，v0220 與 tpe1） | `results_bstp_units_v3.csv`、`posteriors_all_bstp_units_v3.csv`、`taipei_v3_bstp_units_summary.json`、`map_bstp_units_v3_超大豪雨.png` |
+| 3 | `export_webmap_data.py` | `webmap/data/bn_v0220.js`、`bn_v0220_tpe1.js`、`bstp_units.js`、`selftest.js` |
+
+注意：
+- 街廓的鍵是 `unit_id`＝街廓碼（`T16`、`R24-1`），未編碼公設為 `P01`–`P21`；evidence JSON 的 `_meta.unit_index` 有每個單元的分區、面積、宿主里。
+- 潛勢圖 shapefile 的座標系與街廓（3826）不同，用 `pyogrio.read_dataframe(..., bbox=...)` 時 bbox 必須先轉到原檔座標系，否則讀到空集合、全部 0%（`build_bstp_units.h2_table` 已處理）。
+- 改了模型、街廓輸入或 evidence 規則，三支都要重跑，並在瀏覽器開 `webmap/bstp_risk_map.html?selftest=1` 確認自我檢核通過（60 案例對照 pgmpy，容忍 1e-6）。
+- `webmap/` 不需伺服器；要用瀏覽器自動化測試時可用 `python -m http.server --directory webmap`。
 
 ## 不可碰的東西
 
