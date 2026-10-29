@@ -73,6 +73,8 @@ model: bn_v0220.pkl（不動）；bn_v0220_tpe1.pkl（提案）可切換
   - 輸出：點街廓看完整分布（O、R1–R3、延時、修正潛勢、原始潛勢、抽水運作、外水頂托）、錨定用的潛勢統計、該街廓用的證據與來源；
     「匯出 CSV」把目前情境下 67 個街廓的指標與全部分布存成 UTF-8 BOM CSV（含 overrides 欄位），即子計畫一的輸入格式。
   - 底圖用國土測繪中心 WMTS（通用電子地圖／正射影像）與 OSM；推論本身不需網路。直接開 html 檔即可（Leaflet 由 CDN 載入）。
+  - 公開網址（2026-10-30 開 GitHub Pages，main 分支根目錄，repo 本身是公開的）：
+    https://franking1042-droid.github.io/taipei-flood-bn/webmap/bstp_risk_map.html ；repo 根目錄放 `.nojekyll` 讓 Pages 原樣發布、不經 Jekyll。
   - 網頁引擎不含 `OUT_FloodRiskIndex`（7 個父節點、390,625 格）；靜態 CSV 有。
 
 ## 6. 結果（bn_v0220、計畫用途 evidence、街廓錨定）

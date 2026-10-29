@@ -19,6 +19,7 @@
 
 | 內容 | 位置 |
 |---|---|
+| **互動地圖公開網址**（GitHub Pages，main 分支根目錄；每次 push 後約一分鐘更新） | https://franking1042-droid.github.io/taipei-flood-bn/webmap/bstp_risk_map.html |
 | **互動地圖**（直接開 html；Leaflet 由 CDN 載入，底圖需網路，推論離線可用；`?selftest=1` 跑自我檢核） | `webmap/bstp_risk_map.html`、`bn_engine.js`、`data/*.js`；截圖 `docs/figures/bstp_webmap_screenshot.jpg`、`bstp_webmap_popup.jpg` |
 | 決策紀錄（單元定義、計畫用途規則、錨定等價性、結果、限制） | `docs/DRT-TPE-20261030-004_bstp_unit_level_webmap.md` |
 | 街廓單元表、GeoJSON、潛勢統計、錨定表 | `bn_engine/results/taipei_v3_bstp_units/bstp_units_v3.csv`、`.geojson`、`shp_baseline_bstp_units_v3.csv`、`bn_engine/cpt_priors/h2_bstp_unit_conditional_table_v3.json` |
